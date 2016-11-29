@@ -1,4 +1,6 @@
 class BookingsController < ApplicationController
+	protect_from_forgery
+	before_action :authenticate_user!
 	def new
 		@item = Item.find(params[:item_id])
 		@booking = Booking.new
@@ -17,6 +19,7 @@ class BookingsController < ApplicationController
 	end
 
 	def show
+		@user = current_user
 		@item = Item.find(params[:item_id])
 		@booking = Booking.find(params[:id])
 	end
