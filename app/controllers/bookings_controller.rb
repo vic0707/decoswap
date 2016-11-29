@@ -8,11 +8,13 @@ class BookingsController < ApplicationController
 
 	def create
 		@item = Item.find(params[:item_id])
+		@user = current_user
 		@booking = Booking.new(booking_params)
+		@booking.user = @user
 		@booking.item = @item
 
 		if @booking.save
-			redirect_to item_booking_path(@item, @booking)
+			redirect_to profile_path
 		else
 			render :new
 		end
