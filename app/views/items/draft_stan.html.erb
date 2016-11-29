@@ -1,0 +1,18 @@
+
+<!--   <% if @item.errors.any? %>
+    <div class="alert alert-danger" role="alert" style="color:darkred">
+      <% @item.errors.full_messages.each do |message| %>
+        <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+        <span class="sr-only">Error:</span>
+        <%= message.html_safe %><br>
+      <% end %>
+    </div>
+  <% end %> -->
+
+<%= f.input :color %>
+<%= f.input :condition %>
+<%= f.input :designer %>
+<%= f.input :design_period %>
+<%= f.input :materials %>
+<%= f.input :status %>
+<%= f.input :price %>
