@@ -33,8 +33,8 @@ ActiveRecord::Schema.define(version: 20161129102734) do
     t.integer  "price"
     t.string   "status"
     t.integer  "user_id"
-    t.datetime "created_at",        null: false
-    t.datetime "updated_at",        null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.string   "image_url"
     t.string   "description"
     t.string   "color"
