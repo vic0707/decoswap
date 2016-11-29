@@ -1,0 +1,18 @@
+<h1 class="text-center">All the items</h1>
+
+<div class="container police">
+ <div class="row">
+  <% @items.each do |r| %>
+    <div class="col-xs-12 col-sm-6 col-md-3">
+      <%= link_to item_path(r) do %>
+      <%= render "card", item: r %>
+    <% end %>
+    <%= link_to 'Show', item_path(r), class: "btn btn-primary margin-top-5"%>
+    </div> -->
+<% end %>
+
+
+ </div>
+
+
+ <%= link_to 'New item', new_item_path, class: "btn btn-primary", id: "new_item_btn" %>
