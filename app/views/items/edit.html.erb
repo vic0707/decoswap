@@ -1,11 +1,30 @@
 <h1 class="text-center">Edit item</h1>
 <div class="container police">
- <div class="row">
-  <div class="col-xs-1 col-sm-1 col-md-1">
-  </div>
-  <div class="col-xs-10 col-sm-6 col-md-6">
-  <%= render 'form', item: @item %>
-  <%= link_to 'Back', items_path %>
-  </div>
-  <div class="col-xs-1 col-sm-1 col-md-1">
-  </div>
+	<div class="row">
+		<div class="col-xs-1 col-sm-1 col-md-1">
+		</div>
+		<div class="col-xs-10 col-sm-6 col-md-6">
+			<%= simple_form_for @item , url: dashboard_item_path(@item) do |f| %>
+			<div class="form-inputs">
+				<%= f.input :name %>
+				<%= f.input :category_item %>
+				<%= f.input :size %>
+				<%= f.input :photo %>
+				<%= f.input :photo_cache, as: :hidden %>
+				<%= f.input :description %>
+				<%= f.input :price %>
+				<%= f.input :status %>
+				<%= f.input :color %>
+				<%= f.input :condition %>
+				<%= f.input :designer %>
+				<%= f.input :design_period %>
+				<%= f.input :materials %>
+			</div>
+			<div class="form-actions">
+				<%= f.button :submit %>
+			</div>
+			<% end %>
+			<%= link_to 'Back', items_path %>
+		</div>
+		<div class="col-xs-1 col-sm-1 col-md-1">
+		</div>
