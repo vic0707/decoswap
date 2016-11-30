@@ -1,0 +1,10 @@
+<h1>Check ot your Bookings</h1>
+
+<ul>
+	<% @user.bookings.each do |booking| %>
+	<li>
+		<%= booking.item.name %> - <%= booking.item.size %> - <%= booking.item.status %>
+
+	</li>
+	<% end %>
+</ul>
