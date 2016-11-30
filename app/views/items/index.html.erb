@@ -3,17 +3,13 @@
 <div class="container police">
  <div class="row">
   <% @items.each do |item| %>
-    <div class="col-xs-12 col-sm-6 col-md-3">
-      <%= link_to item_path(item) do %>
-      <%= render "card", item: item %>
+  <div class="col-xs-12 col-sm-6 col-md-4">
+    <%= link_to item_path(item) do %>
+    <%= render "card", item: item %>
     <% end %>
-    <%= link_to 'Show', item_path(item), class: "btn btn-primary margin-top-5"%>
-    </div> -->
-<% end %>
-
-<%= link_to 'New item', new_item_path, class: "btn btn-primary", id: "new_item_btn" %>
-
- </div>
-
-
+  </div>
+  <% end %>
+</div>
+</div>
+<%= link_to 'New item', new_item_path, class: "btn btn-primary margin-top-5", id: "new_item_btn" %>
 

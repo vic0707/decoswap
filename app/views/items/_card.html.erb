@@ -1,9 +1,8 @@
-<div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url();">
-  <div class="card-category"><%= item.name %> </div>
-  <div class="card-description">
-    <h2><%= item.name %></h2>
-     <p><%= item.category_item %></p>
-     <p><%= item.description %></p>
-    <p><%= item.price %></p>
-    </div>
+<div class="card"
+ style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.1)), url('<%= cl_image_path item.photo %>')">
+<div class="card-description">
+  <h2 class="text-center"><%= item.name %></h2>
+  <p><%= item.category_item %></p>
+  <p><%= item.price %> €/month</p>
+</div>
 </div>
