@@ -13,7 +13,13 @@ class BookingsController < ApplicationController
 		@booking = Booking.new(booking_params)
 		@booking.user = @user
 		@booking.item = @item
-    status_change(@item)
+
+    	@item.change_status!
+
+		@booking.start_date = Time.now
+		@booking.end_date = Date.strptime(booking_params[:end_date], "%m/%d/%Y")
+		
+
 		if @booking.save
 			@item.save
       redirect_to profile_path
@@ -39,10 +45,6 @@ class BookingsController < ApplicationController
     else
       render :new
     end
-  end
-
-  def status_change(item)
-    @booking.item.status = "Rent"
   end
 
 	private
