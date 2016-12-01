@@ -1,77 +1,79 @@
 <div class="container-fluid">
-      <div class="row">
-        <div class="col-sm-3 col-md-2 sidebar">
-          <ul class="nav nav-sidebar">
-            <li class="active"><a href="#">Dashboard <span class="sr-only">(current)</span></a></li>
-            <li><a href="#">Catalog</a></li>
-            <li><a href="#">Orders</a></li>
-            <li><a href="#">Customers</a></li>
-          </ul>
-          <ul class="nav nav-sidebar">
-            <li><a href="">Income</a></li>
-            <li><a href="">Pricing Rules</a></li>
-            <li><a href="">Time Sheets</a></li>
-          </ul>
-          <ul class="nav nav-sidebar">
-            <li><a href="">Advanced Parameters</a></li>
-            <li><a href="">Accounts settings</a></li>
-            <li><a href="">Stats</a></li>
-          </ul>
+  <div class="row">
+    <div class="col-sm-3 col-md-2 sidebar">
+      <ul class="nav nav-sidebar">
+        <li class="active"><a href="#">Dashboard <span class="sr-only">(current)</span></a></li>
+        <li><a href="#">Catalog</a></li>
+        <li><a href="#">Orders</a></li>
+        <li><a href="#">Customers</a></li>
+      </ul>
+      <ul class="nav nav-sidebar">
+        <li><a href="">Income</a></li>
+        <li><a href="">Pricing Rules</a></li>
+        <li><a href="">Time Sheets</a></li>
+      </ul>
+      <ul class="nav nav-sidebar">
+        <li><a href="">Advanced Parameters</a></li>
+        <li><a href="">Accounts settings</a></li>
+        <li><a href="">Stats</a></li>
+      </ul>
+    </div>
+    <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+      <h1 class="page-header">Check out your Bookings</h1>
+
+      <div class="row placeholders">
+        <div class="col-xs-6 col-sm-3 placeholder">
+          <i class="fa fa-eur" aria-hidden="true"></i>
+          <h4>Income</h4>
+          <span class="text-muted"><%= @sum_of_price_pro %></span>
         </div>
-        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-          <h1 class="page-header">Check out your Bookings</h1>
-
-          <div class="row placeholders">
-            <div class="col-xs-6 col-sm-3 placeholder">
-              <i class="fa fa-eur" aria-hidden="true"></i>
-              <h4>Income</h4>
-              <span class="text-muted">240eur/month</span>
-            </div>
-            <div class="col-xs-6 col-sm-3 placeholder">
-              <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-              <h4>Orders</h4>
-              <span class="text-muted">67</span>
-            </div>
-            <div class="col-xs-6 col-sm-3 placeholder">
-              <i class="fa fa-male" aria-hidden="true"></i>
-              <h4>Customers</h4>
-              <span class="text-muted">98</span>
-            </div>
-            <div class="col-xs-6 col-sm-3 placeholder">
-              <i class="fa fa-bar-chart" aria-hidden="true"></i>
-              <h4>Stats</h4>
-              <span class="text-muted">2304eur net profit</span>
-            </div>
-          </div>
-
-          <h2 class="sub-header">Current orders</h2>
-          <div class="table-responsive">
-            <table class="table table-striped">
-              <thead>
-                <tr>
-                  <th>#id</th>
-                  <th>Item</th>
-                  <th>Customer</th>
-                  <th>Status</th>
-                  <th>Price</th>
-                </tr>
-              </thead>
-              <tbody>
-              <% @user.bookings.each do |booking| %>
-                <tr>
-                  <td><%= booking.item.id %></td>
-                  <td><%= booking.item.name %></td>
-                  <td><%= booking.item.size %></td>
-                  <td><%= booking.item.status %></td>
-                  <td><%= booking.item.price %></td>
-                </tr>
-              <% end %>
-              </tbody>
-            </table>
-          </div>
+        <div class="col-xs-6 col-sm-3 placeholder">
+          <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+          <h4>Orders</h4>
+          <span class="text-muted"><%= @sum_of_orders %></span>
+        </div>
+        <div class="col-xs-6 col-sm-3 placeholder">
+          <i class="fa fa-male" aria-hidden="true"></i>
+          <h4>Customers</h4>
+          <span class="text-muted"><%= @sum_of_customers %></span>
+        </div>
+        <div class="col-xs-6 col-sm-3 placeholder">
+          <i class="fa fa-bar-chart" aria-hidden="true"></i>
+          <h4>Stats</h4>
+          <span class="text-muted">Positive</span>
         </div>
       </div>
+
+      <h2 class="sub-header">Current orders</h2>
+      <div class="table-responsive">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>#id</th>
+              <th>Item</th>
+              <th>Customer</th>
+              <th>Status</th>
+              <th>Price</th>
+              <th>Product Page</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% @user.bookings.each do |booking| %>
+            <tr>
+              <td><%= booking.item.id %></td>
+              <td><%= booking.item.name %></td>
+              <td><%= booking.item.size %></td>
+              <td><%= booking.item.status %></td>
+              <td><%= booking.item.price %></td>
+              <td> <%= link_to 'see', item_path(booking.item) %></td>
+            </tr>
+            <% end %>
+          </tbody>
+        </table>
+      </div>
     </div>
+  </div>
+</div>
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
@@ -84,4 +86,4 @@
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
   </body>
-</html>
+  </html>
