@@ -13,5 +13,7 @@ Rails.application.routes.draw do
   	resources :items, only: [:edit, :update]
   end
 
+  mount Attachinary::Engine => "/attachinary"
+
   root to: 'pages#home'
 end
