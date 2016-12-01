@@ -3,6 +3,14 @@ class Item < ApplicationRecord
   has_many :bookings
   # mount_uploader :photo, PhotoUploader
   has_attachments :photos, maximum: 5
+
+  def change_status!
+  	if self.status = "Rent"
+  		self.status = "Free"
+  	else
+  		self.status = "Rent"
+  	end
+  end
 end
 
 

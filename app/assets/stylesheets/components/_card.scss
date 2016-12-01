@@ -18,6 +18,11 @@
   top: 100px;
 }
 
+.margin-bottom{
+  position: absolute;
+  right: 5px;
+  bottom: 5px;
+}
 .card-category {
   position: absolute;
   top: 10px;
@@ -30,6 +35,14 @@
   bottom: 10px;
   left: 10px;
 }
+
+.card-description-top {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+
 .card-description h2 {
   font-size: 24px;
 }
@@ -48,4 +61,8 @@
 }
 .card-link:hover{
   opacity: 0.1;
+}
+
+.card-link:hover{
+  opacity: 0.6;
 }
