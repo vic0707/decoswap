@@ -12,7 +12,9 @@ class BookingsController < ApplicationController
 		@booking = Booking.new(booking_params)
 		@booking.user = @user
 		@booking.item = @item
-
+		@booking.start_date = Time.now
+		@booking.end_date = Date.strptime(booking_params[:end_date], "%m/%d/%Y")
+		
 		if @booking.save
 			redirect_to profile_path
 		else
