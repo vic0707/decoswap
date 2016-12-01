@@ -5,7 +5,7 @@ class Item < ApplicationRecord
   has_attachments :photos, maximum: 5
 
   def change_status!
-  	if self.status = "Rent"
+  	if self.status == "Rent"
   		self.status = "Free"
   	else
   		self.status = "Rent"
