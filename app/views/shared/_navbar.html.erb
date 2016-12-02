@@ -1,7 +1,7 @@
 <div class="navbar-wagon">
   <!-- Logo -->
   <%= link_to root_path do %>
-    <i class="fa fa-glass" aria-hidden="true"></i>
+  <%= image_tag ("logo.png"), class: "logo", id: "logo"%>
   <% end %>
 
   <!-- Right Navigation -->
@@ -38,7 +38,7 @@
             <% else %>
               <%= link_to dashboard_path do %>
               <i class="fa fa-tachometer"></i> <%= t(".profile", default: "Dashboard") %>
-              <% end %>            
+              <% end %>
             <% end %>
           </li>
           <li>
@@ -64,7 +64,7 @@
 
 
 
-    
+
   </div>
 
   <!-- Dropdown appearing on mobile only -->
