@@ -1,0 +1,34 @@
+<h2 class="text-center"> All the items of <%= @user.email %> </h2>
+<br>
+
+<div class="container police">
+  <div class="row">
+    <% @user.bookings.each do |booking| %>
+      <% if booking.item.status == "Rent" %>
+        <div class="col-xs-12 col-sm-5 col-md-5">
+          <%= render "card", booking: booking %>
+          <%= booking.item.price %> $/month - <%= booking.item.status %>
+          <%= link_to "Swap", profile_booking_path(booking), method: :delete, class: "btn btn-primary center text-right" %>
+        </div>
+        <% end %>
+    <% end %>
+    <div class="col-xs-12 col-sm-2 col-md-2">
+      <div class="total_price text-center">
+      Summary Order
+      <br>
+      -----
+      <br>
+      <br>
+      <br>
+      <br>
+      -----
+      <br>
+
+      <p class=""> Total of <%= @sum_of_prices %> $/month </p>
+
+     </div>
+    </div>
+
+  </div>
+</div>
+
