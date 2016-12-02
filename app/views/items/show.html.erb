@@ -4,13 +4,14 @@
   <div class="content-wrapper">
     <div class="item-container">
       <div class="container">
-        <div class="col-md-12">
-          <div class="product col-md-3 service-image-left">
+
+        <div class="col-md-6">
+          <div class="product col-md-9 service-image-left">
 
             <%= cl_image_tag @item.photos.first.path, :class => ("service-image-left") %>
           </div>
 
-          <div class="container service1-items col-sm-2 col-md-2 pull-left">
+          <div class="container service1-items col-sm-2 col-md-3 pull-right">
             <center>
               <% @item.photos.each_with_index do |photo, index| %>
               <% if index > 0 %>
@@ -23,8 +24,8 @@
          </div>
        </div>
 
-       <div class="col-md-7">
-        <div class="product-title"><%= @item.name %></div>
+       <div class="col-md-6">
+        <div class="product-title"><h1><%= @item.name %></h1></div>
         <div class="product-desc"><%= @item.size %></div>
         <hr>
         <div class="product-price"><%= @item.price %> €/month </div>
