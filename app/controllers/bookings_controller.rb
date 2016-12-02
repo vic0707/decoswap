@@ -17,7 +17,7 @@ class BookingsController < ApplicationController
     	@item.change_status!
 
 		@booking.start_date = Time.now
-		@booking.end_date = Date.strptime(booking_params[:end_date], "%m/%d/%Y")
+		@booking.end_date = Date.strptime(booking_params[:end_date], "%d/%m/%Y")
 		
 
 		if @booking.save
