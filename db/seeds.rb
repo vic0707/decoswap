@@ -50,7 +50,7 @@ item4 = Item.new(
   name: "Rising waters",
   size: "120*80*7",
   price: 16,
-  status: "Fre",
+  status: "Free",
   description: "While walking in Paris, Minou took a wonderful picture, a picture of calm and peace in one of the busiest city. An artwork",
   color: "Black",
   condition: "New",

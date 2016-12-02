@@ -5,9 +5,9 @@
   }
   img {
   position: absolute;
-  right : 0;
-  // top : 0;
-  width: auto;
+  right : 0px;
+  top : 0px;
+  width: 300px;
   height: 100%;
   opacity: 0.8;
   object-fit: cover;
@@ -21,19 +21,13 @@
   }
   img {
   position: absolute;
-  right : 0;
-  // top : 0;
-  width: auto;
+  right : 0px;
+  top : 0px;
+  width: 380px;
   height: 100%;
   opacity: 0.3;
   object-fit: cover;
   }
-}
-
-.flex-hover {
-    display: flex;
-    justify-content: center;
-    align-items: baseline;
 }
 
 .out_of_stock {
@@ -82,8 +76,8 @@ border: 1px
 
 .effect-lily h2,
 .effect-lily p {
-  -webkit-transform: translate3d(0,40px,0);
-  transform: translate3d(0,40px,0);
+  -webkit-transform: translate3d(0,10px,0);
+  transform: translate3d(0,10px,0);
 }
 
 .effect-lily h2 {
