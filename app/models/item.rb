@@ -1,6 +1,7 @@
 class Item < ApplicationRecord
   belongs_to :user, optional: true
   has_many :bookings
+  has_many :reviews, dependent: :destroy
   mount_uploader :photo, PhotoUploader
 end
 
