@@ -1,14 +1,30 @@
-<div class="hovereffect">
-  <div class="card"
-    style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.3)), url('<%= cl_image_path item.photos.first.path if item.photos.first %>')">
-        <div class="overlay">
-          <h2>Object rented...</h2>
-          <%= link_to "See when it's available", item_path(item), class: "info" %>
-        </div>
-        <div class="card-description">
-          <div class="text-center"><%= item.name %> </div>
-            <p><%= item.category_item %></p>
-            <p><%= item.price %> €/month</p>
-          </div>
-  </div>
-</div>
+  <div class="effect-lily font_black">
+   <div class="card photo oos">
+    <div class="flex-hover">
+    <%= image_tag cl_image_path item.photos.first.path if item.photos.first %>
+    </div>
+
+    <div class="overlay">
+      <h2 class="font_gray"><%= item.name %> </h2>
+
+
+    <br>
+    <br>
+
+     <h3 class="text-center font_black no-yes-hover">
+     [ Tell me when it's back ]</h3>
+
+     <h1 class="font_black text-center  out_of_stock">
+     Out of stock</h1>
+ </div>
+
+    <div class="card-description">
+
+      <div class="text-center font_black">
+        <p class="font_black"><%= item.description.first(20) %>...</p>
+      </div>
+    </div>
+    <p class="text-right font_black margin-bottom"><%= item.price %> €/month</p>
+   </div>
+
+    </div>
