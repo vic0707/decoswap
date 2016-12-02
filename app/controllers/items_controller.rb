@@ -44,6 +44,7 @@ class ItemsController < ApplicationController
 
     def set_item
       @item = Item.find(params[:id])
+      @review = Review.new
     end
 
     def item_params

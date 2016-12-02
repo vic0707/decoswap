@@ -18,6 +18,10 @@
         <li><a href="">Stats</a></li>
       </ul>
     </div>
+  <div id="relative_div">
+    <div id="new_item_dashboard">
+      <%= link_to 'New item', new_item_path, class: "btn btn-primary", id: "new_item_btn" %>
+    </div>
     <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
       <h1 class="page-header">Check out your Bookings</h1>
 
@@ -43,6 +47,7 @@
           <span class="text-muted">Positive</span>
         </div>
       </div>
+    </div>
 
       <h2 class="sub-header">Current orders</h2>
       <div class="table-responsive">
