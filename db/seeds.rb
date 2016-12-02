@@ -6,7 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 Item.destroy_all
-Item.create(
+item1 = Item.new(
   name: "C-chair",
   size: "65*40*80",
   price: 12,
@@ -18,9 +18,9 @@ Item.create(
   designer: "",
   design_period: "2010",
   materials: "Wood",
-  category_item: "Chaires",
-  photo: "image/upload/v1480509229/rbpmn8ieodqgsbbzvvck.jpg")
-Item.create(
+  category_item: "Chaires")
+item1.photo_urls = ["http://res.cloudinary.com/dhrqyxgzp/image/upload/v1480509229/rbpmn8ieodqgsbbzvvck.jpg"]
+item2 = Item.new(
   name: "Pixar",
   size: "20*20*150",
   price: 9,
@@ -31,9 +31,9 @@ Item.create(
   designer: "",
   design_period: "2009",
   materials: "Aluminium",
-  category_item: "Lamp",
-  photo: "image/upload/v1480510191/tpraydo6ksmmzaytou1p.jpg")
-Item.create(
+  category_item: "Lamp")
+item2.photo_urls = ["http://res.cloudinary.com/dhrqyxgzp/image/upload/v1480510191/tpraydo6ksmmzaytou1p.jpg"]
+item3 = Item.new(
   name: "Gypset",
   size: "65*50*80",
   price: 18,
@@ -44,9 +44,9 @@ Item.create(
   designer: "Starck",
   design_period: "2004",
   materials: "Wood",
-  category_item: "Chaires",
-  photo: "image/upload/v1480510365/adkpsozdsdvjnpb6reqn.jpg")
-Item.create(
+  category_item: "Chaires")
+item3.photo_urls = ["http://res.cloudinary.com/dhrqyxgzp/image/upload/v1480510365/adkpsozdsdvjnpb6reqn.jpg"]
+item4 = Item.new(
   name: "Rising waters",
   size: "120*80*7",
   price: 16,
@@ -57,9 +57,9 @@ Item.create(
   designer: "Minh",
   design_period: "2015",
   materials: "Wood",
-  category_item: "Painting",
-  photo: "image/upload/v1480510595/uluu8emclrydcp1s2nra.jpg")
-Item.create(
+  category_item: "Painting")
+item4.photo_urls = ["http://res.cloudinary.com/dhrqyxgzp/image/upload/v1480510595/uluu8emclrydcp1s2nra.jpg"]
+item5 = Item.new(
   name: "Wood puddle",
   size: "60*40*30",
   price: 8,
@@ -70,9 +70,9 @@ Item.create(
   designer: "",
   design_period: "2009",
   materials: "Wood",
-  category_item: "Table",
-  photo: "image/upload/v1480510844/tf0p6kbzpe1q22oig6gq.jpg")
-Item.create(
+  category_item: "Table")
+item5.photo_urls = ["http://res.cloudinary.com/dhrqyxgzp/image/upload/v1480510844/tf0p6kbzpe1q22oig6gq.jpg"]
+item6 = Item.new(
   name: "Wall Clock",
   size: "50*50*8",
   price: 5,
@@ -83,9 +83,9 @@ Item.create(
   designer: "",
   design_period: "2013",
   materials: "Wood",
-  category_item: "Clock",
-  photo: "image/upload/v1480510973/qyzg2imxcyjtqzuk29fk.jpg")
-Item.create(
+  category_item: "Clock")
+item6.photo_urls = ["http://res.cloudinary.com/dhrqyxgzp/image/upload/v1480510973/qyzg2imxcyjtqzuk29fk.jpg"]
+item7 = Item.new(
   name: "Balance",
   size: "65*50*80",
   price: 9,
@@ -96,9 +96,9 @@ Item.create(
   designer: "Grandpa John",
   design_period: "",
   materials: "Wood",
-  category_item: "Chaires",
-  photo: "image/upload/v1480511084/edordil2yb77o6bn14gj.jpg")
-Item.create(
+  category_item: "Chaires")
+item7.photo_urls = ["http://res.cloudinary.com/dhrqyxgzp/image/upload/v1480511084/edordil2yb77o6bn14gj.jpg"]
+item8 = Item.new(
   name: "Telescope Lamp",
   size: "20*20*150",
   price: 10,
@@ -109,9 +109,9 @@ Item.create(
   designer: "The Swedish Company",
   design_period: "2015",
   materials: "Wood",
-  category_item: "Lamp",
-  photo: "image/upload/v1480511280/i3bhx0s97a5hjhdjdz51.jpg")
-Item.create(
+  category_item: "Lamp")
+item8.photo_urls = ["http://res.cloudinary.com/dhrqyxgzp/image/upload/v1480511280/i3bhx0s97a5hjhdjdz51.jpg"]
+item9 = Item.new(
   name: "Focused Nature",
   size: "45*100*5",
   price: 7,
@@ -122,9 +122,9 @@ Item.create(
   designer: "Houdihou",
   design_period: "2012",
   materials: "Glass",
-  category_item: "Painting",
-  photo: "image/upload/v1480511503/iqbdfemueq2dqrfmbqg7.jpg")
-Item.create(
+  category_item: "Painting")
+item9.photo_urls = ["http://res.cloudinary.com/dhrqyxgzp/image/upload/v1480511503/iqbdfemueq2dqrfmbqg7.jpg"]
+item10 = Item.new(
   name: "Stable table",
   size: "60*40*30",
   price: 11,
@@ -135,9 +135,9 @@ Item.create(
   designer: "The Swedish Company",
   design_period: "2013",
   materials: "Wood",
-  category_item: "Table",
-  photo: "image/upload/v1480511674/xcpnhix16jtg7qzbho2i.jpg")
-Item.create(
+  category_item: "Table")
+item10.photo_urls = ["http://res.cloudinary.com/dhrqyxgzp/image/upload/v1480511674/xcpnhix16jtg7qzbho2i.jpg"]
+item11 = Item.new(
   name: "Vase Chair ",
   size: "65*50*80",
   price: 11,
@@ -148,9 +148,9 @@ Item.create(
   designer: "Norsign",
   design_period: "2016",
   materials: "Tissu ",
-  category_item: "Chairs",
-  photo: "image/upload/v1480511792/jjlkoduddekghc6867ze.jpg")
-Item.create(
+  category_item: "Chairs")
+item11.photo_urls = ["http://res.cloudinary.com/dhrqyxgzp/image/upload/v1480511792/jjlkoduddekghc6867ze.jpg"]
+item12 = Item.new(
   name: "Tall Hugs",
   size: "50*150*8",
   price: 19,
@@ -161,9 +161,9 @@ Item.create(
   designer: "The an.on.ym.ous photograph",
   design_period: "2014",
   materials: "Glass",
-  category_item: "Painting",
-  photo: "image/upload/v1480512003/zuaxk8kakpzaokmbmgok.jpg")
-Item.create(
+  category_item: "Painting")
+item12.photo_urls = ["http://res.cloudinary.com/dhrqyxgzp/image/upload/v1480512003/zuaxk8kakpzaokmbmgok.jpg"]
+item13 = Item.new(
   name: "The Table.",
   size: "70*50*40",
   price: 8,
@@ -174,9 +174,9 @@ Item.create(
   designer: "The Swedish Company",
   design_period: "",
   materials: "Wood",
-  category_item: "Table",
-  photo: "image/upload/v1480512102/htjt0szqtfyiqhuo9urg.jpg")
-Item.create(
+  category_item: "Table")
+item13.photo_urls = ["http://res.cloudinary.com/dhrqyxgzp/image/upload/v1480512102/htjt0szqtfyiqhuo9urg.jpg"]
+item14 = Item.new(
   name: "Dusty shower",
   size: "160*100*6",
   price: 19,
@@ -187,5 +187,22 @@ Item.create(
   designer: "S.P",
   design_period: "2004",
   materials: "Glass",
-  category_item: "Painting",
-  photo: "image/upload/v1480512493/lf4wrhdiveg0qh1yilwr.jpg")
+  category_item: "Painting")
+item14.photo_urls = ["http://res.cloudinary.com/dhrqyxgzp/image/upload/v1480512493/lf4wrhdiveg0qh1yilwr.jpg"]
+
+item1.save
+item2.save
+item3.save
+item4.save
+item5.save
+item6.save
+item7.save
+item8.save
+item9.save
+item10.save
+item11.save
+item12.save
+item13.save
+item14.save
+
+
