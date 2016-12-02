@@ -6,5 +6,6 @@
 //= require cloudinary/jquery.cloudinary
 //= require attachinary
 //= require init_attachinary
+//= require algolia/v3/algoliasearch.min
 //= require_tree .
 
