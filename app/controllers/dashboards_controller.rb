@@ -7,26 +7,34 @@ class DashboardsController < ApplicationController
 	end
 
   def sum_of_price_pro(user)
-    sum = 0
+    suma = 0
     user.bookings.each do |booking|
-      sum += booking.item.price
+      if booking.item.status == "Rent"
+      suma += booking.item.price
+      else
+      end
     end
-    return sum
+    return suma
   end
 
   def sum_of_customers(user)
-    sum = 0
+    sumb = 0
     user.bookings.each do |booking|
-      sum += (@user.id)
+      if booking.item.status == "Rent"
+      sumb += (@user.id)
+       else
+      end
     end
-    return sum
+    return sumb
   end
 
   def sum_of_orders(user)
-    sum = 0
+    sumc = 0
     user.bookings.each do |booking|
-      sum += (booking.item.id)
+      if booking.item.status == "Rent"
+      sumc += (booking.item.id)
+    else
     end
-    return sum
+    return sumc
   end
 end

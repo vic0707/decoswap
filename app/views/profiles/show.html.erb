@@ -1,34 +1,64 @@
-<h2 class="text-center"> All the items of <%= @user.email %> </h2>
-<br>
-
-<div class="container police">
+<div class="container-fluid">
   <div class="row">
-    <% @user.bookings.each do |booking| %>
-      <% if booking.item.status == "Rent" %>
-        <div class="col-xs-12 col-sm-5 col-md-5">
+    <div class="col-sm-3 col-md-2 sidebar">
+      <ul class="nav nav-sidebar sr-only-user">
+        <li class="active"><a href="#">Dashboard <span class="sr-only">(current)</span></a></li>
+        <li><a href="/show-historic">Historic</a></li>
+        <li><a href="#">Account settings</a></li>
+        <li><a href="#">Log out</a></li>
+        <li><a href="#">
+        <%= link_to 'Continue shopping', items_path, class: "btn btn-lg btn-primary", id: "new_item_btn" %> </a></li>
+      </ul>
+
+    </div>
+
+  <div id="relative_div">
+
+    <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+      <h1 class="page-header">Welcome Home </h1>
+
+      <div class="row placeholders">
+        <div class="col-xs-6 col-sm-6 placeholder">
+          <i class="fa fa-eur" aria-hidden="true"></i>
+          <h4>Total Billed</h4>
+          <span class="text-muted"><%= @sum_of_prices %> €/month</span>
+        </div>
+        <div class="col-xs-6 col-sm-6 placeholder">
+          <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+          <h4>Number of items</h4>
+          <span class="text-muted"><%= @sum_of_items %></span>
+        </div>
+
+          <span class="text-muted">Positive</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="container police">
+      <div class="row">
+        <% @user.bookings.each do |booking| %>
+        <% if booking.item.status == "Rent" %>
+        <div class="col-sm-9 col-sm-offset-3 col-md-4 col-md-offset-2 ">
           <%= render "card", booking: booking %>
           <%= booking.item.price %> $/month - <%= booking.item.status %>
           <%= link_to "Swap", profile_booking_path(booking), method: :delete, class: "btn btn-primary center text-right" %>
         </div>
         <% end %>
-    <% end %>
-    <div class="col-xs-12 col-sm-2 col-md-2">
-      <div class="total_price text-center">
-      Summary Order
-      <br>
-      -----
-      <br>
-      <br>
-      <br>
-      <br>
-      -----
-      <br>
-
-      <p class=""> Total of <%= @sum_of_prices %> $/month </p>
-
-     </div>
+        <% end %>
+      </div>
     </div>
-
   </div>
 </div>
 
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="../../dist/js/bootstrap.min.js"></script>
+    <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
+    <script src="../../assets/js/vendor/holder.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+  </body>
+  </html>
