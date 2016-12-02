@@ -1,8 +1,20 @@
 class Item < ApplicationRecord
   belongs_to :user, optional: true
   has_many :bookings
+
   has_many :reviews, dependent: :destroy
-  mount_uploader :photo, PhotoUploader
+
+  # mount_uploader :photo, PhotoUploader
+  has_attachments :photos, maximum: 5
+
+  def change_status!
+  	if self.status == "Rent"
+  		self.status = "Free"
+  	else
+  		self.status = "Rent"
+  	end
+  end
+
 end
 
 

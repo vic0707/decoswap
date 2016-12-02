@@ -7,12 +7,14 @@ Rails.application.routes.draw do
   end
 
   resource :profile, only: [:show, :edit, :update] do
-  	resources :bookings, only: [:edit, :update]
+  	resources :bookings, only: [:edit, :update, :destroy]
   end
 
   resource :dashboard, only: [:show] do
   	resources :items, only: [:edit, :update]
   end
+
+  mount Attachinary::Engine => "/attachinary"
 
   root to: 'pages#home'
 end

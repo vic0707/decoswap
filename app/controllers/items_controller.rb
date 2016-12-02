@@ -6,6 +6,7 @@ class ItemsController < ApplicationController
   end
 
   def show
+    @booking = Booking.new
   end
 
   def new
@@ -47,6 +48,6 @@ class ItemsController < ApplicationController
     end
 
     def item_params
-      params.require(:item).permit(:name, :category_item, :size, :price, :status, :user_id, :created_at, :updated_at, :photo, :photo_cache, :description, :color, :condition, :country_of_origin, :designer, :design_period, :materials)
+      params.require(:item).permit(:name, :category_item, :size, :price, :status, :user_id, :created_at, :updated_at, :photo_cache, :description, :color, :condition, :country_of_origin, :designer, :design_period, :materials, photos: [])
     end
 end
