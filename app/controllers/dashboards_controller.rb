@@ -11,7 +11,6 @@ class DashboardsController < ApplicationController
     user.bookings.each do |booking|
       if booking.item.status == "Rent"
       suma += booking.item.price
-      else
       end
     end
     return suma
@@ -22,7 +21,6 @@ class DashboardsController < ApplicationController
     user.bookings.each do |booking|
       if booking.item.status == "Rent"
       sumb += (@user.id)
-       else
       end
     end
     return sumb
@@ -33,7 +31,7 @@ class DashboardsController < ApplicationController
     user.bookings.each do |booking|
       if booking.item.status == "Rent"
       sumc += (booking.item.id)
-    else
+      end
     end
     return sumc
   end
