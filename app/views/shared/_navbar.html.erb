@@ -6,8 +6,7 @@
 
     <!-- Search Form -->
   <%= form_tag "/items", method: "get", class: "navbar-wagon-search" do %>
-  <%= text_field_tag(:query) %>
-  <%= submit_tag "Search", class: "navbar-wagon-search-btn" %>
+  <%= text_field_tag :query, nil, placeholder: "Search..." %>
   <% end %>
 
   <!-- Right Navigation -->
