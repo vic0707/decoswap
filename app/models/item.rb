@@ -1,4 +1,5 @@
 class Item < ApplicationRecord
+  include AlgoliaSearch
   belongs_to :user, optional: true
   has_many :bookings
 
@@ -6,6 +7,16 @@ class Item < ApplicationRecord
 
   # mount_uploader :photo, PhotoUploader
   has_attachments :photos, maximum: 5
+
+  algoliasearch do
+    attribute :name, :description, :color, :designer, :materials, :category_item
+
+    attributesToIndex ['name', 'description', 'color', 'designer', 'materials', 'category_item']
+
+    customRanking ['desc(created_at)']
+  end
+
+
 
   def change_status!
   	if self.status == "Rent"
