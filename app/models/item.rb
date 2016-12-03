@@ -9,9 +9,9 @@ class Item < ApplicationRecord
   has_attachments :photos, maximum: 5
 
   algoliasearch do
-    attribute :name, :description, :color, :designer, :materials, :category_item
+    attribute :name, :description, :color, :condition, :designer, :materials, :category_item
 
-    attributesToIndex ['name', 'description', 'color', 'designer', 'materials', 'category_item']
+    attributesToIndex ['name', 'description', 'color', 'condition', 'designer', 'materials', 'category_item']
 
     customRanking ['desc(created_at)']
   end
