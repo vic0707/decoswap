@@ -2,8 +2,8 @@ class ItemsController < ApplicationController
   before_action :set_item, only: [:show, :edit, :update, :destroy]
 
   def index
+    Item.reindex!
     if params[:query]
-      Item.reindex!
       @items = Item.algolia_search(params[:query])
     else
       @items = Item.all
