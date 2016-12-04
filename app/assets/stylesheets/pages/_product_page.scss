@@ -20,11 +20,11 @@
 
 .product{
   border: 1px solid #dddddd;
-  height: 321px;
+  height: 521px;
 }
 
 .product>img{
-  max-width: 250px;
+  max-width: 100%;
   padding-top: 50px;
 }
 
@@ -53,6 +53,22 @@
 
 .product-info{
     margin-top: 50px;
+}
+#owl-product .item img{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+#owl-product .owl-item div{
+  padding:5px;
+}
+#owl-product .owl-item img{
+  display: block;
+  width: 100%;
+  height: auto;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
 }
 
 /*********************************************
@@ -96,8 +112,8 @@
   position: relative;
   overflow: hidden;
   max-width: 100%;
-  height: 321px;
-  width: 130px;
+  height: 400px;
+  width: 230px;
 }
 
 .service1-item {
@@ -138,3 +154,4 @@
 .service-image-left > center > img,.service-image-right > center > img{
   max-height: 155px;
 }
+
