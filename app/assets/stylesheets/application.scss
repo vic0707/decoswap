@@ -19,4 +19,15 @@
 @import "vendor/index";
 @import "pages/home";
 @import "pages/dashboard";
-@import "pages/product_page"
+@import "pages/product_page";
+@import "vendor/owl.theme";
+@import "vendor/owl.carousel";
+@import "vendor/owl.transitions";
+
+
+
+.hide-bullets {
+list-style:none;
+margin-left: -40px;
+margin-top:20px;
+}
