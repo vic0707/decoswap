@@ -1,13 +1,10 @@
 class ItemsController < ApplicationController
   before_action :set_item, only: [:show, :edit, :update, :destroy]
+  helper ItemsHelper
 
   def index
     Item.reindex!
-    if params[:query]
-      @items = Item.algolia_search(params[:query])
-    else
-      @items = Item.all
-    end
+    @items = Item.search(params).all
   end
 
   def show
@@ -44,6 +41,9 @@ class ItemsController < ApplicationController
     redirect_to items_path
   end
 
+  def filter
+
+  end
 
   private
 
