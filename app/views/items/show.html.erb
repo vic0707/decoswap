@@ -22,13 +22,17 @@
             <div class="product-stock"><%= @item.status %></div>
             <hr>
             </div>
+            <% if current_user.try(:customer?) %>
             <div class="btn-group cart">
               <button type="button" class="btn btn-success" data-toggle="modal" data-target="#myModal">
                 Add to cart
               </button>
             </div>
+            <% end %>
             <div class="btn-group wishlist">
+              <% if current_user.try(:professional?) %>
               <%= link_to "Edit", edit_dashboard_item_path(@item), class: "btn btn-danger" %>
+              <% end %>
             </div>
           </div>
         </div>

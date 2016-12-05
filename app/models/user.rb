@@ -8,7 +8,7 @@ class User < ApplicationRecord
 
 
   validates :role, inclusion: { in: ["customer", "professional"], message: "%{value} is not valid" }
-  
+
   def self.find_for_facebook_oauth(auth)
     user_params = auth.to_h.slice(:provider, :uid)
     user_params.merge! auth.info.slice(:email, :first_name, :last_name)
@@ -28,4 +28,18 @@ class User < ApplicationRecord
 
     return user
   end
+
+  def professional?
+    role == "professional"
+  end
+
+  def admin?
+    role == "admin"
+  end
+
+  def customer?
+    role == "customer"
+  end
+
+
 end

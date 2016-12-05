@@ -16,7 +16,20 @@ class Item < ApplicationRecord
     customRanking ['desc(created_at)']
   end
 
-
+  def self.search(params = {})
+    params.inject(Item) do |scope, (field, value)|
+      next scope if value.blank?
+      case field.to_sym
+      when :category_item
+        scope.where(category_item: value)
+      when :query
+        scope = scope.algolia_search(params[:query])
+        scope = Item.where(id: scope.map(&:id))
+      else
+        scope
+      end
+    end
+  end
 
   def change_status!
   	if self.status == "Rent"
