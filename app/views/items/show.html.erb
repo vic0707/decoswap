@@ -6,27 +6,35 @@
         <div class="row">
           <div class="col-md-6">
             <div id="owl-product" class="owl-carousel">
-            <% @item.photos.each do |photo| %>
+              <% @item.photos.each do |photo| %>
               <div class="item">
                <%= cl_image_tag photo.path %>
              </div>
              <% end %>
            </div>
-           </div>
+         </div>
 
-           <div class="col-md-6">
-            <div class="product-title"><h1><%= @item.name %></h1></div>
-            <div class="product-desc"><h4><%= @item.category_item %></h4></div>
-            <hr>
-            <div class="product-price"><%= @item.price %> €/month </div>
-            <div class="product-stock"><%= @item.status %></div>
-            <hr>
-            </div>
-            <% if current_user.try(:customer?) %>
-            <div class="btn-group cart">
-              <button type="button" class="btn btn-success" data-toggle="modal" data-target="#myModal">
+         <div class="col-md-6">
+          <div class="product-title"><h1><%= @item.name %></h1></div>
+          <div class="product-desc"><h4><%= @item.category_item %></h4></div>
+          <hr>
+          <div class="product-price"><%= @item.price %> €/month </div>
+          <div class="product-stock"><%= @item.status %></div>
+          <hr>
+        </div>
+        <% if current_user.try(:customer?) %>
+        <div class="btn-group cart">
+              <!-- <button type="button" class="btn btn-success" data-toggle="modal" data-target="#myModal">
                 Add to cart
-              </button>
+              </button> -->
+              <%= simple_form_for @cart do |f| %>
+              <div class="form-inputs">
+                <%= f.input :id, as: :hidden, input_html: {value: @item.id} %>
+              </div>
+              <div class="form-actions">
+                <%= f.submit 'Add to Cart' %>
+              </div>
+              <% end %>
             </div>
             <% end %>
             <div class="btn-group wishlist">
@@ -44,22 +52,16 @@
         <div class="modal-content">
           <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            <h4 class="modal-title" id="myModalLabel">Make a reservation</h4>
+            <h4 class="modal-title" id="myModalLabel">Nice one</h4>
           </div>
           <div class="modal-body">
-            <%= simple_form_for @booking , url: item_bookings_path(@item) do |f| %>
-            <div class="form-inputs">
-              <%= f.input :end_date, as: :string, input_html: { class: "datepicker"} %>
-            </div>
 
+            <h4> <%= @item.name %> has been added to your cart </h4>
 
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            <div class="form-actions btn btn-primary center">
-              <%= f.button :submit %>
-            </div>
-            <% end %>
+            <%= link_to "Continue Shopping", items_path, class: "btn btn-succes" %>
+            <%= link_to "Checkout", cart_path, class: "btn btn-default" %>
           </div>
         </div>
       </div>
@@ -87,15 +89,15 @@
           <div class="tab-pane fade" id="service-two">
 
             <section class="container product-info">
-            <ul>
-              <li><strong>Size:</strong> <%= @item.size %></li>
-              <li><strong>Condition:</strong> <%= @item.condition %></li>
-              <li><strong>Color:</strong> <%= @item.color %></li>
-              <li><strong>Materials:</strong> <%= @item.materials %></li>
-              <li><strong>Category:</strong> <%= @item.category_item %></li>
-              <li><strong>Designer:</strong> <%= @item.designer %></li>
-              <li><strong>Design Period:</strong> <%= @item.design_period %></li>
-            </ul>
+              <ul>
+                <li><strong>Size:</strong> <%= @item.size %></li>
+                <li><strong>Condition:</strong> <%= @item.condition %></li>
+                <li><strong>Color:</strong> <%= @item.color %></li>
+                <li><strong>Materials:</strong> <%= @item.materials %></li>
+                <li><strong>Category:</strong> <%= @item.category_item %></li>
+                <li><strong>Designer:</strong> <%= @item.designer %></li>
+                <li><strong>Design Period:</strong> <%= @item.design_period %></li>
+              </ul>
             </section>
 
           </div>
@@ -121,29 +123,22 @@
 </div>
 <!-- end of product page -->
 
-<script type="text/javascript">
-  $(document).ready(function(){
-    $('.datepicker').datepicker({
-      format: "dd/mm/yyyy",
-      autoclose: true
-    });
+
+
+<script>
+$(document).ready(function() {
+
+  $("#owl-product").owlCarousel({
+    autoPlay : false,
+    stopOnHover : true,
+    navigation:true,
+    paginationSpeed : 1000,
+    goToFirstSpeed : 2000,
+    singleItem : true,
+    autoHeight : true,
+    transitionStyle:"fade"
   });
-</script>
 
-<script type="text/javascript">
-  $(document).ready(function() {
-
-    $("#owl-product").owlCarousel({
-      autoPlay : false,
-      stopOnHover : true,
-      navigation:true,
-      paginationSpeed : 1000,
-      goToFirstSpeed : 2000,
-      singleItem : true,
-      autoHeight : true,
-      transitionStyle:"fade"
-    });
-
-  });
+});
 </script>
 
