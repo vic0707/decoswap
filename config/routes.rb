@@ -20,4 +20,10 @@ Rails.application.routes.draw do
   mount Attachinary::Engine => "/attachinary"
 
   root to: 'pages#home'
+
+  get 'cart', to: 'carts#index'
+
+  delete 'cart', to: 'carts#delete_all' 
+  resources :carts, only: [:new, :create, :destroy]
+
 end
