@@ -3,7 +3,6 @@ class ItemsController < ApplicationController
   helper ItemsHelper
 
   def index
-    Item.reindex!
     @items = Item.search(params).all
   end
 
