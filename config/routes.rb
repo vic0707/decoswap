@@ -14,6 +14,9 @@ Rails.application.routes.draw do
   end
 
   resource :dashboard, only: [:show] do
+    get '/manager_items', to: "dashboards#manager_items"
+    get '/stats', to: "dashboards#stats"
+    get '/account_settings', to: "dashboards#account_settings"
   	resources :items, only: [:edit, :update]
   end
 
