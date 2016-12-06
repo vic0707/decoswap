@@ -4,13 +4,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <title>DecoSwap</title>
     <%= csrf_meta_tags %>
     <%= action_cable_meta_tag %>
     <%= stylesheet_link_tag    'application', media: 'all' %>
   </head>
   <body>
-    <%= render 'shared/navbar' %>
     <%= render 'shared/flashes' %>
     <%= javascript_include_tag 'application' %>
     <%= yield %>
@@ -18,4 +18,6 @@
 
     <%= render 'shared/footer' %>
   </body>
+
+
 </html>
