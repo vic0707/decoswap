@@ -47,6 +47,26 @@ body {
   left: 0;
   min-width: 100%;
   }
+
+/*********************************************
+          OwlCarousel
+*********************************************/
+#owl-product .item img{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+#owl-product .owl-item div{
+  padding:5px;
+}
+#owl-product .owl-item img{
+  display: block;
+  width: 100%;
+  height: auto;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
 //----------------------------------------
 // MARKETING CONTENT
 //----------------------------------------
@@ -240,7 +260,7 @@ body {
 
 .content-section-a {
     // padding: 50px 0;
-    background-color: #f8f8f8;
+    background-color: white;
 }
 
 .content-section-b {
@@ -327,4 +347,6 @@ p.copyright {
     letter-spacing: 2px;
 }
 
-
+.icon-big{
+  font-size: 38px;
+}
