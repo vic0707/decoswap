@@ -4,7 +4,6 @@
     <div class="filter"></div>
     <video autoplay loop class="fillWidth">
       <source src="../assets/Mp4/Dancing-Bulbs.mp4" type="video/mp4" />Your browser does not support the video tag. I suggest you upgrade your browser.
-<!--       <source src="../assets/Ogv/coverr-lamp.ogv" type="video/webm" />Your browser does not support the video tag. I suggest you upgrade your browser. -->
     </video>
     <div class="poster hidden">
       <img src="../assets/background.jpg" alt="">
@@ -25,7 +24,7 @@
                 <!-- Search Form -->
 
                 <%= form_tag "/items", method: "get", class: "stylish-input-group" do %>
-                <%= text_field_tag :query, nil, placeholder: "Search...", class: "form-control" %>
+                <%= text_field_tag :query, nil, placeholder: "Type the furniture you are looking for...", class: "form-control" %>
                 <% end %>
               </div>
             </div>
@@ -37,22 +36,25 @@
   </div>
 </div>
 <!-- BANNERS -->
+<div id="startchange"></div>
 <div class="content-section-a">
+  <div class="row">
+    <div class="col-sm-6 col-xs-12">
+      <div class="text-center">
+      <hr>
+      <hr>
+      <hr>
+      <h2 class="section-heading">Step one:<br>Choose your item</h2>
+      <p class="lead">Choose between the best selection of your location.</p>
+      <p class="icon-big"><i class="fa fa-map-marker" aria-hidden="true"></i></p>
 
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-lg-5 col-sm-6">
-        <hr class="section-heading-spacer">
-        <div class="clearfix"></div>
-        <h2 class="section-heading">Death to the Stock Photo:<br>Special Thanks</h2>
-        <p class="lead">A special thanks to <a target="_blank" href="http://join.deathtothestockphoto.com/">Death to the Stock Photo</a> for providing the photographs that you see in this template. Visit their website to become a member.</p>
-      </div>
-      <div class="col-lg-5 col-lg-offset-2 col-sm-6">
-        <%= image_tag("cactus.jpeg", class: "img-responsive") %>
       </div>
     </div>
-
+    <div class="col-sm-6 col-xs-12">
+      <%= image_tag("cactus.jpg", class: "img-responsive") %>
+    </div>
   </div>
+
   <!-- /.container -->
 
 </div>
@@ -60,21 +62,23 @@
 
 <div class="content-section-b">
 
-  <div class="container-fluid">
 
-    <div class="row">
-      <div class="col-lg-5 col-lg-offset-1 col-sm-push-6  col-sm-6">
-        <hr class="section-heading-spacer">
-        <div class="clearfix"></div>
-        <h2 class="section-heading">3D Device Mockups<br>by PSDCovers</h2>
-        <p class="lead">Turn your 2D designs into high quality, 3D product shots in seconds using free Photoshop actions by <a target="_blank" href="http://www.psdcovers.com/">PSDCovers</a>! Visit their website to download some of their awesome, free photoshop actions!</p>
-      </div>
-      <div class="col-lg-5 col-sm-pull-6  col-sm-6">
-        <%= image_tag("lamp.jpeg", class: "img-responsive") %>
+  <div class="row">
+    <div class="col-lg-6 col-sm-push-6  col-sm-6">
+      <div class="text-center">
+      <hr>
+      <hr>
+      <hr>
+      <h2 class="section-heading">Step two:<br>Get delivered</h2>
+      <p class="lead">We deliver your order in 48h.</p>
+      <p class="icon-big"><i class="fa fa-truck" aria-hidden="true"></i></p>
       </div>
     </div>
-
+    <div class="col-lg-6 col-sm-pull-6  col-sm-6">
+      <%= image_tag("lamp.jpg", class: "img-responsive") %>
+    </div>
   </div>
+
   <!-- /.container -->
 
 </div>
@@ -82,30 +86,62 @@
 
 <div class="content-section-a">
 
-  <div class="container-fluid">
 
-    <div class="row">
-      <div class="col-lg-5 col-sm-6">
-        <hr class="section-heading-spacer">
-        <div class="clearfix"></div>
-        <h2 class="section-heading">Google Web Fonts and<br>Font Awesome Icons</h2>
-        <p class="lead">This template features the 'Lato' font, part of the <a target="_blank" href="http://www.google.com/fonts">Google Web Font library</a>, as well as <a target="_blank" href="http://fontawesome.io">icons from Font Awesome</a>.</p>
-      </div>
-      <div class="col-lg-5 col-lg-offset-2 col-sm-6">
-        <%= image_tag("loft.jpeg", class: "img-responsive") %>
+  <div class="row">
+    <div class="col-sm-6 col-xs-12">
+      <div class="text-center text-align">
+      <hr>
+      <hr>
+      <hr>
+      <h2 class="section-heading">Step three:<br>Swap</h2>
+      <p class="padding-left">Your item doesn't fit anymore with your new painting color. It's okay. Just Swap it.</p>
+      <p class="icon-big"><i class="fa fa-exchange" aria-hidden="true"></i></p>
+
       </div>
     </div>
-
+    <div class="col-sm-6 col-xs-12">
+      <%= image_tag("loft.jpg", class: "img-responsive") %>
+    </div>
   </div>
+
   <!-- /.container -->
 
 </div>
+<div class="section-heading"></div>
+<div id="owl-product">
+
+  <div class="item"><img src="http://placehold.it/350x250" alt="Owl Image"></div>
+  <div class="item"><img src="http://placehold.it/350x250" alt="Owl Image"></div>
+  <div class="item"><img src="http://placehold.it/350x250" alt="Owl Image"></div>
+  <div class="item"><img src="http://placehold.it/350x250" alt="Owl Image"></div>
+  <div class="item"><img src="http://placehold.it/350x250" alt="Owl Image"></div>
+  <div class="item"><img src="http://placehold.it/350x250" alt="Owl Image"></div>
+  <div class="item"><img src="http://placehold.it/350x250" alt="Owl Image"></div>
+  <div class="item"><img src="http://placehold.it/350x250" alt="Owl Image"></div>
+  <div class="item"><img src="http://placehold.it/350x250" alt="Owl Image"></div>
+  <div class="item"><img src="http://placehold.it/350x250" alt="Owl Image"></div>
+  <div class="item"><img src="http://placehold.it/350x250" alt="Owl Image"></div>
+  <div class="item"><img src="http://placehold.it/350x250" alt="Owl Image"></div>
+  <div class="item"><img src="http://placehold.it/350x250" alt="Owl Image"></div>
+  <div class="item"><img src="http://placehold.it/350x250" alt="Owl Image"></div>
+  <div class="item"><img src="http://placehold.it/350x250" alt="Owl Image"></div>
+  <div class="item"><img src="http://placehold.it/350x250" alt="Owl Image"></div>
+  <div class="item"><img src="http://placehold.it/350x250" alt="Owl Image"></div>
+  <div class="item"><img src="http://placehold.it/350x250" alt="Owl Image"></div>
+  <div class="item"><img src="http://placehold.it/350x250" alt="Owl Image"></div>
+  <div class="item"><img src="http://placehold.it/350x250" alt="Owl Image"></div>
+
+
+
+</div>
+
 <!-- /.content-section-a -->
 
 <a  name="contact"></a>
 <div class="banner">
 
   <div class="container-fluid">
+
 
     <div class="row">
       <div class="col-lg-6">
@@ -131,69 +167,23 @@
 
 </div>
 
+
+<%= javascript_include_tag 'application' %>
 <script type="text/javascript">
-//jQuery is required to run this code
-$( document ).ready(function() {
+  $(document).ready(function() {
 
-  scaleVideoContainer();
+  $("#owl-product").owlCarousel({
 
-  initBannerVideoSize('.video-container .poster img');
-  initBannerVideoSize('.video-container .filter');
-  initBannerVideoSize('.video-container video');
+      autoPlay: 3000, //Set AutoPlay to 3 seconds
 
-  $(window).on('resize', function() {
-    scaleVideoContainer();
-    scaleBannerVideoSize('.video-container .poster img');
-    scaleBannerVideoSize('.video-container .filter');
-    scaleBannerVideoSize('.video-container video');
+      items : 4,
+      itemsDesktop : [1199,3],
+      itemsDesktopSmall : [979,3]
+
   });
 
 });
+</script>
 
-function scaleVideoContainer() {
-
-  var height = $(window).height() + 5;
-  var unitHeight = parseInt(height) + 'px';
-  $('.homepage-hero-module').css('height',unitHeight);
-
-}
-
-function initBannerVideoSize(element){
-
-  $(element).each(function(){
-    $(this).data('height', $(this).height());
-    $(this).data('width', $(this).width());
-  });
-
-  scaleBannerVideoSize(element);
-
-}
-
-function scaleBannerVideoSize(element){
-
-  var windowWidth = $(window).width(),
-  windowHeight = $(window).height() + 5,
-  videoWidth,
-  videoHeight;
-
-  console.log(windowHeight);
-
-  $(element).each(function(){
-    var videoAspectRatio = $(this).data('height')/$(this).data('width');
-
-    $(this).width(windowWidth);
-
-    if(windowWidth < 1000){
-      videoHeight = windowHeight;
-      videoWidth = videoHeight / videoAspectRatio;
-      $(this).css({'margin-top' : 0, 'margin-left' : -(videoWidth - windowWidth) / 2 + 'px'});
-
-      $(this).width(videoWidth).height(videoHeight);
-    }
-
-    $('.homepage-hero-module .video-container video').addClass('fadeIn animated');
-
-  });
-}  </script>
 </body>
 </html>
