@@ -1,20 +1,24 @@
 class CartsController < ApplicationController
 	def index
-		@carts = current_user.carts
+		@carts = current_user.current_order.carts
 	end
 
 	def new
 		@cart = Cart.new
-
 	end
 
 	def create
+		order = current_user.current_order 
+		unless order
+			# create
+			order = Order.create(user: current_user, status: "ongoing")
+		end
+
 		item = Item.find(params[:cart][:id])
-		user = current_user
 
-		Cart.create(item: item, user: user)
+		Cart.create(item: item, order: order)
 
-		redirect_to items_path, notice: 'Added item to cart'
+		redirect_to cart_path, notice: 'Added item to cart'
 	end
 
 	def destroy
