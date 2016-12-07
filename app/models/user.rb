@@ -6,6 +6,7 @@ class User < ApplicationRecord
   has_many :items
   has_many :bookings
 
+  has_many :carts
 
   validates :role, inclusion: { in: ["customer", "professional"], message: "%{value} is not valid" }
 

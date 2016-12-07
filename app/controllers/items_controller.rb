@@ -8,6 +8,7 @@ class ItemsController < ApplicationController
 
   def show
     @booking = Booking.new
+    @cart = Cart.new
   end
 
   def new
