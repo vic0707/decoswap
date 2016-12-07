@@ -8,7 +8,7 @@ class User < ApplicationRecord
 
   has_many :carts
 
-  validates :role, inclusion: { in: ["customer", "professional"], message: "%{value} is not valid" }
+  validates :role, inclusion: { in: ["admin", "customer", "professional"], message: "%{value} is not valid" }
 
   def self.find_for_facebook_oauth(auth)
     user_params = auth.to_h.slice(:provider, :uid)

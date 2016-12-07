@@ -11,6 +11,7 @@ gem 'devise'
 gem 'omniauth-facebook'
 gem "algoliasearch-rails"
 gem 'owlcarousel-rails', '~> 1.1', '>= 1.1.3.3'
+gem 'stripe'
 
 gem 'sass-rails'
 gem 'jquery-rails'
@@ -21,11 +22,15 @@ gem 'simple_form'
 gem 'autoprefixer-rails'
 gem 'bootstrap-datepicker-rails'
 
+gem 'remotipart', github: 'mshibuya/remotipart'
+gem 'rails_admin', '>= 1.0.0.rc'
+
 gem 'cloudinary', '1.1.0'
 gem 'carrierwave'
 gem "attachinary", github: "assembler/attachinary"
 gem "jquery-fileupload-rails"
 gem "coffee-rails"
+gem "chartkick"
 
 
 group :development, :test do
