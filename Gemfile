@@ -21,6 +21,9 @@ gem 'simple_form'
 gem 'autoprefixer-rails'
 gem 'bootstrap-datepicker-rails'
 
+gem 'remotipart', github: 'mshibuya/remotipart'
+gem 'rails_admin', '>= 1.0.0.rc'
+
 gem 'cloudinary', '1.1.0'
 gem 'carrierwave'
 gem "attachinary", github: "assembler/attachinary"
