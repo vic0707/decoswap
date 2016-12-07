@@ -1,5 +1,8 @@
 class CartsController < ApplicationController
-	def index
+  protect_from_forgery
+  before_action :authenticate_user!
+
+  def index
 		@carts = current_user.current_order.carts
 	end
 
@@ -8,7 +11,7 @@ class CartsController < ApplicationController
 	end
 
 	def create
-		order = current_user.current_order 
+		order = current_user.current_order
 		unless order
 			# create
 			order = Order.create(user: current_user, status: "ongoing")
