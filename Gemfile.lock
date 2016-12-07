@@ -76,6 +76,7 @@ GEM
       json (>= 1.7)
       mime-types (>= 1.16)
       mimemagic (>= 0.3.0)
+    chartkick (2.2.1)
     cloudinary (1.1.0)
       aws_cf_signer
       rest-client
@@ -263,6 +264,7 @@ DEPENDENCIES
   bootstrap-datepicker-rails
   bootstrap-sass
   carrierwave
+  chartkick
   cloudinary (= 1.1.0)
   coffee-rails
   devise

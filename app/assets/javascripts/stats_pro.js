@@ -1,4 +1,6 @@
-  google.charts.load('current', {'packages':['corechart']});
+if ($(".dashboards.stats").length > 0) {
+  debugger
+ google.charts.load('current', {'packages':['corechart']});
       google.charts.setOnLoadCallback(drawVisualization);
 
 
@@ -10,7 +12,7 @@
          ['2016/06',  13,      112,        59,             126,                68],
          ['2016/07',  15,      116,        58,             80,                 62],
          ['2016/08',  13,      111,        61,             96,                 60],
-         ['2016/09',  513,      69,         62,             102,                125]
+         ['2016/09',  513,      69,        62,            102,                125]
       ]);
 
     var options = {
@@ -24,3 +26,4 @@
     var chart = new google.visualization.ComboChart(document.getElementById('chart_div'));
     chart.draw(data, options);
   }
+}
