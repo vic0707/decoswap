@@ -8,39 +8,96 @@
             <div id="owl-product" class="owl-carousel">
               <% @item.photos.each do |photo| %>
               <div class="item">
-               <%= cl_image_tag photo.path %>
-             </div>
-             <% end %>
-           </div>
-         </div>
-
-         <div class="col-md-6">
-          <div class="product-title"><h1><%= @item.name %></h1></div>
-          <div class="product-desc"><h4><%= @item.category_item %></h4></div>
-          <hr>
-          <div class="product-price"><%= @item.price %> €/month </div>
-          <div class="product-stock"><%= @item.status %></div>
-          <hr>
-        </div>
-        <% if current_user.try(:customer?) %>
-        <div class="btn-group cart">
-              <!-- <button type="button" class="btn btn-success" data-toggle="modal" data-target="#myModal">
-                Add to cart
-              </button> -->
-              <%= simple_form_for @cart do |f| %>
-              <div class="form-inputs">
-                <%= f.input :id, as: :hidden, input_html: {value: @item.id} %>
-              </div>
-              <div class="form-actions">
-                <%= f.submit 'Add to Cart' %>
+                <%= cl_image_tag(photo.path, :class => 'img-responsive product_main_picture') %>
               </div>
               <% end %>
             </div>
+            <div class="row">
+
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="product-title">
+              <h1><%= @item.name %></h1>
+            </div>
+            <div class="product-desc">
+              <h4><%= @item.category_item %></h4>
+            </div>
+            <hr>
+            <div class="product-price">
+              <%= @item.price %>
+               €/month
+            </div>
+            <div class="product-stock">
+              <%= @item.status %>
+            </div>
+            <hr>
+            <% if current_user.try(:professional?) %>
+            <div class="btn-group cart">
+            <!--   <button type="button" class="btn btn-success" data-toggle="modal" data-target="#myModal">Add to cart</button>
+            </div> -->
+            <%= simple_form_for @cart do |f| %>
+             <div class="form-inputs">
+               <%= f.input :id, as: :hidden, input_html: {value: @item.id} %>
+             </div>
+             <div class="form-actions">
+               <%= f.submit 'Add to Cart' %>
+             </div>
+            <% end %>
             <% end %>
             <div class="btn-group wishlist">
               <% if current_user.try(:professional?) %>
               <%= link_to "Edit", edit_dashboard_item_path(@item), class: "btn btn-danger" %>
               <% end %>
+            </div>
+            <div class="container-fluid">
+              <div class="col-md-12 product-info">
+                <ul id="myTab" class="nav nav-tabs nav_tabs">
+                  <li class="active"><a href="#service-one" data-toggle="tab">DESCRIPTION</a></li>
+                  <li><a href="#service-two" data-toggle="tab">PRODUCT INFO</a></li>
+                  <li><a href="#service-three" data-toggle="tab">REVIEWS</a></li>
+                </ul>
+                <div id="myTabContent" class="tab-content">
+                  <div class="tab-pane fade in active" id="service-one">
+                    <section class="container product-info">
+                      <p>
+                        <%= @item.description %>
+                      </p>
+                    </section>
+                  </div>
+                  <div class="tab-pane fade" id="service-two">
+                    <section class="container product-info">
+                      <ul>
+                        <li><strong>Size:</strong><%= @item.size %></li>
+                        <li><strong>Condition:</strong><%= @item.condition %></li>
+                        <li><strong>Color:</strong><%= @item.color %></li>
+                        <li><strong>Materials:</strong><%= @item.materials %></li>
+                        <li><strong>Category:</strong><%= @item.category_item %></li>
+                        <li><strong>Designer:</strong><%= @item.designer %></li>
+                        <li><strong>Design Period:</strong><%= @item.design_period %></li>
+                      </ul>
+                    </section>
+                  </div>
+                  <div class="tab-pane fade" id="service-three">
+                    <% if current_user && current_user.customer? %>
+                    <%= render 'reviews/form', item: @item, review: @review %>
+                    <% end %>
+                    <div id="reviews-product-info">
+                      <% if current_user && current_user.customer? && @item.reviews.blank? %>
+                      <p>
+                        Be the first to leave a review
+                      </p>
+                       for
+                      <%= @item.name %>
+                      <% end %>
+                      <% @item.reviews.last(4).reverse.each do |review| %>
+                      <%= render 'reviews/show', review: review %>
+                      <% end %>
+                    </div>
+                  </div>
+                </div>
+                <hr>
+              </div>
             </div>
           </div>
         </div>
@@ -52,93 +109,41 @@
         <div class="modal-content">
           <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            <h4 class="modal-title" id="myModalLabel">Nice one</h4>
+            <h4 class="modal-title" id="myModalLabel">Make a reservation</h4>
           </div>
           <div class="modal-body">
-
-            <h4> <%= @item.name %> has been added to your cart </h4>
-
+            <%= simple_form_for @booking , url: item_bookings_path(@item) do |f| %>
+            <div class="form-inputs">
+              <%= f.input :end_date, as: :string, input_html: { class: "datepicker"} %>
+            </div>
           </div>
           <div class="modal-footer">
-            <%= link_to "Continue Shopping", items_path, class: "btn btn-succes" %>
-            <%= link_to "Checkout", cart_path, class: "btn btn-default" %>
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <div class="form-actions btn btn-primary center">
+              <%= f.button :submit %>
+            </div>
+            <% end %>
           </div>
         </div>
       </div>
     </div>
     <!-- End of Modal -->
-
-
-    <div class="container-fluid">
-      <div class="col-md-12 product-info">
-        <ul id="myTab" class="nav nav-tabs nav_tabs">
-
-          <li class="active"><a href="#service-one" data-toggle="tab">DESCRIPTION</a></li>
-          <li><a href="#service-two" data-toggle="tab">PRODUCT INFO</a></li>
-          <li><a href="#service-three" data-toggle="tab">REVIEWS</a></li>
-
-        </ul>
-        <div id="myTabContent" class="tab-content">
-          <div class="tab-pane fade in active" id="service-one">
-
-            <section class="container product-info">
-              <p><%= @item.description %></p>
-            </section>
-
-          </div>
-          <div class="tab-pane fade" id="service-two">
-
-            <section class="container product-info">
-              <ul>
-                <li><strong>Size:</strong> <%= @item.size %></li>
-                <li><strong>Condition:</strong> <%= @item.condition %></li>
-                <li><strong>Color:</strong> <%= @item.color %></li>
-                <li><strong>Materials:</strong> <%= @item.materials %></li>
-                <li><strong>Category:</strong> <%= @item.category_item %></li>
-                <li><strong>Designer:</strong> <%= @item.designer %></li>
-                <li><strong>Design Period:</strong> <%= @item.design_period %></li>
-              </ul>
-            </section>
-
-          </div>
-          <div class="tab-pane fade" id="service-three">
-           <%= render 'reviews/form', item: @item, review: @review %>
-
-           <div id="reviews product-info">
-            <% if @item.reviews.blank? %>
-            <p>Be the first to leave a review</p> for <%= @item.name %>
-            <% else %>
-            <% @item.reviews.each do |review| %>
-            <%= render 'reviews/show', review: review %>
-            <% end %>
-            <% end %>
-          </div>
-
-        </div>
-      </div>
-      <hr>
-    </div>
   </div>
 </div>
 </div>
 <!-- end of product page -->
+<script type="text/javascript">
+    $(document).ready(function(){
+    $('.datepicker').datepicker({
+      format: "dd/mm/yyyy",autoclose: true
+    });
 
-
-
-<script>
-$(document).ready(function() {
-
-  $("#owl-product").owlCarousel({
-    autoPlay : false,
-    stopOnHover : true,
-    navigation:true,
-    paginationSpeed : 1000,
-    goToFirstSpeed : 2000,
-    singleItem : true,
-    autoHeight : true,
-    transitionStyle:"fade"
   });
-
-});
 </script>
-
+<script type="text/javascript">
+    $(document).ready(function() {
+    $("#owl-product").owlCarousel({
+      autoPlay : false,stopOnHover : true,navigation:true,paginationSpeed : 1000,goToFirstSpeed : 2000,singleItem : true,autoHeight : true,transitionStyle:"fade"
+    });
+  });
+</script>

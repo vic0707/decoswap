@@ -12,6 +12,7 @@
 //= require owl.carousel
 //= require owl.carousel.min
 //= require scroll_nav
+//= require home_carousel
 //= require_tree .
 
 

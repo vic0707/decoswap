@@ -1,7 +1,7 @@
 class ReviewsController < ApplicationController
  def create
     @item = Item.find(params[:item_id])
-    @review = Review.new(review_params)
+    @review = Review.new(review_params.merge(user: current_user))
     @review.item = @item
     if @review.save
       respond_to do |format|
@@ -19,6 +19,9 @@ class ReviewsController < ApplicationController
   end
 
   def show
+  end
+
+  def lastcomments
   end
 
   private
