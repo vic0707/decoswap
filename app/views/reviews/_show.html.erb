@@ -1,1 +1,13 @@
-<p><%= review.content %></p>
+<div class="card-panel accent-4 z-depth-1">
+  <div class="row valign-wrapper">
+    <div class="col s4 m2">
+      <img src="https://www.bunnyholder.com/200/200/18" alt="" class="circle responsive-img valign">
+    </div>
+    <div class="col s8 m10">
+      <div>Posted by:<%= review.user.first_name %> </div>
+      <span class="black-text"><%= review.content %>, <%= review.created_at.strftime("%d/%m/%y") %> </span>
+    </div>
+  </div>
+</div>
+<!-- <p><%= review.content %></p>
+ -->

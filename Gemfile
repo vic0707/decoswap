@@ -30,6 +30,7 @@ gem 'carrierwave'
 gem "attachinary", github: "assembler/attachinary"
 gem "jquery-fileupload-rails"
 gem "coffee-rails"
+gem 'materialize-sass'
 gem "chartkick"
 gem "letter_opener", group: :development
 

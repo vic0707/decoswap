@@ -19,7 +19,12 @@ item1 = Item.new(
   design_period: "2010",
   materials: "Wood",
   category_item: "Chaires")
-item1.photo_urls = ["http://res.cloudinary.com/dhrqyxgzp/image/upload/v1480509229/rbpmn8ieodqgsbbzvvck.jpg"]
+item1.photo_urls = [
+  "http://res.cloudinary.com/dhrqyxgzp/image/upload/v1480509229/rbpmn8ieodqgsbbzvvck.jpg",
+  "http://res.cloudinary.com/dhrqyxgzp/image/upload/v1480510191/tpraydo6ksmmzaytou1p.jpg",
+  "http://res.cloudinary.com/dhrqyxgzp/image/upload/v1480510365/adkpsozdsdvjnpb6reqn.jpg",
+  "http://res.cloudinary.com/dhrqyxgzp/image/upload/v1480510595/uluu8emclrydcp1s2nra.jpg"
+]
 item2 = Item.new(
   name: "Pixar",
   size: "20*20*150",
