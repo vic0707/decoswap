@@ -3,18 +3,23 @@ class OrdersController < ApplicationController
 		@order = current_user.current_order
 	end
 
-	def update
-		@order = current_user.current_order
+  def update
+    @order = current_user.current_order
 		@order.status = "paid"
 		@order.carts.each do |cart|
 			cart.status = "paid"
-			cart.save
-		end
+      cart.item.update(status: "rent")
+      cart.save
+      Booking.create!(user: current_user, item: cart.item, status: "booked", start_date: Time.now)
+    end
 		if @order.update(order_params)
 			redirect_to profile_path, notice: 'You bought the best item'
 		end
 
 	end
+
+  def finish
+  end
 
 	private
 

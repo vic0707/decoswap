@@ -17,6 +17,8 @@ class CartsController < ApplicationController
 			order = Order.create(user: current_user, status: "ongoing")
 		end
 
+    p params
+
 		item = Item.find(params[:cart][:id])
 
 		Cart.create(item: item, order: order)
