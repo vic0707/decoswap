@@ -286,7 +286,7 @@ body {
   );
   padding: 100px 0;
   color: #f8f8f8;
-  background-image: asset-data-url("chesterfield.jpg") no-repeat center center;
+  background-image: url(asset-path('chesterfield.jpg')) no-repeat center center;
   background-size: cover;
   height: 250px;
 }
