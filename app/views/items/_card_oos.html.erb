@@ -1,30 +1,17 @@
-  <div class="effect-lily font_black">
-   <div class="card photo oos">
-    <div class="flex-hover">
-    <%= image_tag cl_image_path item.photos.first.path if item.photos.first %>
-    </div>
-
-    <div class="overlay">
-      <h2 class="font_gray"><%= item.name %> </h2>
-
-
-    <br>
-    <br>
-
-     <h3 class="text-center font_black no-yes-hover">
-     [ Tell me when it's back ]</h3>
-
-     <h1 class="font_black text-center  out_of_stock">
-     Out of stock</h1>
- </div>
-
-    <div class="card-description">
-
-      <div class="text-center font_black">
-        <p class="font_black"><%= item.description.first(20) %>...</p>
+<ul class="cards">
+  <li class="cards__item">
+    <div class="card">
+      <div class="image-container">
+        <% if item.photos.first %>
+          <%= cl_image_tag item.photos.first.path %>
+        <% end %>
+          <div class="">
+            <h2 class="card__title"><%= item.name %> - Out of Stock</h2>
+          </div>
+          <div class="overlay">
+            <h2 class="card__title"><%= item.price %> €/month</h2>
+          </div>
       </div>
     </div>
-    <p class="text-right font_black margin-bottom"><%= item.price %> €/month</p>
-   </div>
-
-    </div>
+  </li>
+</ul>

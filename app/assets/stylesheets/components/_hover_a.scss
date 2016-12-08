@@ -23,7 +23,7 @@
   position: absolute;
   right : 0px;
   top : 0px;
-  width: 380px;
+  width: 300px;
   height: 100%;
   opacity: 0.3;
   object-fit: cover;
@@ -34,7 +34,7 @@
 opacity: 1;
 }
 
-.effect-lily:hover .out_of_stock{
+.out_of_stock:hover {
   opacity: 0;
 }
 
@@ -44,7 +44,7 @@ border-style: solid;
 border: 1px
 }
 
-.effect-lily:hover .no-yes-hover{
+.no-yes-hover:hover {
   opacity: 1;
 }
 
@@ -58,7 +58,7 @@ border: 1px
   -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
   transition: opacity 0.35s, transform 0.35s;
   -webkit-transform: translate3d(-40px,0, 0);
-  transform: translate3d(-7px,0,0);
+  transform: translate3d(-0px,0,0);
 }
 
 .effect-lily figcaption {
