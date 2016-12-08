@@ -108,30 +108,13 @@
 </div>
 <div class="section-heading"></div>
 <div id="owl-product">
-
-  <div class="item"><img src="http://placehold.it/350x250" alt="Owl Image"></div>
-  <div class="item"><img src="http://placehold.it/350x250" alt="Owl Image"></div>
-  <div class="item"><img src="http://placehold.it/350x250" alt="Owl Image"></div>
-  <div class="item"><img src="http://placehold.it/350x250" alt="Owl Image"></div>
-  <div class="item"><img src="http://placehold.it/350x250" alt="Owl Image"></div>
-  <div class="item"><img src="http://placehold.it/350x250" alt="Owl Image"></div>
-  <div class="item"><img src="http://placehold.it/350x250" alt="Owl Image"></div>
-  <div class="item"><img src="http://placehold.it/350x250" alt="Owl Image"></div>
-  <div class="item"><img src="http://placehold.it/350x250" alt="Owl Image"></div>
-  <div class="item"><img src="http://placehold.it/350x250" alt="Owl Image"></div>
-  <div class="item"><img src="http://placehold.it/350x250" alt="Owl Image"></div>
-  <div class="item"><img src="http://placehold.it/350x250" alt="Owl Image"></div>
-  <div class="item"><img src="http://placehold.it/350x250" alt="Owl Image"></div>
-  <div class="item"><img src="http://placehold.it/350x250" alt="Owl Image"></div>
-  <div class="item"><img src="http://placehold.it/350x250" alt="Owl Image"></div>
-  <div class="item"><img src="http://placehold.it/350x250" alt="Owl Image"></div>
-  <div class="item"><img src="http://placehold.it/350x250" alt="Owl Image"></div>
-  <div class="item"><img src="http://placehold.it/350x250" alt="Owl Image"></div>
-  <div class="item"><img src="http://placehold.it/350x250" alt="Owl Image"></div>
-  <div class="item"><img src="http://placehold.it/350x250" alt="Owl Image"></div>
-
-
-
+  <% Item.last(10).each do |item| %>
+    <div class="item">
+      <%= link_to item_path(item) do %>
+        <%= render "items/card", item: item %>
+      <% end %>
+    </div>
+  <% end %>
 </div>
 
 <!-- /.content-section-a -->
