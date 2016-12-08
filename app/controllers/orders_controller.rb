@@ -1,17 +1,22 @@
 class OrdersController < ApplicationController
+
+	def show
+		@order = Order.where(status: 'paid').find(params[:id])
+	end
+
 	def edit
 		@order = current_user.current_order
 	end
 
 	def update
 		@order = current_user.current_order
-		@order.status = "paid"
+		@order.status = "pending"
 		@order.carts.each do |cart|
-			cart.status = "paid"
+			cart.status = "pending"
 			cart.save
 		end
 		if @order.update(order_params)
-			redirect_to profile_path, notice: 'You bought the best item'
+			redirect_to new_order_payment_path(@order)
 		end
 
 	end

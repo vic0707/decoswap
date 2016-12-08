@@ -6,10 +6,14 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 Item.destroy_all
+Cart.destroy_all
+Order.destroy_all
+
+
 item1 = Item.new(
   name: "C-chair",
   size: "65*40*80",
-  price: 12,
+  price_cents: 1200,
   status: "Free",
   description:
   "Sitting comfortably is important and not just at mealtimes. Our chairs also come in handy for paying the bills, helping with the homework or just talking with the people you love. Our range includes folding and stackable chairs so guests are never short of seats and upholstered ones for super softness where it matters most.",
@@ -23,7 +27,7 @@ item1.photo_urls = ["http://res.cloudinary.com/dhrqyxgzp/image/upload/v148050922
 item2 = Item.new(
   name: "Pixar",
   size: "20*20*150",
-  price: 9,
+  price_cents: 900,
   status: "Free",
   description: "Floor lamps offer an easy-to-add lighting solution for any space, even if you don’t have much room.",
   color: "Black",
@@ -36,7 +40,7 @@ item2.photo_urls = ["http://res.cloudinary.com/dhrqyxgzp/image/upload/v148051019
 item3 = Item.new(
   name: "Gypset",
   size: "65*50*80",
-  price: 18,
+  price_cents: 1800,
   status: "Free",
   description: "Sitting comfortably is important. Sitting with great style is too. We have combined both.",
   color: "Gray",
@@ -49,7 +53,7 @@ item3.photo_urls = ["http://res.cloudinary.com/dhrqyxgzp/image/upload/v148051036
 item4 = Item.new(
   name: "Rising waters",
   size: "120*80*7",
-  price: 16,
+  price_cents: 1600,
   status: "Free",
   description: "While walking in Paris, Minou took a wonderful picture, a picture of calm and peace in one of the busiest city. An artwork",
   color: "Black",
@@ -62,7 +66,7 @@ item4.photo_urls = ["http://res.cloudinary.com/dhrqyxgzp/image/upload/v148051059
 item5 = Item.new(
   name: "Wood puddle",
   size: "60*40*30",
-  price: 8,
+  price_cents: 800,
   status: "Free",
   description: "Pure wood mixed with a pure design. No better representation of the forest spirit",
   color: "Brown",
@@ -75,7 +79,7 @@ item5.photo_urls = ["http://res.cloudinary.com/dhrqyxgzp/image/upload/v148051084
 item6 = Item.new(
   name: "Wall Clock",
   size: "50*50*8",
-  price: 5,
+  price_cents: 500,
   status: "Free",
   description: "Classic wooden clock which gives time. ",
   color: "White",
@@ -88,7 +92,7 @@ item6.photo_urls = ["http://res.cloudinary.com/dhrqyxgzp/image/upload/v148051097
 item7 = Item.new(
   name: "Balance",
   size: "65*50*80",
-  price: 9,
+  price_cents: 900,
   status: "Free",
   description: "Sitting comfortably is important. Feeling balanced and free is also. We have combined both",
   color: "Beige",
@@ -101,7 +105,7 @@ item7.photo_urls = ["http://res.cloudinary.com/dhrqyxgzp/image/upload/v148051108
 item8 = Item.new(
   name: "Telescope Lamp",
   size: "20*20*150",
-  price: 10,
+  price_cents: 1000,
   status: "Free",
   description: "Nights will no longer be scary. They'll be cosy",
   color: "Gray",
@@ -114,7 +118,7 @@ item8.photo_urls = ["http://res.cloudinary.com/dhrqyxgzp/image/upload/v148051128
 item9 = Item.new(
   name: "Focused Nature",
   size: "45*100*5",
-  price: 7,
+  price_cents: 700,
   status: "Free",
   description: "Focus. Focus on the calm and the purity of this picture. Houdihou signs here a marvellous picture.",
   color: "Black",
@@ -127,7 +131,7 @@ item9.photo_urls = ["http://res.cloudinary.com/dhrqyxgzp/image/upload/v148051150
 item10 = Item.new(
   name: "Stable table",
   size: "60*40*30",
-  price: 11,
+  price_cents: 1100,
   status: "Free",
   description: "Tables. Tables are the place we share things. Get I great one.",
   color: "Light Brown",
@@ -140,7 +144,7 @@ item10.photo_urls = ["http://res.cloudinary.com/dhrqyxgzp/image/upload/v14805116
 item11 = Item.new(
   name: "Vase Chair ",
   size: "65*50*80",
-  price: 11,
+  price_cents: 1100,
   status: "Free",
   description: "Sitting comfortably is important. Sitting with great style is too. We have combined both.",
   color: "Light Gray",
@@ -153,7 +157,7 @@ item11.photo_urls = ["http://res.cloudinary.com/dhrqyxgzp/image/upload/v14805117
 item12 = Item.new(
   name: "Tall Hugs",
   size: "50*150*8",
-  price: 19,
+  price_cents: 1900,
   status: "Free",
   description: "Often brutal and wild, savanna is a dangerous place. And when things get dangerous, there's nothing better then love to fight it.",
   color: "Black",
@@ -166,7 +170,7 @@ item12.photo_urls = ["http://res.cloudinary.com/dhrqyxgzp/image/upload/v14805120
 item13 = Item.new(
   name: "The Table.",
   size: "70*50*40",
-  price: 8,
+  price_cents: 800,
   status: "Free",
   description: "A perfect table. Nothing more, nothing less.",
   color: "Light Brown",
@@ -179,7 +183,7 @@ item13.photo_urls = ["http://res.cloudinary.com/dhrqyxgzp/image/upload/v14805121
 item14 = Item.new(
   name: "Dusty shower",
   size: "160*100*6",
-  price: 19,
+  price_cents: 1900,
   status: "Free",
   description: "Stolen picture of an elephant taking a shower. \"One of my greatest\" says S.P the photograph.",
   color: "Black",

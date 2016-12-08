@@ -12,6 +12,7 @@ gem 'omniauth-facebook'
 gem "algoliasearch-rails"
 gem 'owlcarousel-rails', '~> 1.1', '>= 1.1.3.3'
 gem 'stripe'
+gem 'money-rails'
 
 gem 'sass-rails'
 gem 'jquery-rails'
