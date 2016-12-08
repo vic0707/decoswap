@@ -1,10 +1,26 @@
 .card {
-  height: 300px;
+  height: 400px;
   text-shadow: 0 1px 3px rgba(0,0,0,0.2);
   background-size: cover !important;
   color: white;
   position: relative;
   margin-bottom: 20px;
+  border-style: solid;
+  border-width: 0.01em;
+  border-right-color: #EFEFEF;
+  border-left-color: #DFDFDF;
+  border-top-color: #EFEFEF;
+  border-bottom-color: #DFDFDF;
+
+}
+.card:hover {
+  border-style: solid;
+  border-width: 0.01em;
+  border-right-color: #BFBFBF;
+  border-left-color: #AFAFAF;
+  border-top-color: #BFBFBF;
+  border-bottom-color: #AFAFAF;
+
 }
 .card-user {
   position: absolute;

@@ -1,11 +1,19 @@
 
+.sticky-site {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
 
+.sticky-content {
+  flex: 1;
+}
 /* CUSTOMIZE THE CAROUSEL
 -------------------------------------------------- */
 
 /* Carousel base class */
 .carousel {
-  height: 600px;
+  height: 400px;
   margin-bottom: 60px;
 }
 /* Since positioning the image, we need to help out the caption */
@@ -19,7 +27,7 @@
 
 /* Declare heights because of positioning of img element */
 .carousel .item {
-  height: 600px;
+  height: 400px;
 
 }
 .carousel-inner > .item > img {
@@ -35,20 +43,19 @@
           OwlCarousel
 *********************************************/
 #owl-product .item img{
-    display: block;
-    width: 100%;
-    height: auto;
+    width: auto;
+    height: 300px;
 }
 #owl-product .owl-item div{
-  padding:5px;
+  padding:0px;
 }
 #owl-product .owl-item img{
-  display: block;
-  width: 100%;
-  height: auto;
+  width: auto;
+    height: 300px;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
+  margin: auto;
 }
 //----------------------------------------
 // MARKETING CONTENT
@@ -251,9 +258,20 @@
     border-top: 1px solid #e7e7e7;
     border-bottom: 1px solid #e7e7e7;
 }
+.content-section-a i{
+  color: black;
+}
+.content-section-b i{
+  color: black;
+}
 
 .section-heading {
     margin-bottom: 30px;
+    color: black;
+}
+
+.lead{
+  color: #2F4F4F;
 }
 
 .section-heading-spacer {
