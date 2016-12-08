@@ -2,10 +2,6 @@ class PaymentsController < ApplicationController
 
 	before_action :set_order
 
-	def show
-		raise
-		@order = Order.find(params[:id])
-	end
 
 	def new
 	end
