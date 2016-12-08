@@ -13,7 +13,7 @@
 
 /* Carousel base class */
 .carousel {
-  height: 600px;
+  height: 400px;
   margin-bottom: 60px;
 }
 /* Since positioning the image, we need to help out the caption */
@@ -27,7 +27,7 @@
 
 /* Declare heights because of positioning of img element */
 .carousel .item {
-  height: 600px;
+  height: 400px;
 
 }
 .carousel-inner > .item > img {
@@ -43,20 +43,19 @@
           OwlCarousel
 *********************************************/
 #owl-product .item img{
-    display: block;
-    width: 100%;
-    height: auto;
+    width: auto;
+    height: 300px;
 }
 #owl-product .owl-item div{
-  padding:5px;
+  padding:0px;
 }
 #owl-product .owl-item img{
-  display: block;
-  width: 100%;
-  height: auto;
+  width: auto;
+    height: 300px;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
+  margin: auto;
 }
 //----------------------------------------
 // MARKETING CONTENT

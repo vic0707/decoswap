@@ -112,7 +112,7 @@
 <div class="section-heading"></div>
 <div id="owl-product">
   <% Item.last(10).each do |item| %>
-    <div class="item">
+    <div class="item text-center">
       <%= link_to item_path(item) do %>
         <%= render "items/card", item: item %>
       <% end %>
