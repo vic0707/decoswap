@@ -18,8 +18,7 @@ class PaymentsController < ApplicationController
     		description:  "Payment for Decoswap Order #{@order.id}",
     		currency:     @order.amount.currency
     		)
-		current_user.update(stripe_id: customer.id)
-		@order.update(payment: charge.to_json, status: 'paid')
+		@order.update(payment: charge.to_json, status: 'paid', stripe_id: customer.id, email: params[:stripeEmail], billing_name: params[:stripeBillingName], billing_country: params[:stripeBillingAddressCountry], billing_country_code: params[:stripeBillingAddressCountryCode], billing_zip: params[:stripeBillingAddressZip], billing_line: params[:stripeBillingAddressLine1], billing_city: params[:stripeBillingAddressCity], billing_state: params[:stripeBillingAddressState], shipping_name: params[:stripeShippingName], shipping_country: params[:stripeShippingAddressCountry], shipping_country_code: params[:stripeShippingAddressCountryCode], shipping_zip: params[:stripeShippingAddressZip], shipping_line: params[:stripeShippingAddressLine1], shipping_city: params[:stripeShippingAddressCity], shipping_state: params[:stripeShippingAddressState])
 		redirect_to order_path(@order)
 
 	rescue Stripe::CardError => e
