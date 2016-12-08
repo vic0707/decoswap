@@ -6,11 +6,20 @@
   position: relative;
   margin-bottom: 20px;
   border-style: solid;
-  border-width: 1px;
-  border-right-color: $black;
-  border-left-color: $gray;
-  border-top-color: $light-gray;
-  border-bottom-color: $black;
+  border-width: 0.01em;
+  border-right-color: #EFEFEF;
+  border-left-color: #DFDFDF;
+  border-top-color: #EFEFEF;
+  border-bottom-color: #DFDFDF;
+
+}
+.card:hover {
+  border-style: solid;
+  border-width: 0.01em;
+  border-right-color: #BFBFBF;
+  border-left-color: #AFAFAF;
+  border-top-color: #BFBFBF;
+  border-bottom-color: #AFAFAF;
 
 }
 .card-user {
