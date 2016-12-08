@@ -1,4 +1,4 @@
-<h1 class="text-center">All the items</h1>
+<h1 class="text-center margin-bottom-50px">All the items</h1>
 <div class="container police">
  <div class="row">
   <%= simple_form_for :item, url:items_path, html: {method: :get, class: "form-inline text-center"}, data: {autosubmit: true} do |f| %>
@@ -11,7 +11,7 @@
 </div>
 </div>
 
-<div class="container police">
+<div class="container police margin-bottom-50px">
  <div class="row">
   <% @items.each do |item| %>
   <% if item.status == "Free" || "Rent" || "rent" %>
