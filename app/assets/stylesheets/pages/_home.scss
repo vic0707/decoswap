@@ -1,5 +1,13 @@
 
+.sticky-site {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
 
+.sticky-content {
+  flex: 1;
+}
 /* CUSTOMIZE THE CAROUSEL
 -------------------------------------------------- */
 
