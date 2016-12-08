@@ -1,5 +1,13 @@
 
+.sticky-site {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
 
+.sticky-content {
+  flex: 1;
+}
 /* CUSTOMIZE THE CAROUSEL
 -------------------------------------------------- */
 
@@ -251,9 +259,20 @@
     border-top: 1px solid #e7e7e7;
     border-bottom: 1px solid #e7e7e7;
 }
+.content-section-a i{
+  color: black;
+}
+.content-section-b i{
+  color: black;
+}
 
 .section-heading {
     margin-bottom: 30px;
+    color: black;
+}
+
+.lead{
+  color: #2F4F4F;
 }
 
 .section-heading-spacer {
