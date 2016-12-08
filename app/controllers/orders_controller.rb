@@ -1,19 +1,24 @@
 class OrdersController < ApplicationController
+
+	def show
+		@order = Order.where(status: 'paid').find(params[:id])
+	end
+
 	def edit
 		@order = current_user.current_order
 	end
 
-  def update
-    @order = current_user.current_order
-		@order.status = "paid"
+	def update
+		@order = current_user.current_order
+		@order.status = "pending"
 		@order.carts.each do |cart|
-			cart.status = "paid"
-      cart.item.update(status: "rent")
-      cart.save
-      Booking.create!(user: current_user, item: cart.item, status: "booked", start_date: Time.now)
-    end
+			cart.status = "pending"
+			cart.item.update(status: "rent")
+			cart.save
+			Booking.create!(user: current_user, item: cart.item, status: "booked", start_date: Time.now)
+		end
 		if @order.update(order_params)
-			redirect_to profile_path, notice: 'You bought the best item'
+			redirect_to new_order_payment_path(@order)
 		end
 
 	end
