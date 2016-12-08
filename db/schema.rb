@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161208150308) do
+ActiveRecord::Schema.define(version: 20161208171600) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -73,14 +73,28 @@ ActiveRecord::Schema.define(version: 20161208150308) do
 
   create_table "orders", force: :cascade do |t|
     t.datetime "order_date"
-    t.string   "address"
-    t.string   "card_details"
     t.integer  "user_id"
-    t.datetime "created_at",               null: false
-    t.datetime "updated_at",               null: false
+    t.datetime "created_at",                        null: false
+    t.datetime "updated_at",                        null: false
     t.string   "status"
-    t.integer  "amount_cents", default: 0, null: false
+    t.integer  "amount_cents",          default: 0, null: false
     t.json     "payment"
+    t.string   "email"
+    t.string   "stripe_id"
+    t.string   "billing_name"
+    t.string   "billing_country"
+    t.string   "billing_country_code"
+    t.string   "billing_zip"
+    t.string   "billing_line"
+    t.string   "billing_city"
+    t.string   "billing_state"
+    t.string   "shipping_name"
+    t.string   "shipping_country"
+    t.string   "shipping_country_code"
+    t.string   "shipping_zip"
+    t.string   "shipping_line"
+    t.string   "shipping_city"
+    t.string   "shipping_state"
     t.index ["user_id"], name: "index_orders_on_user_id", using: :btree
   end
 
@@ -116,7 +130,6 @@ ActiveRecord::Schema.define(version: 20161208150308) do
     t.string   "last_name"
     t.string   "token"
     t.datetime "token_expiry"
-    t.string   "stripe_id"
     t.index ["email"], name: "index_users_on_email", unique: true, using: :btree
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   end
