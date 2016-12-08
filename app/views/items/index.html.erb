@@ -14,12 +14,12 @@
 <div class="container police">
  <div class="row">
   <% @items.each do |item| %>
-  <% if item.status == "Free" || "rent" %>
-  <div class="col-xs-12 col-sm-6 col-md-4">
+  <% if item.status == "Free" || "Rent" || "rent" %>
+    <div class="col-xs-12 col-sm-6 col-md-4">
     <%= link_to item_path(item), class:"no-text-decoration" do %>
     <% if item.status == "Free" %>
       <%= render "card", item: item %>
-    <% elsif item.status == "rent" %>
+    <% elsif item.status == "Rent" || "rent" %>
       <%= render "card_oos", item: item %>
     <% end %>
     <% end %>
