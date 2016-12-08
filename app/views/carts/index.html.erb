@@ -21,9 +21,7 @@
 					<div class="col-xs-3"><h3>Delete</h3></div>
 
 				</div>
-				<% sum = 0 %>
 				<% @carts.each do |cart| %>
-				<% sum = sum + cart.item.price.to_i %>
 				<div class="row text-center shopping-cart-margin shopping-cart-padding shopping-cart-border">
 					<div class="col-xs-3">
 						<div class="shopping-cart-image shopping-cart-center flex-center">
@@ -36,7 +34,7 @@
 						</div>
 					</div>
 					<div class="col-xs-3">
-						<div class="flex-center"><h4><%= cart.item.price %>€</h4></div>
+						<div class="flex-center"><h4><%= humanized_money(cart.item.price) %>€</h4></div>
 					</div>
 					<div class="col-xs-3">
 						<div class="flex-center">
@@ -53,8 +51,8 @@
 			<div class="background">
 				<h3>Order Sumary</h3>
 				<p>Free Shipping</p>
-				<p>Total price <%= sum %>€</p>
-				<%= link_to "Checkout", edit_order_path, class:"btn btn-primary"%>
+				<p>Total price <%= @order.total_amount %>€</p>
+				<%= link_to "Checkout", edit_order_path(@order), class:"btn btn-primary"%>
 				<%#= link_to "Empty Cart", cart_path , class: "btn btn-danger", method: :delete %>
 			</div>
 		</div>

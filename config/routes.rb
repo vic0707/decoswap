@@ -10,7 +10,9 @@ Rails.application.routes.draw do
     end
   end
 
-  resource :order, only: [:edit, :update]
+  resources :orders, only: [:edit, :update, :show] do
+    resources :payments, only: [:new, :create]
+  end
 
   resource :profile, only: [:show, :edit, :update] do
   	resources :bookings, only: [:edit, :update, :destroy]
@@ -20,7 +22,7 @@ Rails.application.routes.draw do
     get '/manager_items', to: "dashboards#manager_items"
     get '/stats', to: "dashboards#stats"
     get '/account_settings', to: "dashboards#account_settings"
-  	resources :items, only: [:edit, :update]
+    resources :items, only: [:edit, :update]
   end
 
   mount Attachinary::Engine => "/attachinary"

@@ -1,22 +1,13 @@
-/* -------------------------------------
- * CSS code specific to home page
- * (margin/padding adjustments)
- * ------------------------------------- */
 
-/*----------------------ADD BY MINH--------------------------
-*/
-
-/* GLOBAL STYLES
--------------------------------------------------- */
-/* Padding below the footer and lighter body text */
-
-body {
-  padding-bottom: 40px;
-  color: #5a5a5a;
+.sticky-site {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
 }
 
-
-
+.sticky-content {
+  flex: 1;
+}
 /* CUSTOMIZE THE CAROUSEL
 -------------------------------------------------- */
 
@@ -205,7 +196,7 @@ body {
 
 
 .video-container .title-container {
-  z-index: 1000;
+  z-index: 0;
   position: absolute;
   top: 35%;
   width: 100%;
@@ -239,7 +230,7 @@ body {
   background:transparent;
 }
 .dropdown-menu{
-  z-index: 1001;
+  z-index: 999;
 }
 
 //----------------------------------------
@@ -268,9 +259,20 @@ body {
     border-top: 1px solid #e7e7e7;
     border-bottom: 1px solid #e7e7e7;
 }
+.content-section-a i{
+  color: black;
+}
+.content-section-b i{
+  color: black;
+}
 
 .section-heading {
     margin-bottom: 30px;
+    color: black;
+}
+
+.lead{
+  color: #2F4F4F;
 }
 
 .section-heading-spacer {
@@ -286,7 +288,7 @@ body {
   );
   padding: 100px 0;
   color: #f8f8f8;
-  background: url(chesterfield.jpg) no-repeat center center;
+  background: url(asset-path('chesterfield.jpg')) no-repeat center center;
   background-size: cover;
   height: 250px;
 }
@@ -333,7 +335,7 @@ body {
 
 footer {
     padding: 50px 0;
-    background-color: #f8f8f8;
+    background-color: black;
 }
 
 p.copyright {
