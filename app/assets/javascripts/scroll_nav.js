@@ -5,7 +5,7 @@ $(document).ready(function() {
   if (startchange.length) {
     $(document).scroll(function() {
       scroll_start = $(this).scrollTop();
-      if (scroll_start > offset.top) {
+      if (scroll_start > (offset.top - 100)) {
         $('.navbar-wagon').css('animation-name', 'fadeIn' );
         $('.navbar-wagon').css('-webkit-animation-name', 'fadeIn' );
         $('.navbar-wagon').css('animation-duration', '1.4s' );
