@@ -26,6 +26,7 @@ gem 'carrierwave'
 gem "attachinary", github: "assembler/attachinary"
 gem "jquery-fileupload-rails"
 gem "coffee-rails"
+gem 'materialize-sass'
 
 
 group :development, :test do
