@@ -22,6 +22,12 @@ class Item < ApplicationRecord
       case field.to_sym
       when :category_item
         scope.where(category_item: value)
+      when :price
+        scope.where(price: value)
+      when :materials
+        scope.where(materials: value)
+      when :color
+        scope.where(color: value)
       when :query
         scope = scope.algolia_search(params[:query])
         scope = Item.where(id: scope.map(&:id))

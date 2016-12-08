@@ -41,6 +41,16 @@ ActiveRecord::Schema.define(version: 20161206143410) do
     t.index ["user_id"], name: "index_bookings_on_user_id", using: :btree
   end
 
+  create_table "carts", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer  "item_id"
+    t.integer  "order_id"
+    t.string   "status"
+    t.index ["item_id"], name: "index_carts_on_item_id", using: :btree
+    t.index ["order_id"], name: "index_carts_on_order_id", using: :btree
+  end
+
   create_table "items", force: :cascade do |t|
     t.string   "name"
     t.string   "size"
@@ -58,6 +68,17 @@ ActiveRecord::Schema.define(version: 20161206143410) do
     t.string   "materials"
     t.string   "category_item"
     t.index ["user_id"], name: "index_items_on_user_id", using: :btree
+  end
+
+  create_table "orders", force: :cascade do |t|
+    t.datetime "order_date"
+    t.string   "address"
+    t.string   "card_details"
+    t.integer  "user_id"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+    t.string   "status"
+    t.index ["user_id"], name: "index_orders_on_user_id", using: :btree
   end
 
   create_table "reviews", force: :cascade do |t|
@@ -98,7 +119,9 @@ ActiveRecord::Schema.define(version: 20161206143410) do
 
   add_foreign_key "bookings", "items"
   add_foreign_key "bookings", "users"
+  add_foreign_key "carts", "orders"
   add_foreign_key "items", "users"
+  add_foreign_key "orders", "users"
   add_foreign_key "reviews", "items"
   add_foreign_key "reviews", "users"
 end

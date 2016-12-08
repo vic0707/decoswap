@@ -18,10 +18,11 @@ class BookingsController < ApplicationController
 
 		@booking.start_date = Time.now
 		@booking.end_date = Date.strptime(booking_params[:end_date], "%d/%m/%Y")
-		
+
 
 		if @booking.save
 			@item.save
+      UserMailer.creation_confirmation(@item).deliver_now
       redirect_to profile_path
 		else
 			render :new

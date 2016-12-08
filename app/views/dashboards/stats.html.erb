@@ -1,0 +1,23 @@
+ <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-3 col-md-2 sidebar">
+          <ul class="nav nav-sidebar">
+            <li> <%= link_to 'Dashboard', dashboard_path %>  </li>
+            <li> <%= link_to 'Manage Items', manager_items_dashboard_path %>  </li>
+            <li class="active"> <%= link_to 'Stats', stats_dashboard_path %>  </li>
+            <li> <%= link_to 'Account Settings', account_settings_dashboard_path %>  </li>
+            <li> <br> </li>
+            <li> <%= link_to 'Add New item', new_item_path %> </li>
+          </ul>
+        </div>
+        <div id="relative_div">
+          <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+            <h1 class="page-header">My statistics</h1>
+
+            <div id="chart_div" style="width: 900px; height: 500px;"></div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

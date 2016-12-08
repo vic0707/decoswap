@@ -47,6 +47,26 @@ body {
   left: 0;
   min-width: 100%;
   }
+
+/*********************************************
+          OwlCarousel
+*********************************************/
+#owl-product .item img{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+#owl-product .owl-item div{
+  padding:5px;
+}
+#owl-product .owl-item img{
+  display: block;
+  width: 100%;
+  height: auto;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
 //----------------------------------------
 // MARKETING CONTENT
 //----------------------------------------
@@ -217,4 +237,116 @@ body {
 .stylish-input-group button{
   border:0;
   background:transparent;
+}
+.dropdown-menu{
+  z-index: 1001;
+}
+
+//----------------------------------------
+// BANNERS
+//----------------------------------------
+
+.container-banner{
+  max-width: 1140px;
+}
+
+
+.network-name {
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 2px;
+}
+
+.content-section-a {
+    // padding: 50px 0;
+    background-color: white;
+}
+
+.content-section-b {
+    // padding: 50px 0;
+    border-top: 1px solid #e7e7e7;
+    border-bottom: 1px solid #e7e7e7;
+}
+
+.section-heading {
+    margin-bottom: 30px;
+}
+
+.section-heading-spacer {
+    float: left;
+    width: 200px;
+    border-top: 3px solid #e7e7e7;
+}
+
+.banner {
+  background-image: linear-gradient(
+    linear, left top, left bottom, from(rgba(50,50,50,0.8)),
+    to(rgba(80,80,80,0.2)), color-stop(.5,#333333)
+  );
+  padding: 100px 0;
+  color: #f8f8f8;
+  background: url(chesterfield.jpg) no-repeat center center;
+  background-size: cover;
+  height: 250px;
+}
+
+.banner h2 {
+    margin: 0;
+    text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
+    font-size: 3em;
+}
+
+.banner ul {
+    margin-bottom: 0;
+}
+
+.banner-social-buttons {
+    float: right;
+    margin-top: 0;
+}
+
+@media(max-width:1199px) {
+    ul.banner-social-buttons {
+        float: left;
+        margin-top: 15px;
+    }
+}
+
+@media(max-width:767px) {
+    .banner h2 {
+        margin: 0;
+        text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
+        font-size: 3em;
+    }
+
+    ul.banner-social-buttons > li {
+        display: block;
+        margin-bottom: 20px;
+        padding: 0;
+    }
+
+    ul.banner-social-buttons > li:last-child {
+        margin-bottom: 0;
+    }
+}
+
+footer {
+    padding: 50px 0;
+    background-color: #f8f8f8;
+}
+
+p.copyright {
+    margin: 15px 0 0;
+}
+
+.network-name {
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 2px;
+}
+
+.icon-big{
+  font-size: 38px;
 }

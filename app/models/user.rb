@@ -7,7 +7,19 @@ class User < ApplicationRecord
   has_many :bookings
   has_many :reviews
 
-  validates :role, inclusion: { in: ["customer", "professional"], message: "%{value} is not valid" }
+  has_many :orders
+
+  has_many :carts, through: :orders
+
+  validates :role, inclusion: { in: ["admin", "customer", "professional"], message: "%{value} is not valid" }
+
+
+  after_create :send_welcome_email
+
+  def current_order
+    orders.find_by(status: "ongoing")
+  end
+
 
   def self.find_for_facebook_oauth(auth)
     user_params = auth.to_h.slice(:provider, :uid)
@@ -41,5 +53,10 @@ class User < ApplicationRecord
     role == "customer"
   end
 
+  private
+
+  def send_welcome_email
+    UserMailer.welcome(self).deliver_now
+  end
 
 end

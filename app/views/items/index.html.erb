@@ -1,17 +1,15 @@
 <h1 class="text-center">All the items</h1>
-
 <div class="container police">
  <div class="row">
-  <%= simple_form_for :item, url:items_path, html: {method: :get}, data: {autosubmit: true} do |f| %>
-  <%= f.input :category_item, collection: category_collection, as: :select, label: "Category", include_blank: "All items", input_html: {name: :category_item} %>
+  <%= simple_form_for :item, url:items_path, html: {method: :get, class: "form-inline text-center"}, data: {autosubmit: true} do |f| %>
+  <%= f.input :category_item, collection: category_collection, as: :select, label: "Category ", include_blank: "All items", input_html: {name: :category_item}, selected: params[:category_item] %>
   <%= f.hidden_field :name, value: params["query"], name: :query %>
-
+  <%= f.input :price, collection: price_collection, as: :select, label: "Price ", include_blank: "All prices", input_html: {name: :price}, selected: params[:price] %>
+  <%= f.input :materials, collection: materials_collection, as: :select, label: "Materials ", include_blank: "All materials", input_html: {name: :materials}, selected: params[:materials] %>
+  <%= f.input :color, collection: colors_collection, as: :select, label: "Color ", include_blank: "All colors", input_html: {name: :color}, selected: params[:color] %>
   <% end %>
-
 </div>
 </div>
-
-
 
 <div class="container police">
  <div class="row">
@@ -20,9 +18,9 @@
   <div class="col-xs-12 col-sm-6 col-md-4">
     <%= link_to item_path(item), class:"no-text-decoration" do %>
     <% if item.status == "Free" %>
-    <%= render "card", item: item %>
+      <%= render "card", item: item %>
     <% elsif item.status == "Rent" %>
-    <%= render "card_oos", item: item %>
+      <%= render "card_oos", item: item %>
     <% end %>
     <% end %>
   </div>

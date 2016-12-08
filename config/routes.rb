@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   devise_for :users, controllers: { omniauth_callbacks: 'users/omniauth_callbacks' }
 
   resources :items, only: [:index, :show, :new, :create] do
@@ -9,15 +10,26 @@ Rails.application.routes.draw do
     end
   end
 
+  resource :order, only: [:edit, :update]
+
   resource :profile, only: [:show, :edit, :update] do
   	resources :bookings, only: [:edit, :update, :destroy]
   end
 
   resource :dashboard, only: [:show] do
+    get '/manager_items', to: "dashboards#manager_items"
+    get '/stats', to: "dashboards#stats"
+    get '/account_settings', to: "dashboards#account_settings"
   	resources :items, only: [:edit, :update]
   end
 
   mount Attachinary::Engine => "/attachinary"
 
   root to: 'pages#home'
+
+  get 'cart', to: 'carts#index'
+
+  delete 'cart', to: 'carts#delete_all' 
+  resources :carts, only: [:new, :create, :destroy]
+
 end
