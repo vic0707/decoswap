@@ -53,6 +53,7 @@
 				<p>Free Shipping</p>
 				<p>Total price <%= @order.total_amount %>€</p>
 				<%= link_to "Checkout", edit_order_path(@order), class:"btn btn-primary"%>
+
 				<%#= link_to "Empty Cart", cart_path , class: "btn btn-danger", method: :delete %>
 			</div>
 		</div>

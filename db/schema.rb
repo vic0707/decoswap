@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161208171600) do
+ActiveRecord::Schema.define(version: 20161209125404) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -81,20 +81,22 @@ ActiveRecord::Schema.define(version: 20161208171600) do
     t.json     "payment"
     t.string   "email"
     t.string   "stripe_id"
-    t.string   "billing_name"
     t.string   "billing_country"
     t.string   "billing_country_code"
     t.string   "billing_zip"
     t.string   "billing_line"
     t.string   "billing_city"
     t.string   "billing_state"
-    t.string   "shipping_name"
     t.string   "shipping_country"
     t.string   "shipping_country_code"
     t.string   "shipping_zip"
     t.string   "shipping_line"
     t.string   "shipping_city"
     t.string   "shipping_state"
+    t.string   "billing_first_name"
+    t.string   "billing_last_name"
+    t.string   "shipping_first_name"
+    t.string   "shipping_last_name"
     t.index ["user_id"], name: "index_orders_on_user_id", using: :btree
   end
 
