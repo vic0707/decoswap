@@ -152,6 +152,34 @@
   max-height: 155px;
 }
 
-.card-panel {
+/* Box styles */
+.myBox {
+border: none;
+padding-left: 20px;
+padding-right: 100px;
+font: 14px/26 px sans-serif;
+width: 600px;
+height: 300px;
+overflow-y: auto;
+overflow-x: hidden;
+}
 
+/* Scrollbar styles */
+::-webkit-scrollbar {
+width: 12px;
+height: 12px;
+}
+
+::-webkit-scrollbar-track {
+border: 1px solid white;
+border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+background: grey;
+border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+background: #88ba1c;
 }
