@@ -1,4 +1,3 @@
-
 /*********************************************
             Theme Elements
 *********************************************/
@@ -53,16 +52,16 @@
 *********************************************/
 #owl-product .item img{
     display: block;
-    width: auto;
-    height: 300px;
+    width: 100%;
+    height: auto;
 }
 #owl-product .owl-item div{
-  padding-right :5px;
+  padding:5px;
 }
 #owl-product .owl-item img{
   display: block;
-  width: auto;
-  height: 300px;
+  width: 100%;
+  height: auto;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
