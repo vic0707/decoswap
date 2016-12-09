@@ -1,11 +1,9 @@
-<div class="container">
+<div class="container c-margin-b-15">
 	<div class="row">
 		<div class="col-xs-8 col-xs-offset-1 title">
 			<h1>Process Order</h1>
 		</div>
-		<div class="col-xs-2 shopping-cart-continue-shopping">
-			<%= link_to "Back to Cart", cart_path, class: "btn btn-default" %>
-		</div>
+
 	</div>
 	<div class="row">
 		<div class="col-xs-12 col-md-7 c-padding-20">
@@ -75,7 +73,18 @@
 						</div>
 					</div>
 					<div class="row">
-						Pay
+						<div class="col-xs-6 col-xs-offset-6">
+							<%= form_tag order_payments_path(@order) do %>
+
+							<script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+							data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+							data-name="Decoswap"
+							data-image="images/logo.png"
+							data-amount="<%= (@order.total_amount * 100) %>"
+							data-currency="<%= @order.amount.currency %>">
+							</script>
+							<% end %>
+						</div>
 					</div>
 				</div>
 			</div>
