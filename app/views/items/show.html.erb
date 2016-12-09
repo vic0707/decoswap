@@ -5,15 +5,12 @@
       <div class="container">
         <div class="row">
           <div class="col-md-6">
-            <div id="owl-product" class="owl-carousel">
+            <div id="owl-demo" class="owl-carousel owl-theme">
               <% @item.photos.each do |photo| %>
-              <div class="item">
-                <%= cl_image_tag(photo.path, :class => 'img-responsive product_main_picture') %>
-              </div>
+                <div class="item">
+                  <%= cl_image_tag(photo.path, :class => 'img-responsive product_main_picture') %>
+                </div>
               <% end %>
-            </div>
-            <div class="row">
-
             </div>
           </div>
           <div class="col-md-6">
@@ -135,6 +132,14 @@
   </div>
 </div>
 </div>
+
+<style>
+#owl-demo .item img{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+</style>
 <!-- end of product page -->
 <script type="text/javascript">
     $(document).ready(function(){
@@ -144,9 +149,23 @@
   });
 </script>
 <script type="text/javascript">
-    $(document).ready(function() {
-    $("#owl-product").owlCarousel({
-      autoPlay : false,stopOnHover : true,navigation:true,paginationSpeed : 1000,goToFirstSpeed : 2000,singleItem : true,autoHeight : true,transitionStyle:"fade"
-    });
+$(document).ready(function() {
+
+  $("#owl-demo").owlCarousel({
+
+      navigation : true, // Show next and prev buttons
+      slideSpeed : 300,
+      paginationSpeed : 400,
+      singleItem:true
+
+      // "singleItem:true" is a shortcut for:
+      // items : 1,
+      // itemsDesktop : false,
+      // itemsDesktopSmall : false,
+      // itemsTablet: false,
+      // itemsMobile : false
+
   });
+
+});
 </script>
