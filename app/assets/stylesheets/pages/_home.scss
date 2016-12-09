@@ -229,8 +229,124 @@
   background:transparent;
 }
 .dropdown-menu{
-  z-index: 999;
+  z-index: 1;
 }
+
+//----------------------------------------
+// PRICING
+//----------------------------------------
+.pricing-box {
+    position: relative;
+    border: 1px solid rgba(0,0,0,0.075);
+    border-radius: 3px;
+    text-align: center;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+    background-color: #F5F5F5;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.pricing-title {
+  padding: 15px 0;
+  background-color: #F9F9F9;
+  border-radius: 3px 3px 0 0;
+  text-shadow: 1px 1px 1px #FFF;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+.pricing-title h3 {
+  margin: 0;
+  font-size: 20px;
+  letter-spacing: 1px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #555;
+}
+
+.pricing-title span {
+  display: block;
+  color: #999;
+  font-weight: 300;
+  font-size: 14px;
+  margin-top: 3px;
+  text-transform: uppercase;
+}
+
+
+.pricing-price {
+  position: relative;
+  padding: 25px 0;
+  color: #469AE0;
+  font-weight: 300;
+  font-size: 64px;
+  line-height: 1;
+}
+
+.pricing-price:after {
+  content: '';
+  position: absolute;
+  width: 100px;
+  border-top: 1px solid rgba(0,0,0,0.1);
+  top: auto;
+  bottom: 0;
+  left: 50%;
+  margin-left: -50px;
+}
+
+.pricing-price span {
+  display: inline-block;
+  vertical-align: top;
+  margin: 7px 3px 0 0;
+  font-size: 28px;
+  font-weight: normal;
+}
+
+.pricing-price span.price-tenure {
+  vertical-align: baseline;
+  font-size: 16px;
+  font-weight: normal;
+  color: #999;
+  margin: 0 0 0 3px;
+}
+
+
+.pricing-features { border-bottom: 1px solid rgba(0,0,0,0.075); }
+
+.pricing-features ul {
+  margin: 0;
+  padding: 15px 0;
+  list-style: none;
+}
+
+.pricing-features li {
+  padding: 6px 0;
+  font-size: 14px;
+}
+.pricing-features i {
+  color: #E4AF3C;
+}
+
+.pricing-box.best-price {
+  background-color: #FFF;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+  z-index: 0;
+}
+
+.pricing-box.best-price { margin: 15px -26px 0 -26px; }
+
+.pricing-box.best-price .pricing-title {
+  background-color: #FFF;
+  padding: 20px 0;
+}
+
+.pricing-box.best-price .pricing-title h3 { font-size: 22px; }
+
+.pricing-box.best-price .pricing-price {
+  color: #469AE0;
+  font-size: 72px;
+}
+
+
 
 //----------------------------------------
 // BANNERS
@@ -333,8 +449,8 @@
 }
 
 footer {
-    padding: 50px 0;
-    background-color: black;
+    padding: 30px 0px 20px 0px;
+    background-color: #282828;
 }
 
 p.copyright {
