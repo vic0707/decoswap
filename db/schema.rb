@@ -10,7 +10,8 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161207162517) do
+
+ActiveRecord::Schema.define(version: 20161208171600) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -37,6 +38,7 @@ ActiveRecord::Schema.define(version: 20161207162517) do
     t.integer  "item_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string   "status"
     t.index ["item_id"], name: "index_bookings_on_item_id", using: :btree
     t.index ["user_id"], name: "index_bookings_on_user_id", using: :btree
   end
@@ -54,11 +56,10 @@ ActiveRecord::Schema.define(version: 20161207162517) do
   create_table "items", force: :cascade do |t|
     t.string   "name"
     t.string   "size"
-    t.integer  "price"
     t.string   "status"
     t.integer  "user_id"
-    t.datetime "created_at",        null: false
-    t.datetime "updated_at",        null: false
+    t.datetime "created_at",                    null: false
+    t.datetime "updated_at",                    null: false
     t.string   "description"
     t.string   "color"
     t.string   "condition"
@@ -67,17 +68,34 @@ ActiveRecord::Schema.define(version: 20161207162517) do
     t.string   "design_period"
     t.string   "materials"
     t.string   "category_item"
+    t.integer  "price_cents",       default: 0, null: false
     t.index ["user_id"], name: "index_items_on_user_id", using: :btree
   end
 
   create_table "orders", force: :cascade do |t|
     t.datetime "order_date"
-    t.string   "address"
-    t.string   "card_details"
     t.integer  "user_id"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+    t.datetime "created_at",                        null: false
+    t.datetime "updated_at",                        null: false
     t.string   "status"
+    t.integer  "amount_cents",          default: 0, null: false
+    t.json     "payment"
+    t.string   "email"
+    t.string   "stripe_id"
+    t.string   "billing_name"
+    t.string   "billing_country"
+    t.string   "billing_country_code"
+    t.string   "billing_zip"
+    t.string   "billing_line"
+    t.string   "billing_city"
+    t.string   "billing_state"
+    t.string   "shipping_name"
+    t.string   "shipping_country"
+    t.string   "shipping_country_code"
+    t.string   "shipping_zip"
+    t.string   "shipping_line"
+    t.string   "shipping_city"
+    t.string   "shipping_state"
     t.index ["user_id"], name: "index_orders_on_user_id", using: :btree
   end
 

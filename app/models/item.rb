@@ -5,8 +5,9 @@ class Item < ApplicationRecord
 
   has_many :reviews, dependent: :destroy
 
-  # mount_uploader :photo, PhotoUploader
   has_attachments :photos, maximum: 5
+
+  monetize :price_cents
 
   algoliasearch do
     attribute :name, :description, :color, :condition, :designer, :materials, :category_item

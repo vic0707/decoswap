@@ -3,6 +3,7 @@ class CartsController < ApplicationController
   before_action :authenticate_user!
 
   def index
+  		@order = current_user.current_order
 		@carts = current_user.current_order.carts
 	end
 
@@ -16,6 +17,8 @@ class CartsController < ApplicationController
 			# create
 			order = Order.create(user: current_user, status: "ongoing")
 		end
+
+    p params
 
 		item = Item.find(params[:cart][:id])
 

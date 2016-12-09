@@ -1,0 +1,15 @@
+<div class="effect-lily font_black">
+ <div class="card photo">
+
+  <%= image_tag cl_image_path item.photos.first.path if item.photos.first %>
+
+  <div class="overlay">
+    <h2 class="font_black"><%= item.name %> </h2>
+  </div>
+  <div class="card-description">
+    <div class="text-center font_black">
+      <p class="font_black"><%= item.description.first(20) %>... </p>
+    </div>
+  </div>
+ </div>
+</div>

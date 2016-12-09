@@ -53,16 +53,16 @@
 *********************************************/
 #owl-product .item img{
     display: block;
-    width: 100%;
-    height: auto;
+    width: auto;
+    height: 300px;
 }
 #owl-product .owl-item div{
-  padding:5px;
+  padding-right :5px;
 }
 #owl-product .owl-item img{
   display: block;
-  width: 100%;
-  height: auto;
+  width: auto;
+  height: 300px;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
