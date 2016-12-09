@@ -14,7 +14,7 @@ $(document).ready(function() {
         $('.navbar-wagon').css('-webkit-animation-timing-function', 'ease-in-out' );
         $('.navbar-wagon').css('visibility', 'visible !important' );
 
-        $(".navbar-wagon").css('background-color', '#000000');
+        $(".navbar-wagon").css('background-color', '#282828');
       } else {
         $('.navbar-wagon').css('background-color', 'transparent' );
 
