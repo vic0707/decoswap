@@ -164,22 +164,3 @@ overflow-y: auto;
 overflow-x: hidden;
 }
 
-/* Scrollbar styles */
-::-webkit-scrollbar {
-width: 12px;
-height: 12px;
-}
-
-::-webkit-scrollbar-track {
-border: 1px solid white;
-border-radius: 10px;
-}
-
-::-webkit-scrollbar-thumb {
-background: grey;
-border-radius: 10px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-background: #88ba1c;
-}
