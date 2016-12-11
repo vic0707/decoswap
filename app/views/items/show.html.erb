@@ -13,38 +13,37 @@
               <% end %>
             </div>
           </div>
+
+
+
           <div class="col-md-6">
-            <div class="product-title">
-              <h1><%= @item.name %></h1>
-            </div>
-            <div class="product-desc">
-              <h4><%= @item.category_item %></h4>
-            </div>
-            <div class="product-price">
-              <%= @item.price %>
-               €/month
-            </div>
-            <div class="product-stock">
-              <%= @item.status %>
-            </div>
+            <div class="product-title"><h1><%= @item.name %></h1></div>
+            <div class="product-desc"><h4><%= @item.category_item %></h4></div>
+            <div class="product-price"><%= @item.price %>€/month</div>
+            <div class="product-stock"><%= @item.status %></div>
+
             <% if current_user.try(:professional?) %>
             <div class="btn-group cart">
             <!--   <button type="button" class="btn btn-success" data-toggle="modal" data-target="#myModal">Add to cart</button>
             </div> -->
             <%= simple_form_for @cart do |f| %>
-             <div class="form-inputs">
-               <%= f.input :id, as: :hidden, input_html: {value: @item.id} %>
-             </div>
-             <div class="form-actions">
-               <%= f.submit 'Add to Cart' %>
-             </div>
+            <div class="form-inputs">
+              <%= f.input :id, as: :hidden, input_html: {value: @item.id} %>
+            </div>
+            <div class="form-actions">
+              <%= f.submit 'Add to Cart' %>
+            </div>
             <% end %>
             <% end %>
             <div class="btn-group wishlist">
+
               <% if current_user.try(:professional?) %>
               <%= link_to "Edit", edit_dashboard_item_path(@item), class: "btn btn-danger" %>
               <% end %>
             </div>
+
+
+
             <div class="container-fluid-tab">
               <div class="col-md-12 product-info">
                 <ul id="myTab" class="nav nav-tabs nav_tabs">
@@ -52,15 +51,15 @@
                   <li><a href="#service-two" data-toggle="tab">PRODUCT INFO</a></li>
                   <li><a href="#service-three" data-toggle="tab">REVIEWS</a></li>
                 </ul>
+
                 <div id="myTabContent" class="tab-content">
+
                   <div class="tab-pane fade in active" id="service-one">
                     <section class="container product-info">
-                      <p>
-                        <%= @item.description %>
-                      </p>
+                      <p><%= @item.description %></p>
                     </section>
                   </div>
-                  </div>
+
                   <div class="tab-pane fade" id="service-two">
                     <section class="container product-info">
                       <ul>
@@ -74,62 +73,61 @@
                       </ul>
                     </section>
                   </div>
+
                   <div class="tab-pane fade" id="service-three">
                     <section class="container product-info">
-                    <% if current_user && current_user.customer? %>
-                    <%= render 'reviews/form', item: @item, review: @review %>
-                    <% end %>
-                    <div id="reviews-product-info">
-                      <% if current_user && current_user.customer? && @item.reviews.blank? %>
-                      <p>
-                        Be the first to leave a review
-                      </p>
-                       for
-                      <%= @item.name %>
+                      <% if current_user && current_user.customer? %>
+                      <%= render 'reviews/form', item: @item, review: @review %>
                       <% end %>
-                      <% @item.reviews.last(4).reverse.each do |review| %>
-                      <%= render 'reviews/show', review: review %>
-                      <% end %>
-                      </section>
+                      <div id="reviews-product-info" class="pre-scrollable">
 
-                    </div>
+                        <% if current_user && current_user.customer? && @item.reviews.blank? %>
+                        <p>Be the first to leave a review</p> for <%= @item.name %>
+                        <% end %>
+
+                        <% @item.reviews.reverse.each do |review| %>
+                        <%= render 'reviews/show', review: review %>
+                        <% end %>
+
+                      </div>
+                    </section>
                   </div>
                 </div>
-                <hr>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <!-- Modal -->
-    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            <h4 class="modal-title" id="myModalLabel">Make a reservation</h4>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="myModalLabel">Make a reservation</h4>
+        </div>
+        <div class="modal-body">
+          <%= simple_form_for @booking , url: item_bookings_path(@item) do |f| %>
+          <div class="form-inputs">
+            <%= f.input :end_date, as: :string, input_html: { class: "datepicker"} %>
           </div>
-          <div class="modal-body">
-            <%= simple_form_for @booking , url: item_bookings_path(@item) do |f| %>
-            <div class="form-inputs">
-              <%= f.input :end_date, as: :string, input_html: { class: "datepicker"} %>
-            </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <div class="form-actions btn btn-primary center">
+            <%= f.button :submit %>
           </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            <div class="form-actions btn btn-primary center">
-              <%= f.button :submit %>
-            </div>
-            <% end %>
-          </div>
+          <% end %>
         </div>
       </div>
     </div>
-    <!-- End of Modal -->
   </div>
+  <!-- End of Modal -->
 </div>
-</div>
+
 
 
 <!-- end of product page -->
