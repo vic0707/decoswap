@@ -26,6 +26,9 @@
 }
 
 /* Navbar logo */
+.navbar-wagon-brand {
+  margin-right: 30px;
+}
 
 .navbar-wagon-brand img {
   width: 350px;
@@ -157,7 +160,7 @@
   background-color: transparent;
 }
 #expandable_searchbar input[type=text]:focus {
-  width: 130px;
+  width: 100px;
   padding-left: 32px;
   color: #000;
   background-color: transparent;
@@ -189,7 +192,7 @@ input[type=text] {
   background: transparent url(http://static.tumblr.com/ftv85bp/MIXmud4tx/search-icon.png) no-repeat 9px center;
   border: solid 1px #fff;
   padding: 9px 23px 9px 31px;
-  width: 50px;
+  width: -1px;
 
   -webkit-border-radius: 10em;
   -moz-border-radius: 10em;
@@ -217,3 +220,15 @@ input::-webkit-input-placeholder {
   color: #999;
 }
 
+.login_button{
+    border: 1px solid;
+    border-radius: 20px;
+    color: white;
+}
+
+.register_button{
+    border: 1px solid;
+    border-radius: 20px;
+    background-color: #469ae0 !important;
+    color: white !important;
+}
