@@ -85,6 +85,7 @@
 .container-fluid{
   max-width: 1140px;
   margin: 0 auto;
+  padding-top: 150px;
 }
 
 .view-wrapper {
@@ -181,5 +182,22 @@ border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-background: #88ba1c;
+}
+
+.container-fluid-tab{
+  max-width: 1140px;
+  margin: 0 auto;
+  padding-top: 5px;
+}
+
+.item{
+  size: auto;
+}
+
+#owl-demo .item img{
+    display: block;
+    width: auto;
+    height: 500px;
+    margin-left: auto;
+    margin-right: auto;
 }

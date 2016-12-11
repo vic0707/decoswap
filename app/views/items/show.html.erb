@@ -20,7 +20,6 @@
             <div class="product-desc">
               <h4><%= @item.category_item %></h4>
             </div>
-            <hr>
             <div class="product-price">
               <%= @item.price %>
                €/month
@@ -28,7 +27,6 @@
             <div class="product-stock">
               <%= @item.status %>
             </div>
-            <hr>
             <% if current_user.try(:professional?) %>
             <div class="btn-group cart">
             <!--   <button type="button" class="btn btn-success" data-toggle="modal" data-target="#myModal">Add to cart</button>
@@ -47,7 +45,7 @@
               <%= link_to "Edit", edit_dashboard_item_path(@item), class: "btn btn-danger" %>
               <% end %>
             </div>
-            <div class="container-fluid">
+            <div class="container-fluid-tab">
               <div class="col-md-12 product-info">
                 <ul id="myTab" class="nav nav-tabs nav_tabs">
                   <li class="active"><a href="#service-one" data-toggle="tab">DESCRIPTION</a></li>
@@ -133,13 +131,7 @@
 </div>
 </div>
 
-<style>
-#owl-demo .item img{
-    display: block;
-    width: 100%;
-    height: auto;
-}
-</style>
+
 <!-- end of product page -->
 <script type="text/javascript">
     $(document).ready(function(){
