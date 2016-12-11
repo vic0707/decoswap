@@ -6,19 +6,20 @@ class OrdersController < ApplicationController
 
 	def edit
 		@order = current_user.current_order
+		#@order.status = "pending"
+		#@order.save
 	end
 
 	def update
 		@order = current_user.current_order
-		@order.status = "pending"
-		@order.carts.each do |cart|
-			cart.status = "pending"
-			cart.item.update(status: "rent")
-			cart.save
-			Booking.create!(user: current_user, item: cart.item, status: "booked", start_date: Time.now)
+		@order.items.each do |item|
+			Booking.create!(user: current_user, item: item, status: "booked", start_date: Time.now)
 		end
-		if @order.update(order_params)
-			redirect_to new_order_payment_path(@order)
+		
+		@order.update(billing_first_name: params[:order][:billing_first_name], billing_last_name: params[:order][:billing_last_name], billing_line: params[:order][:billing_line], billing_zip: params[:order][:billing_zip], billing_city: params[:order][:billing_city], billing_country: params[:order][:billing_country])
+
+		respond_to do |format|
+			format.js
 		end
 
 	end
@@ -29,7 +30,7 @@ class OrdersController < ApplicationController
 	private
 
 	def order_params
-		params.require(:order).permit(:order_date, :address, :card_details)
+		params.require(:order).permit(:billing_first_name, :billing_last_name, :billing_line, :billing_zip, :billing_city, :billing_country)
 	end
 
 end

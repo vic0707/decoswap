@@ -3,6 +3,8 @@ class Order < ApplicationRecord
 
   has_many :carts
 
+  has_many :items, through: :carts
+
   monetize :amount_cents
 
   def total_amount

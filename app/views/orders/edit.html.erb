@@ -1,6 +1,6 @@
 <div class="container c-margin-b-15">
 	<div class="row">
-		<div class="col-xs-8 col-xs-offset-1 title">
+		<div class="col-xs-8 title">
 			<h1>Process Order</h1>
 		</div>
 
@@ -8,7 +8,7 @@
 	<div class="row">
 		<div class="col-xs-12 col-md-7 c-padding-20">
 			<h3 class="c-font-bold c-font-uppercase c-font-24">Billing Address</h3>
-			<%= simple_form_for @order do |f| %>
+			<%= simple_form_for @order, remote: true do |f| %>
 			<div class="container">
 				<div class="row">
 					<div class="col-xs-6">
@@ -23,9 +23,9 @@
 			<%= f.input :billing_zip, label: 'Postal Code' %>
 			<%= f.input :billing_city, label: 'City' %>
 			<%= f.input :billing_country, selected: "BE", label: 'Country'  %>
-			<%#= f.button :submit %>
+			<%#= f.button :submit , id: 'Submit', style: "display: none;"%>
 
-			<h3>Shipping Address</h3>
+			<h3 class="c-font-bold c-font-uppercase c-font-24">Shipping Address</h3>
 			<p>Same as Billing Address</p>
 			<% end %>
 		</div>
@@ -74,15 +74,20 @@
 					</div>
 					<div class="row">
 						<div class="col-xs-6 col-xs-offset-6">
-							<%= form_tag order_payments_path(@order) do %>
-
-							<script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-							data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
-							data-name="Decoswap"
-							data-image="images/logo.png"
-							data-amount="<%= (@order.total_amount * 100) %>"
-							data-currency="<%= @order.amount.currency %>">
-							</script>
+							<%= form_tag order_payments_path(@order), class: "stipe-btn", id: "stripe-form" do %>
+							<div class="text-center">
+								<input
+								type="submit"
+								data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+								class="btn btn-primary toggle-stripe"
+								value="Confirm"
+								data-amount="<%= (@order.total_amount * 100) %>"
+								data-locale="fr"
+								data-currency="<%= @order.amount.currency %>"
+								data-name="Decoswap"
+								data-email='<%= current_user.email %>'
+								data-description="Furniture as a Service".html_safe/>
+							</div>
 							<% end %>
 						</div>
 					</div>
@@ -91,3 +96,6 @@
 		</div>
 	</div>
 </div>
+
+
+<script src="https://checkout.stripe.com/v2/checkout.js"></script>

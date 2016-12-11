@@ -29,7 +29,7 @@
               <%= @item.status %>
             </div>
             <hr>
-            <% if current_user.try(:customer?) %>
+            <% if current_user.try(:customer?) && @item.status == "Free" %>
             <div class="btn-group cart">
             <!--   <button type="button" class="btn btn-success" data-toggle="modal" data-target="#myModal">Add to cart</button>
             </div> -->

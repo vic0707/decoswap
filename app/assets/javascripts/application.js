@@ -6,6 +6,7 @@
 //= require cloudinary/jquery.cloudinary
 //= require attachinary
 //= require init_attachinary
+//= require order_submit
 //= require filters_items
 //= require algolia/v3/algoliasearch.min
 //= require banner_video

@@ -18,9 +18,9 @@ class CartsController < ApplicationController
 			order = Order.create(user: current_user, status: "ongoing")
 		end
 
-    p params
-
 		item = Item.find(params[:cart][:id])
+		item.status = "Rent"
+		item.save
 
 		Cart.create(item: item, order: order)
 
@@ -29,6 +29,9 @@ class CartsController < ApplicationController
 
 	def destroy
 		cart = Cart.find(params[:format])
+		@item = cart.item
+		@item.update(status: "Free")
+
 		cart.destroy
 		redirect_to cart_path
 	end
