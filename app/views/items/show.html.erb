@@ -22,26 +22,29 @@
             <div class="product-price"><%= @item.price %>€/month</div>
             <div class="product-stock"><%= @item.status %></div>
 
+
+
             <% if current_user.try(:professional?) %>
-            <div class="btn-group cart">
-            <!--   <button type="button" class="btn btn-success" data-toggle="modal" data-target="#myModal">Add to cart</button>
+          <!--   <div class="btn-group cart">
+              <button type="button" class="btn btn-success" data-toggle="modal" data-target="#myModal">Add to cart</button>
             </div> -->
             <%= simple_form_for @cart do |f| %>
             <div class="form-inputs">
               <%= f.input :id, as: :hidden, input_html: {value: @item.id} %>
             </div>
+
             <div class="form-actions">
               <%= f.submit 'Add to Cart' %>
             </div>
             <% end %>
             <% end %>
+
             <div class="btn-group wishlist">
 
               <% if current_user.try(:professional?) %>
               <%= link_to "Edit", edit_dashboard_item_path(@item), class: "btn btn-danger" %>
               <% end %>
             </div>
-
 
 
             <div class="container-fluid-tab">
