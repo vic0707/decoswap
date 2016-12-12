@@ -3,8 +3,8 @@ class CartsController < ApplicationController
   before_action :authenticate_user!
 
   def index
-  		@order = current_user.current_order
-		@carts = current_user.current_order.carts
+  	@order = current_user.current_order
+    @carts = @order ? @order.carts : []
 	end
 
 	def new
