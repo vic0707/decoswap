@@ -17,18 +17,16 @@
             <div class="headlines">
                 <h1 class="center">DecoSwap</h1>
                 <h3 class="center">Furniture as a Service</h3>
-
                 <div class="container">
                     <div class="row">
                         <div class="col-sm-6 col-sm-offset-3">
-                            <div id="search_container">
+                          <%= link_to items_path, class: "btn-home btn-home-1" do %>
+                            <svg>
+                              <rect x="0" y="0" fill="none" width="100%" height="100%"/>
+                            </svg>
+                            Start Now
+                          <% end %>
 
-                                <!-- Search Form -->
-
-                                <%= form_tag "/items", method: "get", class: "stylish-input-group" do %>
-                                <%= text_field_tag :query, nil, placeholder: "Type the furniture you are looking for...", class: "form-control" %>
-                                <% end %>
-                            </div>
                         </div>
                     </div>
                 </div>
