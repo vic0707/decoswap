@@ -569,11 +569,53 @@ p.copyright {
 }
 
 #price_wrapper {
-  position: relative;
   background-image: asset-data-url("background.jpg");
   background-size: cover;
   height: 500px;
   background-position: bottom;
 }
+// TESTIMONIAL ///
+.testimonials-text{
+  padding: 49px 0 45px 40px;
+  max-width: 490px;
+  float: right;
+}
 
+.testimonials-author{
+  margin-top: 30px;
+  position: relative;
+}
 
+.testimonials-author img {
+  border-radius: 50%;
+  width: 64px;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.author-info{
+  padding-left: 85px;
+  display: inline-block;
+  text-align: left;
+}
+
+.author-location{
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.63;
+  color: inherit;
+}
+
+// .testimonials-text span:before {
+//   content: '"';
+//   display: inline-block;
+//   color: #5e82a6;
+//   font-size: 48px;
+//   font-style: italic;
+//   position: absolute;
+//   top: -30px;
+//   left: -28px;
+// }

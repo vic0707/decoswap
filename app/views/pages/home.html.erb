@@ -5,7 +5,7 @@
     <div class="filter"></div>
 
     <%= content_tag :div, class: "fillWidth embed-responsive-item" do %>
-      <%= video_tag("Mp4/Dancing-Bulbs.mp4", autoplay: true, loop: true)%>
+    <%= video_tag("Mp4/Dancing-Bulbs.mp4", autoplay: true, loop: true)%>
     <% end %>
 
     <div class="poster hidden">
@@ -20,10 +20,10 @@
           <div class="row">
             <div class="col-sm-6 col-sm-offset-3">
               <%= link_to items_path, class: "btn-home btn-home-1" do %>
-                <svg>
-                  <rect x="0" y="0" fill="none" width="100%" height="100%"/>
-                </svg>
-                Start Now
+              <svg>
+                <rect x="0" y="0" fill="none" width="100%" height="100%"/>
+              </svg>
+              Start Now
               <% end %>
             </div>
           </div>
@@ -128,6 +128,28 @@
     </div>
   </div>
 </div>
+<div id="testimonials_anchor" class="container-fluid">
+  <div class="testimonials-inner">
+    <div class="row">
+      <div class="col-xs-12 col-sm-7 col-md-8 with-padding-bottom">
+        <div class="testimonials-text">
+          <i class="fa fa-quote-left" aria-hidden="true"></i>
+          <p>It ended up being one of the nicest shirts I ever owned, and I’ve had nothing but positive feedback.</p>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-5 col-md-4">
+        <div class="testimonials-author">
+          <%= image_tag("testimonial_img_01.png") %>
+          <div class="author-info">
+            <h4 class="ds-page-subtitle-alt">Derrick Tabouret</h4>
+            <p>35 years old</p>
+            <span class="author-location">Brussels, BELGIUM</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
 <!-- -/////////////////end-of-Princing////////////////////////// -->
 
@@ -135,10 +157,10 @@
 
 <div id="owl-product">
   <% Item.last(10).each do |item| %>
-    <div class="item text-center">
-      <%= link_to item_path(item), class:"no-text-decoration" do %>
-        <%= render "items/card", item: item %>
-      <% end %>
-    </div>
+  <div class="item text-center">
+    <%= link_to item_path(item), class:"no-text-decoration" do %>
+    <%= render "items/card", item: item %>
+    <% end %>
+  </div>
   <% end %>
 </div>
