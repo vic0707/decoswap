@@ -237,21 +237,18 @@
 //----------------------------------------
 .pricing-box {
     position: relative;
-    border: 1px solid rgba(0,0,0,0.075);
-    border-radius: 3px;
+    border: 5px solid #333333;
     text-align: center;
     box-shadow: 0 1px 1px rgba(0,0,0,0.1);
-    background-color: #F5F5F5;
-    margin-top: 40px;
-    margin-bottom: 40px;
+    background-color: #fff;
+    margin-top: 100px;
+    margin-bottom: 100px;
 }
 
 .pricing-title {
   padding: 15px 0;
-  background-color: #F9F9F9;
-  border-radius: 3px 3px 0 0;
+  background-color: #fff;
   text-shadow: 1px 1px 1px #FFF;
-  border-bottom: 1px solid rgba(0,0,0,0.05);
 }
 
 .pricing-title h3 {
@@ -276,7 +273,7 @@
 .pricing-price {
   position: relative;
   padding: 25px 0;
-  color: #469AE0;
+  color: #333333;
   font-weight: 300;
   font-size: 64px;
   line-height: 1;
@@ -320,7 +317,7 @@
 
 .pricing-features li {
   padding: 6px 0;
-  font-size: 14px;
+  font-size: 20px;
 }
 .pricing-features i {
   color: #E4AF3C;
