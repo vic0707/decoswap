@@ -4,12 +4,13 @@
 	<%= image_tag ("logo_white.png"), class: "logo", id: "logo"%>
 	<% end %>
 	<!-- Search form -->
-		<%= form_tag "/items", method: "get", class: "navbar-wagon-search" do %>
-			<%= text_field_tag :query, params["query"], class: "navbar-wagon-search-input", placeholder: "Search..." %>
-			<%= button_tag(type: 'submit', class: "navbar-wagon-search-btn") do %>
-				<i class="fa fa-search"></i>
-			<% end %>
-		<% end %>
+
+<div id="barsearch" class="container align-right">
+    <%= form_tag "/items", method: "get", class: "expandable_searchbar" do %>
+      <%= text_field_tag :query, params["query"], class: "expandable_searchbar", placeholder: "Search..." %>
+      <% end %>
+</div>
+
 
 	<div class="navbar-wagon-right hidden-xs hidden-sm">
 
@@ -69,8 +70,8 @@
 	</div>
 	<% else %>
 
-		<%= link_to "Sign up", "#signupModal", :class => "btn", "data-toggle" => "modal" %>
-		<%= link_to "Log in", "#loginModal", :class => "btn", "data-toggle" => "modal" %>
+		<%= link_to "Register", "#signupModal", :class => "btn btn-primary register_button", "data-toggle" => "modal" %>
+		<%= link_to "Login", "#loginModal", :class => "btn btn-success login_button", "data-toggle" => "modal" %>
 
 		<div class="modal fade" id="signupModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
 			<div class="modal-dialog" role="document">
