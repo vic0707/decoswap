@@ -9,7 +9,7 @@
 	</div>
 
 
-	
+
 
 	<div class="row">
 		<div class="col-xs-12 col-md-7 col-md-offset-1">
@@ -48,14 +48,17 @@
 			</div>
 		</div>
 		<div class="col-xs-12 col-md-3">
-			<div class="background">
-				<h3>Order Sumary</h3>
-				<p>Free Shipping</p>
-				<p>Total price <%= @order.total_amount %>€</p>
-				<%= link_to "Checkout", edit_order_path(@order), class:"btn btn-primary"%>
+      <% if @order %>
+  			<div class="background">
+  				<h3>Order Sumary</h3>
+  				<p>Free Shipping</p>
 
-				<%#= link_to "Empty Cart", cart_path , class: "btn btn-danger", method: :delete %>
-			</div>
+  				  <p>Total price <%= @order.total_amount %>€</p>
+  				  <%= link_to "Checkout", edit_order_path(@order), class:"btn btn-primary" %>
+
+  				<%#= link_to "Empty Cart", cart_path , class: "btn btn-danger", method: :delete %>
+  			</div>
+      <% end %>
 		</div>
 	</div>
 </div>

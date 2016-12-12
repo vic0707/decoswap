@@ -30,9 +30,9 @@
     <%= link_to cart_path, class: "navbar-wagon-item navbar-wagon-link" do%>
       <div class="badge-container">
         <i class="fa fa-shopping-cart"></i>
-        <%# if current_user.current_order.carts.count > 0 %>
-        <div class="badge badge-blue"><%#= current_user.current_order.carts.count %></div>
-        <%# end %>
+        <% if current_user.current_order %>
+          <div class="badge badge-blue"><%= current_user.current_order.carts.count %></div>
+        <% end %>
       </div>
     <% end %>
 
