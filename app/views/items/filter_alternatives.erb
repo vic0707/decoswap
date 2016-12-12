@@ -8,3 +8,4 @@
  <%= f.collection_check_boxes :materials, materials_collection.map {|x| x[0]}, :first, :materials, label: "Materials ", include_blank: "All materials", input_html: {name: :materials}, selected: params[:materials] %>
 
  <%= f.association :materials, collection: materials_collection, label: "Materials ", include_blank: "All materials", input_html: {name: :materials}, selected: params[:materials] %>
+
