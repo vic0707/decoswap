@@ -85,6 +85,7 @@
 .container-fluid{
   max-width: 1140px;
   margin: 0 auto;
+  padding-top: 150px;
 }
 
 .view-wrapper {
@@ -152,15 +153,63 @@
   max-height: 155px;
 }
 
-/* Box styles */
-.myBox {
-border: none;
-padding-left: 20px;
-padding-right: 100px;
-font: 14px/26 px sans-serif;
-width: 600px;
-height: 300px;
-overflow-y: auto;
+
+.container-fluid-tab{
+  max-width: 1140px;
+  margin: 0 auto;
+  padding-top: 5px;
+}
+
+.item{
+  size: auto;
+}
+
+#owl-demo .item img{
+    display: block;
+    width: auto;
+    height: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.profile-review {
+  width: auto;
+  height: 60px;
+  border-radius: 50%;
+  padding: 0px;
+}
+
+.row-review{
+  margin-bottom: 10px;
+}
+
+
+#reviews-product-info {
 overflow-x: hidden;
+height: 200px;
+margin-top: 10px;
+margin-bottom : 10px;
+
+}
+
+
+/* Scrollbar styles */
+::-webkit-scrollbar {
+width: 12px;
+height: 12px;
+}
+
+::-webkit-scrollbar-track {
+border: 1px solid white;
+border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+background: grey;
+border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: grey;
 }
 

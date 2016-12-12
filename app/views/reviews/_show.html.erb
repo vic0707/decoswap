@@ -1,15 +1,13 @@
 
-<div class="row">
-    <div class="col s4 m2">
-      <img src="https://www.bunnyholder.com/100/100/18" alt="" class="circle responsive-img valign">
-    </div>
-    <div class="col s8 m10">
-      <div>Posted by:<%= review.user.first_name %> </div>
-      <span class="black-text"><%= review.content %>, <%= review.created_at.strftime("%d/%m/%y") %> </span>
-    </div>
+<div class="row row-review">
+  <div class="col-md-2">
+    <img src="https://www.bunnyholder.com/100/100/18" alt="" class="profile-review">
+  </div>
+  <div class="col-md-10">
+    <div>Posted by:<%= review.user.first_name %> </div>
+    <span class="black-text"><%= review.content %>, <%= review.created_at.strftime("%d/%m/%y") %> </span>
   </div>
 </div>
-
 
 <!-- <p><%= review.content %></p>
  -->
