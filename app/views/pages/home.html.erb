@@ -1,63 +1,63 @@
 <% content_for :nav_class, 'navbar-wagon-fixed' %>
 <!-- Start video hero -->
-<div class="homepage-hero-module">
-  <div class="video-container">
-    <div class="filter"></div>
+<div class="homepage-hero-module hidden-xs hidden-sm">
+    <div class="video-container">
+        <div class="filter"></div>
 
-    <%= content_tag :div, class: "fillWidth embed-responsive-item" do %>
-      <%= video_tag("Mp4/Dancing-Bulbs.mp4", autoplay: true, loop: true)%>
-    <% end %>
+        <%= content_tag :div, class: "fillWidth embed-responsive-item" do %>
+        <%= video_tag("Mp4/Dancing-Bulbs.mp4", autoplay: true, loop: true)%>
+        <% end %>
 
-    <div class="poster hidden">
-      <img src="../assets/background.jpg" alt="">
-    </div>
-
-
-    <div class="title-container">
-      <div class="headlines">
-        <h1 class="center">DecoSwap</h1>
-        <h3 class="center">Change your interior decoration whenever you want</h3>
-
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-6 col-sm-offset-3">
-              <div id="search_container">
-
-                <!-- Search Form -->
-
-                <%= form_tag "/items", method: "get", class: "stylish-input-group" do %>
-                <%= text_field_tag :query, nil, placeholder: "Type the furniture you are looking for...", class: "form-control" %>
-                <% end %>
-              </div>
-            </div>
-          </div>
+        <div class="poster hidden">
+            <img src="../assets/background.jpg" alt="">
         </div>
 
-      </div>
+
+        <div class="title-container">
+            <div class="headlines">
+                <h1 class="center">DecoSwap</h1>
+                <h3 class="center">Furniture as a Service</h3>
+
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-6 col-sm-offset-3">
+                            <div id="search_container">
+
+                                <!-- Search Form -->
+
+                                <%= form_tag "/items", method: "get", class: "stylish-input-group" do %>
+                                <%= text_field_tag :query, nil, placeholder: "Type the furniture you are looking for...", class: "form-control" %>
+                                <% end %>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
     </div>
-  </div>
 </div>
 <!-- BANNERS -->
 <div id="startchange"></div>
 <div class="content-section-a">
-  <div class="row">
-    <div class="col-sm-6 col-xs-12">
-      <div class="text-center">
-      <br>
-      <br>
-      <br>
-      <h2 class="section-heading">Step one:<br>Choose your item</h2>
-      <p class="lead">Choose between the best selection of your location.</p>
-      <p class="icon-big"><i class="fa fa-map-marker" aria-hidden="true"></i></p>
+    <div class="row">
+        <div class="col-sm-6 col-xs-12">
+            <div class="text-center">
+                <br>
+                <br>
+                <br>
+                <h2 class="section-heading">Step one:<br>Choose your item</h2>
+                <p class="lead">Choose between the best selection of your location.</p>
+                <p class="icon-big"><i class="fa fa-map-marker" aria-hidden="true"></i></p>
 
-      </div>
+            </div>
+        </div>
+        <div class="col-sm-6 col-xs-12">
+            <%= image_tag("cactus.jpg", class: "img-responsive") %>
+        </div>
     </div>
-    <div class="col-sm-6 col-xs-12">
-      <%= image_tag("cactus.jpg", class: "img-responsive") %>
-    </div>
-  </div>
 
-  <!-- /.container -->
+    <!-- /.container -->
 
 </div>
 <!-- /.content-section-a -->
@@ -65,23 +65,23 @@
 <div class="content-section-b">
 
 
-  <div class="row">
-    <div class="col-lg-6 col-sm-push-6  col-sm-6">
-      <div class="text-center">
-      <br>
-      <br>
-      <br>
-      <h2 class="section-heading">Step two:<br>Get delivered</h2>
-      <p class="lead">We deliver your order in 48h.</p>
-      <p class="icon-big"><i class="fa fa-truck" aria-hidden="true"></i></p>
-      </div>
+    <div class="row">
+        <div class="col-lg-6 col-sm-push-6  col-sm-6">
+            <div class="text-center">
+                <br>
+                <br>
+                <br>
+                <h2 class="section-heading">Step two:<br>Get delivered</h2>
+                <p class="lead">We deliver your order in 48h.</p>
+                <p class="icon-big"><i class="fa fa-truck" aria-hidden="true"></i></p>
+            </div>
+        </div>
+        <div class="col-lg-6 col-sm-pull-6  col-sm-6">
+            <%= image_tag("lamp.jpg", class: "img-responsive") %>
+        </div>
     </div>
-    <div class="col-lg-6 col-sm-pull-6  col-sm-6">
-      <%= image_tag("lamp.jpg", class: "img-responsive") %>
-    </div>
-  </div>
 
-  <!-- /.container -->
+    <!-- /.container -->
 
 </div>
 <!-- /.content-section-b -->
@@ -89,69 +89,105 @@
 <div class="content-section-a">
 
 
-  <div class="row">
-    <div class="col-sm-6 col-xs-12">
-      <div class="text-center text-align">
-      <br>
-      <br>
-      <br>
-      <h2 class="section-heading">Step three:<br>Swap</h2>
-      <p class="lead">Your item doesn't fit anymore with your new painting color. It's okay. Just Swap it.</p>
-      <p class="icon-big"><i class="fa fa-exchange" aria-hidden="true"></i></p>
+    <div class="row">
+        <div class="col-sm-6 col-xs-12">
+            <div class="text-center text-align">
+                <br>
+                <br>
+                <br>
+                <h2 class="section-heading">Step three:<br>Swap</h2>
+                <p class="lead">Your item doesn't fit anymore with your new painting color. It's okay. Just Swap it.</p>
+                <p class="icon-big"><i class="fa fa-exchange" aria-hidden="true"></i></p>
 
-      </div>
+            </div>
+        </div>
+        <div class="col-sm-6 col-xs-12">
+            <%= image_tag("loft.jpg", class: "img-responsive") %>
+        </div>
     </div>
-    <div class="col-sm-6 col-xs-12">
-      <%= image_tag("loft.jpg", class: "img-responsive") %>
-    </div>
-  </div>
+</div>
 
-  <!-- /.container -->
+<!-- -/////////////////Princing//////////////////// -->
+<div id="price_anchor" class="container-fluid">
+<div class="row">
+    <div class="col-md-4">
+    <div class="pricing-box">
+        <div class="pricing-title">
+            <h3>A LITTLE</h3>
+        </div>
+        <div class="pricing-price">
+            <span class="price-unit">&euro;</span>40<span class="price-tenure">/mth</span>
+        </div>
+        <div class="pricing-features">
+            <ul>
+                <li><strong>1 swaps</strong></li>
+
+            </ul>
+        </div>
+
+        </div>
+    </div>
+
+        <div class="col-md-4">
+<div class="pricing-box">
+            <div class="pricing-title">
+                <h3>A LOT</h3>
+            </div>
+            <div class="pricing-price">
+                <span class="price-unit">&euro;</span>60<span class="price-tenure">/mth</span>
+            </div>
+            <div class="pricing-features">
+                <ul>
+                    <li><strong>3 swaps</strong></li>
+
+                  </ul>
+              </div>
+
+                </div>
+            </div>
+        <div class="col-md-4">
+        <div class="pricing-box">
+            <div class="pricing-title">
+                <h3>PASSIONATELY</h3>
+            </div>
+            <div class="pricing-price">
+                <span class="price-unit">&euro;</span>120<span class="price-tenure">/mth</span>
+            </div>
+            <div class="pricing-features">
+                <ul>
+                    <li><strong>6 swaps</strong></li>
+                </ul>
+            </div>
 
 </div>
+        </div>
+        <div class="col-md-2">
+
+        </div>
+        <div class="col-md-2">
+
+        </div>
+    </div>
+    </div>
+    </div>
+</div>
+<!-- -/////////////////end-of-Princing////////////////////////// -->
+
+<!-- /.container -->
+
 <div class="section-heading"></div>
 <div id="owl-product">
-  <% Item.last(10).each do |item| %>
+    <% Item.last(10).each do |item| %>
     <div class="item text-center">
-      <%= link_to item_path(item), class:"no-text-decoration" do %>
+        <%= link_to item_path(item), class:"no-text-decoration" do %>
         <%= render "items/card", item: item %>
-      <% end %>
+        <% end %>
     </div>
-  <% end %>
+    <% end %>
 </div>
 
-<!-- /.content-section-a -->
-
-<a  name="contact"></a>
-<div class="banner">
-
-  <div class="container-fluid">
-
-
-    <div class="row">
-      <div class="col-lg-6">
-        <h2>Connect to Start Swapping</h2>
-      </div>
-      <div class="col-lg-6">
-        <ul class="list-inline banner-social-buttons">
-          <li>
-            <a href="#" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
-          </li>
-          <li>
-            <a href="#" class="btn btn-default btn-lg"><i class="fa fa-facebook fa-fw"></i> <span class="network-name">Facebook</span></a>
-          </li>
-          <li>
-            <a href="#" class="btn btn-default btn-lg"><i class="fa fa-pinterest fa-fw"></i> <span class="network-name">Pinterest</span></a>
-          </li>
-        </ul>
-      </div>
-    </div>
-
-  </div>
-  <!-- /.container -->
 
 </div>
-
 
 <%= javascript_include_tag 'application' %>
 
