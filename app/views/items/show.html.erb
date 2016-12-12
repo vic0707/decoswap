@@ -1,19 +1,51 @@
 <!-- product page -->
-<div class="container-fluid">
-  <div class="content-wrapper">
-    <div class="item-container">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-6">
-            <div id="owl-demo" class="owl-carousel owl-theme">
-              <% @item.photos.each do |photo| %>
-              <div class="item">
-                <%= cl_image_tag(photo.path, :class => 'img-responsive product_main_picture') %>
-              </div>
-              <% end %>
-            </div>
-          </div>
 
+<div class= "padding-bottom">
+<div class="content-wrapper">
+  <div class="row">
+    <div class="col-md-6">
+      <h1><%= @item.name %> </h1>
+      <%= @item.category_item %>
+    </div>
+  </div>
+  <div class="item-container">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <div id="owl-demo" class="owl-carousel owl-theme">
+            <% @item.photos.each do |photo| %>
+
+            <div class="item card-product">
+              <%= cl_image_tag(photo.path, :class => 'img-responsive product_main_picture small') %>
+
+            </div>
+            <% end %>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <h3>Product information</h3>
+          <p><%= @item.description %></p>
+          <br>
+          <p> <strong> Size: </strong>   <%= @item.size %> </p>
+          <p> <strong> Condition: </strong>   <%= @item.condition %> </p>
+          <p> <strong> Color: </strong>   <%= @item.color %> </p>
+          <p> <strong> Materials: </strong>   <%= @item.materials %> </p>
+          <p> <strong> Designer: </strong>   <%= @item.designer %> in <%= @item.design_period %> </p>
+          <br>
+          <h1><%= @item.price_cents/100 %> €/month</h1>
+          <%= render 'add-to-cart' %>
+        </div>
+        <div class="row">
+        <div class="col-md-12">
+          <h2>Reviews</h2>
+          <% if current_user && current_user.customer? %>
+          <%= render 'reviews/form', item: @item, review: @review %>
+          <% end %>
+          <div id="reviews-product-info" class="pre-scrollable">
+
+            <% if current_user && current_user.customer? && @item.reviews.blank? %>
+            <p>Be the first to leave a review for <%= @item.name %> </p>
 
 
           <div class="col-md-6">
@@ -53,64 +85,22 @@
               <% end %>
             </div>
 
+            <% end %>
 
-            <div class="container-fluid-tab">
-              <div class="col-md-12 product-info">
-                <ul id="myTab" class="nav nav-tabs nav_tabs">
-                  <li class="active"><a href="#service-one" data-toggle="tab">DESCRIPTION</a></li>
-                  <li><a href="#service-two" data-toggle="tab">PRODUCT INFO</a></li>
-                  <li><a href="#service-three" data-toggle="tab">REVIEWS</a></li>
-                </ul>
 
-                <div id="myTabContent" class="tab-content">
-
-                  <div class="tab-pane fade in active" id="service-one">
-                    <section class="container product-info">
-                      <p><%= @item.description %></p>
-                    </section>
-                  </div>
-
-                  <div class="tab-pane fade" id="service-two">
-                    <section class="container product-info">
-                      <ul>
-                        <li><strong>Size:</strong><%= @item.size %></li>
-                        <li><strong>Condition:</strong><%= @item.condition %></li>
-                        <li><strong>Color:</strong><%= @item.color %></li>
-                        <li><strong>Materials:</strong><%= @item.materials %></li>
-                        <li><strong>Category:</strong><%= @item.category_item %></li>
-                        <li><strong>Designer:</strong><%= @item.designer %></li>
-                        <li><strong>Design Period:</strong><%= @item.design_period %></li>
-                      </ul>
-                    </section>
-                  </div>
-
-                  <div class="tab-pane fade" id="service-three">
-                    <section class="container product-info">
-                      <% if current_user && current_user.customer? %>
-                      <%= render 'reviews/form', item: @item, review: @review %>
-                      <% end %>
-                      <div id="reviews-product-info" class="pre-scrollable">
-
-                        <% if current_user && current_user.customer? && @item.reviews.blank? %>
-                        <p>Be the first to leave a review</p> for <%= @item.name %>
-                        <% end %>
-
-                        <% @item.reviews.reverse.each do |review| %>
-                        <%= render 'reviews/show', review: review %>
-                        <% end %>
-
-                      </div>
-                    </section>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <% @item.reviews.reverse.each do |review| %>
+            <%= render 'reviews/show', review: review %>
+            <% end %>
           </div>
         </div>
+        </div>
       </div>
-    </div>
-  </div>
 
+    </div>
+
+
+  </div>
+</div>
   <!-- Modal -->
   <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
     <div class="modal-dialog" role="document">
@@ -123,11 +113,14 @@
           <%= link_to "Continue Shopping", items_path, class: "btn btn-primary" %>
           <%= link_to "Checkout", cart_path, class: "btn btn-primary" %>
         </div>
+        <% end %>
       </div>
     </div>
   </div>
-  <!-- End of Modal -->
 </div>
+</div>
+<!-- End of Modal -->
+
 
 
 
@@ -136,13 +129,14 @@
 $(document).ready(function(){
   $('.datepicker').datepicker({
     format: "dd/mm/yyyy",autoclose: true
+
   });
 });
 </script>
 <script type="text/javascript">
-$(document).ready(function() {
+  $(document).ready(function() {
 
-  $("#owl-demo").owlCarousel({
+    $("#owl-demo").owlCarousel({
 
       navigation : true, // Show next and prev buttons
       slideSpeed : 300,
@@ -158,5 +152,5 @@ $(document).ready(function() {
 
     });
 
-});
+  });
 </script>
