@@ -464,3 +464,102 @@ p.copyright {
 .icon-big{
   font-size: 38px;
 }
+
+//button styles
+
+
+//default button
+.btn-home {
+  color: #fff;
+  cursor: pointer;
+  display: block;
+  font-size:16px;
+  font-weight: 400;
+  line-height: 45px;
+  margin: 0 auto 2em;
+  max-width: 160px;
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+  vertical-align: middle;
+  width: 100%;
+  margin-top: 80px;
+  &:hover { text-decoration: none; }
+}
+  /////////////////////////////////
+//button one
+///////////////////////////////
+.btn-home-1 {
+  background-color: transparent;
+  font-weight: 100;
+
+  svg {
+    height: 45px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+
+  rect {
+    fill: none;
+    stroke: #fff;
+    stroke-width: 2;
+    stroke-dasharray: 422, 0;
+  }
+}
+
+.btn-home-1:hover {
+  background: rgba($red, 0);
+  font-weight: 900;
+  letter-spacing: 1px;
+
+  rect {
+    stroke-width: 5;
+    stroke-dasharray: 15, 310;
+    stroke-dashoffset: 48;
+    transition: all 1.35s cubic-bezier(0.19, 1, 0.22, 1);
+  }
+}
+
+
+// HOW IT WORKS SECTION +//
+
+.how-it-works{
+  text-align: center;
+  background-color: #fff;
+  max-width: 1344px;
+  padding: 96px 0;
+}
+
+.how-it-works-wrapper{
+  // max-width: 940px;
+  margin: auto;
+  padding: 0 48px;
+}
+.how-it-works-img-cnt{
+  // background: url() center -30% no-repeat;
+  background-size: 180px;
+}
+
+.how-it-works-img-cnt img{
+  width: 55px;
+  height: 125px;
+}
+
+.bf-page-title{
+  font-size: 30px;
+  line-height: 42px;
+  font-weight: 800;
+  margin-bottom: 48px;
+}
+
+.bf-page-subtitle-alt{
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  color: inherit;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+}

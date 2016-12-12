@@ -17,18 +17,16 @@
             <div class="headlines">
                 <h1 class="center">DecoSwap</h1>
                 <h3 class="center">Furniture as a Service</h3>
-
                 <div class="container">
                     <div class="row">
                         <div class="col-sm-6 col-sm-offset-3">
-                            <div id="search_container">
+                          <%= link_to items_path, class: "btn-home btn-home-1" do %>
+                            <svg>
+                              <rect x="0" y="0" fill="none" width="100%" height="100%"/>
+                            </svg>
+                            Start Now
+                          <% end %>
 
-                                <!-- Search Form -->
-
-                                <%= form_tag "/items", method: "get", class: "stylish-input-group" do %>
-                                <%= text_field_tag :query, nil, placeholder: "Type the furniture you are looking for...", class: "form-control" %>
-                                <% end %>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -39,74 +37,41 @@
 </div>
 <!-- BANNERS -->
 <div id="startchange"></div>
-<div class="content-section-a">
-    <div class="row">
-        <div class="col-sm-6 col-xs-12">
-            <div class="text-center">
-                <br>
-                <br>
-                <br>
-                <h2 class="section-heading">Step one:<br>Choose your item</h2>
-                <p class="lead">Choose between the best selection of your location.</p>
-                <p class="icon-big"><i class="fa fa-map-marker" aria-hidden="true"></i></p>
-
-            </div>
+  <div class="how-it-works">
+    <div class="how-it-works-wrapper">
+      <h2 class="bf-page-title">How it works</h2>
+      <div class="row">
+        <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 with-padding-bottom">
+          <div class="how-it-works-img-cnt">
+            <img src="assets/icons/product.svg" alt="product-icon">
+          </div>
+          <h3 class="bf-page-subtitle-alt">Design and launch</h3>
+          <p>Upload custom artwork or create your design right on Bonfire</p>
         </div>
-        <div class="col-sm-6 col-xs-12">
-            <%= image_tag("cactus.jpg", class: "img-responsive") %>
+        <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 with-padding-bottom">
+          <div class="how-it-works-img-cnt">
+            <img src="https://www.bonfire.com/images/partials/icons/big-promote.svg" alt="big-promote-icon ">
+          </div>
+          <h3 class="bf-page-subtitle-alt">Promote &amp; sell</h3>
+          <p>Spread the word on social media while we handle everything else</p>
         </div>
+        <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 with-padding-bottom">
+          <div class="how-it-works-img-cnt">
+            <img src="assets/icons/shipping.svg" alt="shipped-icon">
+          </div>
+          <h3 class="bf-page-subtitle-alt">Shirts are shipped</h3>
+          <p>Sit back as orders are printed and sent directly to buyers</p>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 with-padding-bottom">
+          <div class="how-it-works-img-cnt"><img src="assets/icons/money.svg" alt="money-icon">
+          </div>
+          <h3 class="bf-page-subtitle-alt">Receive the profits</h3>
+          <p>Get a fast payout of 100% of the campaign profits</p>
+        </div>
+      </div>
+      <a href="/how-it-works/" class="btn btn-default">More details</a>
     </div>
-
-    <!-- /.container -->
-
-</div>
-<!-- /.content-section-a -->
-
-<div class="content-section-b">
-
-
-    <div class="row">
-        <div class="col-lg-6 col-sm-push-6  col-sm-6">
-            <div class="text-center">
-                <br>
-                <br>
-                <br>
-                <h2 class="section-heading">Step two:<br>Get delivered</h2>
-                <p class="lead">We deliver your order in 48h.</p>
-                <p class="icon-big"><i class="fa fa-truck" aria-hidden="true"></i></p>
-            </div>
-        </div>
-        <div class="col-lg-6 col-sm-pull-6  col-sm-6">
-            <%= image_tag("lamp.jpg", class: "img-responsive") %>
-        </div>
-    </div>
-
-    <!-- /.container -->
-
-</div>
-<!-- /.content-section-b -->
-
-<div class="content-section-a">
-
-
-    <div class="row">
-        <div class="col-sm-6 col-xs-12">
-            <div class="text-center text-align">
-                <br>
-                <br>
-                <br>
-                <h2 class="section-heading">Step three:<br>Swap</h2>
-                <p class="lead">Your item doesn't fit anymore with your new painting color. It's okay. Just Swap it.</p>
-                <p class="icon-big"><i class="fa fa-exchange" aria-hidden="true"></i></p>
-
-            </div>
-        </div>
-        <div class="col-sm-6 col-xs-12">
-            <%= image_tag("loft.jpg", class: "img-responsive") %>
-        </div>
-    </div>
-</div>
-
+  </div>
 <!-- -/////////////////Princing//////////////////// -->
 <div id="price_anchor" class="container-fluid">
 <div class="row">
