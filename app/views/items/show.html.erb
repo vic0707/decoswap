@@ -33,8 +33,10 @@
           <p> <strong> Materials: </strong>   <%= @item.materials %> </p>
           <p> <strong> Designer: </strong>   <%= @item.designer %> in <%= @item.design_period %> </p>
           <br>
+
           <h1><%= @item.price_cents/100 %> €/month</h1>
           <%= render 'add-to-cart' %>
+
         </div>
         <div class="row">
         <div class="col-md-12">
