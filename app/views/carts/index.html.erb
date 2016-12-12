@@ -25,7 +25,7 @@
 				<div class="row text-center shopping-cart-margin shopping-cart-padding shopping-cart-border">
 					<div class="col-xs-3">
 						<div class="shopping-cart-image shopping-cart-center flex-center">
-							<%= cl_image_tag(cart.item.photos.last.path) %>
+							<%= cl_image_tag(cart.item.photos.first.path) %>
 						</div>
 					</div>
 					<div class="col-xs-3">
@@ -53,6 +53,7 @@
 				<p>Free Shipping</p>
 				<p>Total price <%= @order.total_amount %>€</p>
 				<%= link_to "Checkout", edit_order_path(@order), class:"btn btn-primary"%>
+
 				<%#= link_to "Empty Cart", cart_path , class: "btn btn-danger", method: :delete %>
 			</div>
 		</div>

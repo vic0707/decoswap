@@ -23,8 +23,8 @@ class Item < ApplicationRecord
       case field.to_sym
       when :category_item
         scope.where(category_item: value)
-      when :price
-        scope.where(price: value)
+      when :price_cents
+        scope.where(price_cents: value)
       when :materials
         scope.where(materials: value)
       when :color

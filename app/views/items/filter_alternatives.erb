@@ -1,0 +1,10 @@
+ <%= f.collection_check_boxes :price, Item.all , :id, :price, label: "Price ", include_blank: "All prices", input_html: {name: :price}, selected: params[:price] %>
+
+
+  <%= f.input :materials, collection: materials_collection, as: :select, label: "Materials ", include_blank: "All materials", input_html: {name: :materials}, selected: params[:materials] %>
+
+    <%= f.check :color, collection: colors_collection, as: :select, label: "Color ", include_blank: "All colors", input_html: {name: :color}, selected: params[:color] %>
+
+ <%= f.collection_check_boxes :materials, materials_collection.map {|x| x[0]}, :first, :materials, label: "Materials ", include_blank: "All materials", input_html: {name: :materials}, selected: params[:materials] %>
+
+ <%= f.association :materials, collection: materials_collection, label: "Materials ", include_blank: "All materials", input_html: {name: :materials}, selected: params[:materials] %>
