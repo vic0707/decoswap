@@ -44,6 +44,7 @@
 
             <% if current_user && current_user.customer? && @item.reviews.blank? %>
             <p>Be the first to leave a review for <%= @item.name %> </p>
+
             <% end %>
 
             <% @item.reviews.reverse.each do |review| %>
