@@ -8,6 +8,7 @@
 //= require init_attachinary
 //= require order_submit
 //= require filters_items
+//= require product_page
 //= require algolia/v3/algoliasearch.min
 //= require banner_video
 //= require owl.carousel

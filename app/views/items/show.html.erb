@@ -1,4 +1,5 @@
 <!-- product page -->
+
 <div class= "padding-bottom">
 <div class="content-wrapper">
   <div class="row">
@@ -16,6 +17,7 @@
 
             <div class="item card-product">
               <%= cl_image_tag(photo.path, :class => 'img-responsive product_main_picture small') %>
+
             </div>
             <% end %>
           </div>
@@ -45,7 +47,46 @@
             <% if current_user && current_user.customer? && @item.reviews.blank? %>
             <p>Be the first to leave a review for <%= @item.name %> </p>
 
+
+          <div class="col-md-6">
+
+            <div class="product-title"><h1><%= @item.name %></h1></div>
+            <div class="product-desc"><h4><%= @item.category_item %></h4></div>
+            <div class="product-price"><%= @item.price %>€/month</div>
+            <div class="product-stock"><%= @item.status %></div>
+
+
+
+            <% if current_user.try(:customer?) %>
+            <div class="btn-group cart">
+              <%= link_to "Add to cart", "#myModal", :class => "btn btn-primary register_button", "data-toggle" => "modal", id: "add_to_cart" %>
+              <!-- <button type="button" class="btn btn-success" data-toggle="modal" data-target="#myModal">Add to cart</button> -->
+            </div>
+            <%= simple_form_for @cart do |f| %>
+            <div class="form-inputs">
+              <%= f.input :id, as: :hidden, input_html: {value: @item.id} %>
+            </div>
+
+            <div class="form-actions">
+              <%#= f.submit 'Add to Cart' %>
+            </div>
             <% end %>
+            <% else %>
+            <div class="btn-group cart">
+              <%= link_to "Add to cart", "#loginModal", class: "btn btn-primary register_button", "data-toggle" => "modal", id: "add_to_cart" %>
+            </div>
+
+            <% end %>
+
+            <div class="btn-group wishlist">
+
+              <% if current_user.try(:professional?) %>
+              <%= link_to "Edit", edit_dashboard_item_path(@item), class: "btn btn-danger" %>
+              <% end %>
+            </div>
+
+            <% end %>
+
 
             <% @item.reviews.reverse.each do |review| %>
             <%= render 'reviews/show', review: review %>
@@ -60,25 +101,17 @@
 
   </div>
 </div>
-
-<!-- Modal -->
-<div class="modal" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">Make a reservation</h4>
-      </div>
-      <div class="modal-body">
-        <%= simple_form_for @booking , url: item_bookings_path(@item) do |f| %>
-        <div class="form-inputs">
-          <%= f.input :end_date, as: :string, input_html: { class: "datepicker"} %>
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="myModalLabel">Item added to cart!</h4>
         </div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <div class="form-actions btn btn-primary center">
-          <%= f.button :submit %>
+        <div class="modal-body">
+          <%= link_to "Continue Shopping", items_path, class: "btn btn-primary" %>
+          <%= link_to "Checkout", cart_path, class: "btn btn-primary" %>
         </div>
         <% end %>
       </div>
@@ -93,11 +126,12 @@
 
 <!-- end of product page -->
 <script type="text/javascript">
-  $(document).ready(function(){
-    $('.datepicker').datepicker({
-      format: "dd/mm/yyyy",autoclose: true
-    });
+$(document).ready(function(){
+  $('.datepicker').datepicker({
+    format: "dd/mm/yyyy",autoclose: true
+
   });
+});
 </script>
 <script type="text/javascript">
   $(document).ready(function() {
