@@ -9,7 +9,7 @@
         <% end %>
 
         <div class="poster hidden">
-            <img src="../assets/background.jpg" alt="">
+            <%= image_tag("background.jpg") %>
         </div>
 
 
@@ -43,27 +43,29 @@
       <div class="row">
         <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 with-padding-bottom">
           <div class="how-it-works-img-cnt">
-            <img src="assets/icons/product.svg" alt="product-icon">
+            <%= image_tag("icons/product.svg") %>
           </div>
-          <h3 class="bf-page-subtitle-alt">Design and launch</h3>
-          <p>Upload custom artwork or create your design right on Bonfire</p>
+          <h3 class="bf-page-subtitle-alt">Select your items</h3>
+          <p>No more mainstream decorations, choose something unique from the best furnitures stores in your city</p>
         </div>
         <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 with-padding-bottom">
           <div class="how-it-works-img-cnt">
-            <img src="https://www.bonfire.com/images/partials/icons/big-promote.svg" alt="big-promote-icon ">
+            <%= image_tag("icons/shipping.svg") %>
           </div>
-          <h3 class="bf-page-subtitle-alt">Promote &amp; sell</h3>
-          <p>Spread the word on social media while we handle everything else</p>
+          <h3 class="bf-page-subtitle-alt">Items are shipped</h3>
+          <p>Sit back as orders are prepared and sent directly to you</p>
         </div>
         <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 with-padding-bottom">
           <div class="how-it-works-img-cnt">
-            <img src="assets/icons/shipping.svg" alt="shipped-icon">
+            <%= image_tag("icons/shipping.svg") %>
           </div>
           <h3 class="bf-page-subtitle-alt">Shirts are shipped</h3>
           <p>Sit back as orders are printed and sent directly to buyers</p>
         </div>
         <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 with-padding-bottom">
-          <div class="how-it-works-img-cnt"><img src="assets/icons/money.svg" alt="money-icon">
+          <div class="how-it-works-img-cnt">
+            <%= image_tag("icons/money.svg") %>
+
           </div>
           <h3 class="bf-page-subtitle-alt">Receive the profits</h3>
           <p>Get a fast payout of 100% of the campaign profits</p>
@@ -154,7 +156,6 @@
 
 </div>
 
-<%= javascript_include_tag 'application' %>
 
 
 </body>
