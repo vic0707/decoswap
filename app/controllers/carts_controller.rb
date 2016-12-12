@@ -24,7 +24,7 @@ class CartsController < ApplicationController
 
 		Cart.create(item: item, order: order)
 
-		redirect_to cart_path, notice: 'Added item to cart'
+		#redirect_to cart_path, notice: 'Added item to cart'
 	end
 
 	def destroy
