@@ -16,7 +16,7 @@ item1 = Item.new(
   price_cents: 2000,
   status: "Free",
   description:
-  "Sitting comfortably is important and not just at mealtimes. Our chairs also come in handy for paying the bills, helping with the homework or just talking with the people you love. Our range includes folding and stackable chairs so guests are never short of seats and upholstered ones for super softness where it matters most.",
+  "Sitting comfortably is important. Our chairs also come in handy for paying the bills, helping with the homework or just talking with the people you love.",
   color: "Beige",
   condition: "New",
   designer: "",
