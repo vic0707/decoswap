@@ -1,0 +1,31 @@
+<% if current_user.try(:admin?) %>
+<!--   <div class="btn-group cart">
+  <button type="button" class="btn btn-success" data-toggle="modal" data-target="#myModal">Add to cart</button>
+</div> -->
+<%= link_to "Edit", edit_dashboard_item_path(@item), class: "btn btn-danger" %>
+<%= simple_form_for @cart do |f| %>
+<div class="form-inputs">
+  <%= f.input :id, as: :hidden, input_html: {value: @item.id} %>
+</div>
+<div class="form-actions">
+  <%= f.submit 'Add to Cart', class: 'btn btn-primary' %>
+</div>
+<% end %>
+<% elsif current_user.try(:professional?) %>
+<div class="btn-group wishlist">
+  <%= link_to "Edit", edit_dashboard_item_path(@item), class: "btn btn-danger" %>
+  <% elsif current_user.try(:customer?) %>
+  <%= simple_form_for @cart do |f| %>
+  <div class="form-inputs">
+    <%= f.input :id, as: :hidden, input_html: {value: @item.id} %>
+  </div>
+  <div class="form-actions">
+    <%= f.submit 'Add to Cart', class: 'btn btn-prima' %>
+  </div>
+  <% end %>
+  <% else %>
+  <div class="btn-group cart">
+    <%= link_to "Add to cart", "#signupModal", :class => "btn btn-primary register_button", "data-toggle" => "modal" %>
+    <% end %>
+  </div>
+</div>
