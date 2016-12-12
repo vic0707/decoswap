@@ -15,7 +15,9 @@
     <%= render 'shared/navbar' %>
     <%= render 'shared/flashes' %>
     <%= javascript_include_tag 'application' %>
-    <div class="sticky-content"><%= yield %></div>
+    <div class="sticky-content">
+      <%= yield %> 
+    </div>
     <%= cloudinary_js_config %>
 
     <%= render 'shared/footer' %>

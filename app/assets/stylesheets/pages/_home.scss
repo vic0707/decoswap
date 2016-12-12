@@ -547,14 +547,18 @@ p.copyright {
   height: 125px;
 }
 
-.bf-page-title{
+.ds-page-title{
+  font-family: Soleil,Helvetica,Arial,sans-serif;
   font-size: 30px;
   line-height: 42px;
   font-weight: 800;
   margin-bottom: 48px;
+  color: #333;
 }
 
-.bf-page-subtitle-alt{
+.ds-page-subtitle-alt{
+  font-family: Soleil,Helvetica,Arial,sans-serif;
+  text-transform: uppercase;
   font-size: 16px;
   line-height: 22px;
   font-weight: 800;
@@ -563,3 +567,13 @@ p.copyright {
   text-transform: uppercase;
   margin-bottom: 24px;
 }
+
+#price_wrapper {
+  position: relative;
+  background-image: asset-data-url("background.jpg");
+  background-size: cover;
+  height: 500px;
+  background-position: bottom;
+}
+
+
