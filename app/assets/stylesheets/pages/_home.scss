@@ -483,6 +483,7 @@ p.copyright {
   text-transform: uppercase;
   vertical-align: middle;
   width: 100%;
+  margin-top: 80px;
   &:hover { text-decoration: none; }
 }
   /////////////////////////////////
@@ -521,3 +522,44 @@ p.copyright {
   }
 }
 
+
+// HOW IT WORKS SECTION +//
+
+.how-it-works{
+  text-align: center;
+  background-color: #fff;
+  max-width: 1344px;
+  padding: 96px 0;
+}
+
+.how-it-works-wrapper{
+  // max-width: 940px;
+  margin: auto;
+  padding: 0 48px;
+}
+.how-it-works-img-cnt{
+  background: url(https://www.bonfire.com/images/home/texture.png) center -30% no-repeat;
+  background-size: 180px;
+}
+
+.how-it-works-img-cnt img{
+  width: 55px;
+  height: 125px;
+}
+
+.bf-page-title{
+  font-size: 30px;
+  line-height: 42px;
+  font-weight: 800;
+  margin-bottom: 48px;
+}
+
+.bf-page-subtitle-alt{
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  color: inherit;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+}
