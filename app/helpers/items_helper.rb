@@ -7,7 +7,7 @@ module ItemsHelper
     "Tables",
     "Clocks",
     "Sofas" ].map do |x|
-      [x,x.parameterize]
+      [x, x]
     end
   end
   def price_collection
@@ -17,7 +17,8 @@ module ItemsHelper
     "40",
     "60",
     "100"].map do |x|
-      [x, x.to_i]
+      y = x.to_i*100
+      [x,y]
     end
   end
 
@@ -29,7 +30,7 @@ module ItemsHelper
     "Stone",
     "Tissu",
     "Wool"].map do |x|
-      [x,x.parameterize]
+      [x, x]
     end
   end
 
@@ -38,12 +39,13 @@ module ItemsHelper
     "White",
     "Black",
     "Brown",
+    "Beige",
     "Gray",
     "Warm",
     "Cold",
     "Flashy",
     ].map do |x|
-      [x,x.parameterize]
+      [x, x]
     end
   end
 

@@ -4,13 +4,15 @@
   <%= simple_form_for :item, url:items_path, html: {method: :get, class: "form-inline text-center"}, data: {autosubmit: true} do |f| %>
   <%= f.input :category_item, collection: category_collection, as: :select, label: "Category ", include_blank: "All items", input_html: {name: :category_item}, selected: params[:category_item] %>
   <%= f.hidden_field :name, value: params["query"], name: :query %>
-  <%= f.input :price, collection: price_collection, as: :select, label: "Price ", include_blank: "All prices", input_html: {name: :price}, selected: params[:price] %>
-  <%= f.input :materials, collection: materials_collection, as: :select, label: "Materials ", include_blank: "All materials", input_html: {name: :materials}, selected: params[:materials] %>
-  <%= f.input :color, collection: colors_collection, as: :select, label: "Color ", include_blank: "All colors", input_html: {name: :color}, selected: params[:color] %>
+
+  <%= f.input :price_cents, collection: price_collection, as: :select, label: "Price ", include_blank: "All prices", input_html: {name: :price_cents}, selected: params[:price_cents] %>
+
+ <%= f.input :color, collection: colors_collection, as: :select, label: "Color ", include_blank: "All colors", input_html: {name: :color}, selected: params[:color] %>
+
   <% end %>
 </div>
 </div>
-
+<br>
 <div class="container police margin-bottom-50px">
  <div class="row">
   <% @items.each do |item| %>
