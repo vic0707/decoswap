@@ -33,19 +33,15 @@
         <div class="profile-tabs">
           <a class="profile-tab active" <%= link_to 'Dashboard', dashboard_path %></a>
           <a class="profile-tab" <%= link_to 'Manage Items', manager_items_dashboard_path %> </a>
-
            <a class="profile-tab" <%= link_to 'Account Setting', account_settings_dashboard_path %> </a>
-
           <a class="profile-tab" <%= link_to 'Stats', stats_dashboard_path %> </a>
         </div>
 
         <div id="relative_div">
-
           <div class="text-justify-button">
             <h2 class="sub-header">Your Bookings</h2>
           <%= link_to 'Add New item', new_item_path, class: "btn btn-lg btn-primary" %>
           </div>
-
             <div class="table-responsive">
               <table class="table table-striped">
                 <thead>
