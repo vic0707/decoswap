@@ -1,6 +1,6 @@
             <% if current_user.try(:customer?) %>
             <div class="btn-group cart">
-              <%= link_to "Add to cart", "#myModal", :class => "btn btn-primary register_button", "data-toggle" => "modal", id: "add_to_cart" %>
+              <%= link_to "Add to cart", "#myModal", :class => "btn btn-lg btn-cart", "data-toggle" => "modal", id: "add_to_cart" %>
               <!-- <button type="button" class="btn btn-success" data-toggle="modal" data-target="#myModal">Add to cart</button> -->
             </div>
             <%= simple_form_for @cart do |f| %>
@@ -14,7 +14,7 @@
             <% end %>
             <% else %>
             <div class="btn-group cart">
-              <%= link_to "Add to cart", "#loginModal", class: "btn btn-primary register_button", "data-toggle" => "modal", id: "add_to_cart" %>
+              <%= link_to "Add to cart", "#loginModal", class: "btn btn-lg btn-primary", "data-toggle" => "modal", id: "add_to_cart" %>
             </div>
 
             <% end %>
