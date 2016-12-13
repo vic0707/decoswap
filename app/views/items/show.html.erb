@@ -35,8 +35,11 @@
             <br>
 
             <h1><%= @item.price_cents/100 %> €/month</h1>
-            <%= render 'add-to-cart' %>
-
+            <% if @to_swap %>
+              <%= render 'swap_modal'%>
+            <% else %>
+              <%= render 'add-to-cart' %>
+            <% end %>
           </div>
           <div class="row">
             <div class="col-md-12">
