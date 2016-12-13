@@ -21,11 +21,17 @@ class OrdersController < ApplicationController
 		respond_to do |format|
 			format.js
 		end
-
 	end
 
-  def finish
-  end
+	def swap
+		@item_return = Item.find(params[:to_swap])
+		@item_booked = Item.find(params[:format])
+		@booking_return = Booking.where(item: @item_return)
+		@booking_return.update(status: "Swap")
+		@item_return.update(status: "Free")
+		@item_booked.update(status: "Rent")
+		Booking.create!(user: current_user, item: @item_booked, status: "booked", start_date: Time.now)
+	end
 
 	private
 

@@ -4,13 +4,16 @@ class ItemsController < ApplicationController
 
   def index
     @items = Item.search(params).all
+    @to_swap = params[:to_swap]
+    @price_cents = params[:price_cents]
   end
 
   def show
     @booking = Booking.new
     @cart = Cart.new
     @review = Review.new
-
+    @to_swap = params[:to_swap]
+    @price_cents = params[:price_cents]
   end
 
   def new
