@@ -1,16 +1,20 @@
 .footer{
   background-color: #282828;
   width: 100%;
+  padding: 15px 0 10px;
 }
 
-.links_socials {
+.links-socials {
+  padding-top: 10px;
   ul {
     li {
       text-decoration: none;
       list-style: none;
       display: inline-block;
-      padding: 5px 10px;
       text-align: left;
+    }
+    a {
+      padding: 10px 20px;
     }
   }
   @media (max-width: 768px) {
