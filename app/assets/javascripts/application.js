@@ -7,6 +7,7 @@
 //= require attachinary
 //= require init_attachinary
 //= require order_submit
+//= require flip
 //= require filters_items
 //= require product_page
 //= require algolia/v3/algoliasearch.min
