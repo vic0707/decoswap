@@ -32,10 +32,10 @@ class DashboardsController < ApplicationController
     suma = 0
     user.bookings.each do |booking|
       if booking.item.status == "Rent"
-      suma += booking.item.price
+      suma += booking.item.price_cents
       end
     end
-    return suma
+    return suma/100
   end
 
   def sum_of_customers(user)
