@@ -76,8 +76,16 @@
           </div>
         </div>
         <div class="modal-body">
-          <%= link_to "Continue Shopping", items_path, class: "btn btn-primary" %>
-          <%= link_to "Checkout", cart_path, class: "btn btn-primary" %>
+          <div class="container">
+            <div class="row">
+              <div class="col-xs-6 text-center">
+                <%= link_to "Continue Shopping", items_path, class: "btn btn-cart" %>
+              </div>
+              <div class="col-xs-6 text-center">
+                <%= link_to "Checkout", cart_path, class: "btn btn-cart" %>
+              </div>
+            </div>
+          </div>      
         </div>
       </div>
     </div>
