@@ -1,6 +1,6 @@
 <div class="container police">
  <div class="row">
-  <%= simple_form_for :item, url:items_path, html: {method: :get, class: "form-inline text-center"}, data: {autosubmit: true} do |f| %>
+  <%= simple_form_for :item, url:items_path, html: {method: :get, class: "form-inline text-center"}, data: {autosubmit: true}, remote: true do |f| %>
   <%= f.input :category_item, collection: category_collection, as: :select, label: false, include_blank: "All items", input_html: {name: :category_item}, selected: params[:category_item] %>
   <%= f.hidden_field :name, value: params["query"], name: :query %>
 <p> ---</p>

@@ -405,7 +405,7 @@ item25 = Item.new(
   materials: "Canvas",
   category_item: "Paintings")
 item25.photo_urls = [
-  "http://res.cloudinary.com/dhrqyxgzp/image/upload/v1481564718/2nd%20seed/pulp_fiction1.webp",
+  "http://res.cloudinary.com/dhrqyxgzp/image/upload/v1481636698/2nd%20seed/pulp_fiction_by_ale_giorgini_42x59cm_lb02.webp",
   "http://res.cloudinary.com/dhrqyxgzp/image/upload/v1481564718/2nd%20seed/pulp_fiction2.jpg",
   "http://res.cloudinary.com/dhrqyxgzp/image/upload/v1481564718/2nd%20seed/pulp_fiction3.png",
   "http://res.cloudinary.com/dhrqyxgzp/image/upload/v1481564719/2nd%20seed/pulp_fiction4.webp",

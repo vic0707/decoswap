@@ -6,6 +6,10 @@ class ItemsController < ApplicationController
     @items = Item.search(params).all
     @to_swap = params[:to_swap]
     @price_cents = params[:price_cents]
+    respond_to do |format|
+      format.html
+      format.js
+    end
   end
 
   def show
