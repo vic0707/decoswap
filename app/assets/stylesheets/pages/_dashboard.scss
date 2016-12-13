@@ -122,3 +122,13 @@ body {
 #relative_div {
   position: relative;
 }
+
+.text-justify-button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+    h2 {
+      border: none;
+    }
+}
