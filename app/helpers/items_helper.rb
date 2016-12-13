@@ -2,7 +2,7 @@ module ItemsHelper
   def category_collection
     [
     "Chairs",
-    "Paitings",
+    "Paintings",
     "Lamps",
     "Tables",
     "Clocks",
@@ -25,10 +25,12 @@ module ItemsHelper
   def materials_collection
     [
     "Wood",
-    "Aluminium",
+    "Metal",
     "Plastic",
-    "Stone",
-    "Tissu",
+    "Glass",
+    "Canvas",
+    "Leather",
+    "Cotton",
     "Wool"].map do |x|
       [x, x]
     end

@@ -9,3 +9,5 @@
 
  <%= f.association :materials, collection: materials_collection, label: "Materials ", include_blank: "All materials", input_html: {name: :materials}, selected: params[:materials] %>
 
+
+ <%= f.input :color, collection: colors_collection, as: :select, label: false, include_blank: "All colors", input_html: {name: :color}, selected: params[:color] %>
