@@ -15,7 +15,9 @@ Rails.application.routes.draw do
   end
 
   resource :profile, only: [:show, :edit, :update] do
-  	resources :bookings, only: [:edit, :update, :destroy]
+    get '/historic', to: "profiles#historic"
+    get '/account_settings', to: "profiles#account_settings"
+    resources :bookings, only: [:edit, :update, :destroy]
   end
 
   resource :dashboard, only: [:show] do
@@ -31,7 +33,7 @@ Rails.application.routes.draw do
 
   get 'cart', to: 'carts#index'
 
-  delete 'cart', to: 'carts#delete_all' 
+  delete 'cart', to: 'carts#delete_all'
   resources :carts, only: [:new, :create, :destroy]
 
 end
