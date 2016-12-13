@@ -36,16 +36,22 @@ class BookingsController < ApplicationController
 	end
 
   def destroy
+  	#raise
     @booking = Booking.find(params[:id])
-    @item = Item.find(@booking.item.id)
-    @item.status = "Free"
-    @booking.end_date = Time.now
-    if @booking.save
-      @item.save
-      redirect_to profile_path
-    else
-      render :new
-    end
+    #@item = Item.find(@booking.item.id)
+    #@item.status = "Free"
+    @booking.update(status: "swap")
+
+    @items = Item.where(price_cents: @booking.item.price_cents)
+
+    redirect_to items_path
+    #@booking.end_date = Time.now
+    #if @booking.save
+    #  @item.save
+    #  redirect_to profile_path
+    #else
+    #  render :new
+    #end
   end
 
 	private

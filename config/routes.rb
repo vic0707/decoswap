@@ -10,9 +10,11 @@ Rails.application.routes.draw do
     end
   end
 
+  get 'orders/swap', to: 'orders#swap'
   resources :orders, only: [:edit, :update, :show] do
     resources :payments, only: [:new, :create]
   end
+
 
   resource :profile, only: [:show, :edit, :update] do
   	resources :bookings, only: [:edit, :update, :destroy]
