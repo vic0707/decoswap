@@ -1,20 +1,9 @@
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-sm-3 col-md-2 sidebar">
-          <ul class="nav nav-sidebar">
-            <li class="active"> <%= link_to 'Dashboard', dashboard_path %>  </li>
-            <li> <%= link_to 'Manage Items', manager_items_dashboard_path %>  </li>
-            <li> <%= link_to 'Stats', stats_dashboard_path %>  </li>
-            <li> <%= link_to 'Account Settings', account_settings_dashboard_path %>  </li>
-            <li> <br> </li>
-            <li> <%= link_to 'Add New item', new_item_path %> </li>
-          </ul>
-        </div>
-        <%= link_to 'Add New item', new_item_path, class: "btn btn-lg btn-primary", id: "new_item_btn" %>
-        <div id="relative_div">
 
-          <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-            <h1 class="page-header">Check out your Bookings</h1>
+<h1 class="page- text-center">Check out your Bookings</h1>
+<div class="container-fluid">
+      <div class="row">
+       <div class="col-md-12">
+
             <div class="row placeholders">
               <div class="col-xs-6 col-sm-3 placeholder">
                 <i class="fa fa-eur" aria-hidden="true"></i>
@@ -37,8 +26,26 @@
                 <span class="text-muted">+34%</span>
               </div>
             </div>
+          </div>
+        </div>
 
-            <h2 class="sub-header">Section title</h2>
+
+        <div class="profile-tabs">
+          <a class="profile-tab active" <%= link_to 'Dashboard', dashboard_path %></a>
+          <a class="profile-tab" <%= link_to 'Manage Items', manager_items_dashboard_path %> </a>
+
+           <a class="profile-tab" <%= link_to 'Account Setting', account_settings_dashboard_path %> </a>
+
+          <a class="profile-tab" <%= link_to 'Stats', stats_dashboard_path %> </a>
+        </div>
+
+        <div id="relative_div">
+
+          <div class="text-justify-button">
+            <h2 class="sub-header">Your Bookings</h2>
+          <%= link_to 'Add New item', new_item_path, class: "btn btn-lg btn-primary" %>
+          </div>
+
             <div class="table-responsive">
               <table class="table table-striped">
                 <thead>

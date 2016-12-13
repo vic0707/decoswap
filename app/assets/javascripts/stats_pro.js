@@ -1,5 +1,4 @@
 if ($(".dashboards.stats").length > 0) {
-  debugger
  google.charts.load('current', {'packages':['corechart']});
       google.charts.setOnLoadCallback(drawVisualization);
 
