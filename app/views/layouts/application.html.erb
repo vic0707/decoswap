@@ -13,10 +13,10 @@
   </head>
   <body class="<%= controller_name %> <%= action_name %> sticky-site" >
     <%= render 'shared/navbar' %>
-    <%= render 'shared/flashes' %>
     <%= javascript_include_tag 'application' %>
+    <%= render 'shared/flashes' %>
     <div class="sticky-content">
-      <%= yield %> 
+      <%= yield %>
     </div>
     <%= cloudinary_js_config %>
 
