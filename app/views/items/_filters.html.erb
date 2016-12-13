@@ -4,7 +4,7 @@
   <%= f.input :category_item, collection: category_collection, as: :select, label: false, include_blank: "All items", input_html: {name: :category_item}, selected: params[:category_item] %>
   <%= f.hidden_field :name, value: params["query"], name: :query %>
 <p> ---</p>
-   <%= f.collection_check_boxes :price_cent, price_collection, :last, :first, { item_wrapper_class: "collection_button_wrapper", collection_wrapper_class: "folded tags_collection", checked: params["price_cent"], include_hidden: false }, name: "price_cent[]"%>
+   <%= f.collection_check_boxes :price_cents, price_collection, :last, :first, { item_wrapper_class: "collection_button_wrapper", collection_wrapper_class: "folded tags_collection", checked: params["price_cents"], include_hidden: false }, name: "price_cents[]"%>
 <p> ---</p>
  <%= f.collection_check_boxes :color, colors_collection, :last, :first, { item_wrapper_class: "collection_button_wrapper", collection_wrapper_class: "folded tags_collection", checked: params["color"], include_hidden: false }, name: "color[]"%>
 <p> ---</p>
