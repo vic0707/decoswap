@@ -65,3 +65,11 @@
 
 
 
+.collection_button_wrapper {
+  label {
+    min-width: 100px;
+  }
+}
+#item_color_beige + label{
+  background-color: red;
+}
