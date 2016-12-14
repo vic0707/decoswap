@@ -1,9 +1,10 @@
-<!-- <h1 class="text-center">All the items</h1> -->
+<h1 class="text-center">Select your Item</h1>
 
-<%= render "filters" %>
+ <%= render "filters" %>
+
+<div class="border-bottom-filters"> </div>
 
 <br>
-
 <div id= "items" class="container police margin-bottom-50px">
   <%= render 'items/searchresult', items: @items %>
 </div>

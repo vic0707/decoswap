@@ -28,8 +28,7 @@ module ItemsHelper
     "Plastic",
     "Canvas",
     "Leather",
-    "Cotton",
-    "Wool"].map do |x|
+    "Cotton"].map do |x|
       [x, x]
     end
   end
