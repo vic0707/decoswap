@@ -27,19 +27,24 @@ item1 = Item.new(
   category_item: "Chairs")
 item1.photo_urls = [
   "http://res.cloudinary.com/dhrqyxgzp/image/upload/v1480509229/rbpmn8ieodqgsbbzvvck.jpg"]
+
 item2 = Item.new(
-  name: "Pixar",
-  size: "20*20*150",
-  price_cents: 2000,
+  name: "White Cloud",
+  size: "50*60*85",
+  price_cents: 10000,
   status: "Free",
-  description: "Floor lamps offer an easy-to-add lighting solution for any space, even if you don’t have much room.",
-  color: "Black",
+  description: "For you, we've designed the most confortable sofa. Try it, it feels like if your were sitting in the clouds",
   condition: "New",
-  designer: "",
-  design_period: "2009",
-  materials: "Aluminium",
+  designer: "Dark Father",
+  design_period: "2016",
+  materials: "Plastic",
   category_item: "Lamps")
-item2.photo_urls = ["http://res.cloudinary.com/dhrqyxgzp/image/upload/v1480510191/tpraydo6ksmmzaytou1p.jpg"]
+item2.photo_urls = [
+  "http://res.cloudinary.com/dhrqyxgzp/image/upload/v1481709824/sofa-1_isquxj.jpg",
+  "http://res.cloudinary.com/dhrqyxgzp/image/upload/v1481709824/sofa-2_ksvwge.jpg",
+  "http://res.cloudinary.com/dhrqyxgzp/image/upload/v1481709824/sofa-3_gzl1vc.jpg"]
+
+
 item3 = Item.new(
   name: "Gypset",
   size: "65*50*80",
@@ -64,7 +69,7 @@ item4 = Item.new(
   designer: "Minh",
   design_period: "2015",
   materials: "Wood",
-  category_item: "Paintings")
+  category_item: "Painting")
 item4.photo_urls = ["http://res.cloudinary.com/dhrqyxgzp/image/upload/v1480510595/uluu8emclrydcp1s2nra.jpg"]
 item5 = Item.new(
   name: "Wood puddle",
@@ -77,21 +82,23 @@ item5 = Item.new(
   designer: "",
   design_period: "2009",
   materials: "Wood",
-  category_item: "Tables")
+  category_item: "Table")
 item5.photo_urls = ["http://res.cloudinary.com/dhrqyxgzp/image/upload/v1480510844/tf0p6kbzpe1q22oig6gq.jpg"]
+
 item6 = Item.new(
-  name: "Wall Clock",
-  size: "50*50*8",
-  price_cents: 1000,
+  name: "Pixar",
+  size: "20*20*150",
+  price_cents: 2000,
   status: "Free",
-  description: "Classic wooden clock which gives time. ",
-  color: "White",
+  description: "Floor lamps offer an easy-to-add lighting solution for any space, even if you don’t have much room.",
+  color: "Black",
   condition: "New",
   designer: "",
-  design_period: "2013",
-  materials: "Wood",
-  category_item: "Clocks")
-item6.photo_urls = ["http://res.cloudinary.com/dhrqyxgzp/image/upload/v1480510973/qyzg2imxcyjtqzuk29fk.jpg"]
+  design_period: "2009",
+  materials: "Aluminium",
+  category_item: "Lamp")
+item6.photo_urls = ["http://res.cloudinary.com/dhrqyxgzp/image/upload/v1480510191/tpraydo6ksmmzaytou1p.jpg"]
+
 item7 = Item.new(
   name: "Balance",
   size: "65*50*80",
@@ -116,7 +123,7 @@ item8 = Item.new(
   designer: "The Swedish Company",
   design_period: "2015",
   materials: "Wood",
-  category_item: "Lamps")
+  category_item: "Lamp")
 item8.photo_urls = ["http://res.cloudinary.com/dhrqyxgzp/image/upload/v1480511280/i3bhx0s97a5hjhdjdz51.jpg"]
 item9 = Item.new(
   name: "Focused Nature",
@@ -129,7 +136,7 @@ item9 = Item.new(
   designer: "Houdihou",
   design_period: "2012",
   materials: "Glass",
-  category_item: "Paintings")
+  category_item: "Painting")
 item9.photo_urls = ["http://res.cloudinary.com/dhrqyxgzp/image/upload/v1480511503/iqbdfemueq2dqrfmbqg7.jpg"]
 item10 = Item.new(
   name: "Stable table",
@@ -142,7 +149,7 @@ item10 = Item.new(
   designer: "The Swedish Company",
   design_period: "2013",
   materials: "Wood",
-  category_item: "Tables")
+  category_item: "Table")
 item10.photo_urls = ["http://res.cloudinary.com/dhrqyxgzp/image/upload/v1480511674/xcpnhix16jtg7qzbho2i.jpg"]
 item11 = Item.new(
   name: "Vase Chair ",
@@ -168,7 +175,7 @@ item12 = Item.new(
   designer: "The an.on.ym.ous photograph",
   design_period: "2014",
   materials: "Glass",
-  category_item: "Paintings")
+  category_item: "Painting")
 item12.photo_urls = ["http://res.cloudinary.com/dhrqyxgzp/image/upload/v1480512003/zuaxk8kakpzaokmbmgok.jpg"]
 item13 = Item.new(
   name: "The Table.",
@@ -181,9 +188,8 @@ item13 = Item.new(
   designer: "The Swedish Company",
   design_period: "",
   materials: "Wood",
-  category_item: "Tables")
+  category_item: "Table")
 item13.photo_urls = ["http://res.cloudinary.com/dhrqyxgzp/image/upload/v1480512102/htjt0szqtfyiqhuo9urg.jpg"]
-
 item14 = Item.new(
   name: "Dusty shower",
   size: "160*100*6",
@@ -195,13 +201,13 @@ item14 = Item.new(
   designer: "S.P",
   design_period: "2004",
   materials: "Glass",
-  category_item: "Paintings")
+  category_item: "Painting")
 item14.photo_urls = ["http://res.cloudinary.com/dhrqyxgzp/image/upload/v1480512493/lf4wrhdiveg0qh1yilwr.jpg"]
 
 
 item21 = Item.new(
   name: "Jonah",
-  size: "82*84*3",
+  size: "82*84*89",
   price_cents: 4000,
   status: "Free",
   description: "We’re a bit emotional about Jonah. It was one of our first ever designs, and it’s been a customer favourite ever since. So we thought a re-vamp was well deserved. Check out the new Spearmint Green fabric.",
@@ -219,42 +225,22 @@ item21.photo_urls = [
 ]
 
 item22 = Item.new(
-  name: "Fonteyn",
-  size: "75*90*50",
-  price_cents: 6000,
+  name: "Movie Studio",
+  size: "30*40*120",
+  price_cents: 4000,
   status: "Free",
-  description: "This dressing table is elegantly balanced with slender, tapered legs and gracefully curved edges. Topped by a stylish round mirror.",
-  color: "Beige",
+  description:
+  "Shhhhhhhh ..... ! We're filming.... annnnd Actionnn !!!",
+  color: "Black",
   condition: "New",
-  designer: "Steuart Padwick",
-  design_period: "2016",
-  materials: "Wood",
-  category_item: "Tables")
-item22.photo_urls = [
-  "http://res.cloudinary.com/dhrqyxgzp/image/upload/v1481563143/2nd%20seed/fonteyn1.webp",
-  "http://res.cloudinary.com/dhrqyxgzp/image/upload/v1481563143/2nd%20seed/fonteyn2.webp",
-  "http://res.cloudinary.com/dhrqyxgzp/image/upload/v1481563143/2nd%20seed/fonteyn3.webp",
-  "http://res.cloudinary.com/dhrqyxgzp/image/upload/v1481563146/2nd%20seed/fonteyn4.webp",
-]
+  designer: "The Movie furnisher",
+  design_period: "2010",
+  materials: "Metal",
+  category_item: "Lamps")
+  item22.photo_urls = [
+  "http://res.cloudinary.com/dhrqyxgzp/image/upload/v1481705989/projo-1_imdril.jpg",
+  "http://res.cloudinary.com/dhrqyxgzp/image/upload/v1481705989/projo-2_s3ivvv.jpg"]
 
-item23 = Item.new(
-  name: "Jenson",
-  size: "55*110*43",
-  price_cents: 6000,
-  status: "Free",
-  description: "Based on a 60s telephone bench, this storage piece from our Jensen range fuses the best of mid-century design with modern luxury.",
-  color: "Beige",
-  condition: "New",
-  designer: "Tim Fenby",
-  design_period: "2015",
-  materials: "Wood",
-  category_item: "Chairs")
-item23.photo_urls = [
-  "http://res.cloudinary.com/dhrqyxgzp/image/upload/v1481563738/2nd%20seed/jenson1.webp",
-  "http://res.cloudinary.com/dhrqyxgzp/image/upload/v1481563738/2nd%20seed/jenson2.webp",
-  "http://res.cloudinary.com/dhrqyxgzp/image/upload/v1481563738/2nd%20seed/jenson3.webp",
-  "http://res.cloudinary.com/dhrqyxgzp/image/upload/v1481563738/2nd%20seed/jenson4.webp",
-]
 
 
 item26 = Item.new(
@@ -273,14 +259,14 @@ item26.photo_urls = [
   "http://res.cloudinary.com/dhrqyxgzp/image/upload/v1481565198/2nd%20seed/back_to_the_future1.png",
   "http://res.cloudinary.com/dhrqyxgzp/image/upload/v1481565198/2nd%20seed/back_to_the_future2.webp",
   "http://res.cloudinary.com/dhrqyxgzp/image/upload/v1481565198/2nd%20seed/back_to_the_future3.png",
-  "http://res.cloudinary.com/dhrqyxgzp/image/upload/v1481565198/2nd%20seed/back_to_the_future4.png"
+  "http://res.cloudinary.com/dhrqyxgzp/image/upload/v1481565198/2nd%20seed/back_to_the_future4.png",
 ]
 
 
 item27 = Item.new(
   name: "Vulpes Vulpes",
   size: "42*59",
-  price_cents: 10000,
+  price_cents: 12000,
   status: "Free",
   description: "Hungary-based artist Robert Farkas creates artwork by digitally layering traditional watercolour. Vulpes Vulpes is the Latin name of the red fox, the star of piece.",
   color: "Warm",
@@ -406,22 +392,26 @@ item35 = Item.new(
   "http://res.cloudinary.com/dhrqyxgzp/image/upload/v1481705989/photograph-2_fjmyqa.jpg",
   "http://res.cloudinary.com/dhrqyxgzp/image/upload/v1481705989/photograph-3_oaqe4i.jpg"]
 
+
+
 item36 = Item.new(
-  name: "Movie Studio",
-  size: "30*40*120",
-  price_cents: 4000,
+  name: "Jenson",
+  size: "55*110*43",
+  price_cents: 12000,
   status: "Free",
-  description:
-  "Shhhhhhhh ..... ! We're filming.... annnnd Actionnn !!!",
-  color: "Black",
+  description: "Based on a 60s telephone bench, this storage piece from our Jensen range fuses the best of mid-century design with modern luxury.",
+  color: "Beige",
   condition: "New",
-  designer: "The Movie furnisher",
-  design_period: "2010",
-  materials: "Metal",
-  category_item: "Lamps")
-  item36.photo_urls = [
-  "http://res.cloudinary.com/dhrqyxgzp/image/upload/v1481705989/projo-1_imdril.jpg",
-  "http://res.cloudinary.com/dhrqyxgzp/image/upload/v1481705989/projo-2_s3ivvv.jpg"]
+  designer: "Tim Fenby",
+  design_period: "2015",
+  materials: "Wood",
+  category_item: "Chairs")
+item36.photo_urls = [
+  "http://res.cloudinary.com/dhrqyxgzp/image/upload/v1481563738/2nd%20seed/jenson1.webp",
+  "http://res.cloudinary.com/dhrqyxgzp/image/upload/v1481563738/2nd%20seed/jenson2.webp",
+  "http://res.cloudinary.com/dhrqyxgzp/image/upload/v1481563738/2nd%20seed/jenson3.webp",
+  "http://res.cloudinary.com/dhrqyxgzp/image/upload/v1481563738/2nd%20seed/jenson4.webp",
+]
 
 item37 = Item.new(
   name: "Dinner Table",
@@ -436,7 +426,9 @@ item37 = Item.new(
   design_period: "2015",
   materials: "Metal",
   category_item: "Tables")
-  item37.photo_urls = ["http://res.cloudinary.com/dhrqyxgzp/image/upload/v1481705989/table-white-2_symhyl.jpg",
+  item37.photo_urls = [
+  "http://res.cloudinary.com/dhrqyxgzp/image/upload/v1481721571/table-white-1-1_i7gpcy.jpg",
+  "http://res.cloudinary.com/dhrqyxgzp/image/upload/v1481705989/table-white-2_symhyl.jpg",
   "http://res.cloudinary.com/dhrqyxgzp/image/upload/v1481705989/table-white-3_zokoxs.jpg"]
 
 item38 = Item.new(
@@ -487,21 +479,39 @@ item40 = Item.new(
 item40.photo_urls = [
   "http://res.cloudinary.com/dhrqyxgzp/image/upload/v1481707846/black_lamp__nrsbjh.jpg"]
 
-item41 = Item.new(
-  name: "White Cloud",
-  size: "50*60*85",
-  price_cents: 10000,
+
+item42 = Item.new(
+  name: "Wall Clock",
+  size: "50*50*8",
+  price_cents: 1000,
   status: "Free",
-  description: "For you, we've designed the most confortable sofa. Try it, it feels like if your were sitting in the clouds",
+  description: "Classic wooden clock which gives time. ",
+  color: "White",
   condition: "New",
-  designer: "Dark Father",
+  designer: "",
+  design_period: "2013",
+  materials: "Wood",
+  category_item: "Clock")
+item42.photo_urls = ["http://res.cloudinary.com/dhrqyxgzp/image/upload/v1480510973/qyzg2imxcyjtqzuk29fk.jpg"]
+
+item43 = Item.new(
+  name: "Fonteyn",
+  size: "75*90*50",
+  price_cents: 12000,
+  status: "Free",
+  description: "This dressing table is elegantly balanced with slender, tapered legs and gracefully curved edges. Topped by a stylish round mirror.",
+  color: "Beige",
+  condition: "New",
+  designer: "Steuart Padwick",
   design_period: "2016",
-  materials: "Leather",
-  category_item: "Sofas")
-item41.photo_urls = [
-  "http://res.cloudinary.com/dhrqyxgzp/image/upload/v1481709824/sofa-1_isquxj.jpg",
-  "http://res.cloudinary.com/dhrqyxgzp/image/upload/v1481709824/sofa-2_ksvwge.jpg",
-  "http://res.cloudinary.com/dhrqyxgzp/image/upload/v1481709824/sofa-3_gzl1vc.jpg"]
+  materials: "Wood",
+  category_item: "Tables")
+item43.photo_urls = [
+  "http://res.cloudinary.com/dhrqyxgzp/image/upload/v1481563143/2nd%20seed/fonteyn1.webp",
+  "http://res.cloudinary.com/dhrqyxgzp/image/upload/v1481563143/2nd%20seed/fonteyn2.webp",
+  "http://res.cloudinary.com/dhrqyxgzp/image/upload/v1481563143/2nd%20seed/fonteyn3.webp",
+  "http://res.cloudinary.com/dhrqyxgzp/image/upload/v1481563146/2nd%20seed/fonteyn4.webp",
+]
 
 item1.save
 item2.save
@@ -516,10 +526,8 @@ item10.save
 item11.save
 item12.save
 item13.save
-item14.save
 item21.save
 item22.save
-item23.save
 item26.save
 item27.save
 item28.save
@@ -528,31 +536,11 @@ item32.save
 item33.save
 item34.save
 item35.save
-item36.save
 item37.save
+item36.save
 item38.save
 item39.save
 item40.save
-item41.save
+item42.save
+item43.save
 
-
-
-
-#.save item1 = Item.new(
-#   name: "",
-#   size: "",
-#   price_cents: 4000,
-#   status: "Available",
-#   description: "",
-#   color: "",
-#   condition: "New",
-#   designer: "",
-#   design_period: "",
-#   materials: "",
-#   category_item: "")
-# item1.photo_urls = [
-#   "",
-#   "",
-#   "",
-#   "",
-#]
