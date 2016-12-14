@@ -41,7 +41,6 @@ module ItemsHelper
     "Beige",
     "Gray",
     "Warm",
-    "Cold",
     ].map do |x|
       [x, x]
     end

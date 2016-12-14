@@ -4,7 +4,7 @@
   <div class="content-wrapper">
     <div class="row">
       <div class="col-md-6">
-        <h1><%= @item.name %> </h1>
+        <h1> <strong> <%= @item.name %> </strong> </h1>
         <%= @item.category_item %>
       </div>
     </div>
@@ -24,7 +24,7 @@
           </div>
 
           <div class="col-md-6">
-            <h3>Product information</h3>
+            <h3> <strong> Product information </strong> </h3>
             <p><%= @item.description %></p>
             <br>
             <p> <strong> Size: </strong>   <%= @item.size %> </p>
@@ -88,7 +88,7 @@
                 <%= link_to "Checkout", cart_path, class: "btn btn-cart" %>
               </div>
             </div>
-          </div>      
+          </div>
         </div>
       </div>
     </div>
