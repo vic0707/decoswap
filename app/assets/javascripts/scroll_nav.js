@@ -16,12 +16,12 @@ $(document).ready(function() {
 
         $(".navbar-wagon").css('background-color', '#282828');
         $(".navbar-wagon").css('margin-top', 0);
-        $(".navbar-wagon-brand img").css('width', 150);
+        // $(".navbar-wagon-brand img").css('width', 150);
 
       } else {
         $('.navbar-wagon').css('background-color', 'transparent' );
-        $(".navbar-wagon").css('margin-top', 30);
-        $(".navbar-wagon-brand img").css('width', 200);
+        $(".navbar-wagon").css('margin-top', 20);
+        // $(".navbar-wagon-brand img").css('width', 200);
 
       }
     });

@@ -1,8 +1,12 @@
+#logo{
+  width: 20px;
+  padding-bottom: 8px;
+}
 .navbar-wagon {
   background: #282828;
   transition: all 0.3s ease;
   display: flex;
-  height: 70px;
+  height: 62px;
   padding: 0px 60px;
   align-items: center;
   justify-content: space-between;
@@ -161,7 +165,7 @@ width: 400px;
   background-color: transparent;
 }
 #expandable_searchbar input[type=text]:focus {
-  width: 100px;
+  width: 150px;
   padding-left: 32px;
   color: #000;
   background-color: transparent;
@@ -192,7 +196,7 @@ input::-webkit-search-cancel-button {
 input[type=text] {
   background: transparent url(http://static.tumblr.com/ftv85bp/MIXmud4tx/search-icon.png) no-repeat 9px center;
   border: solid 1px #fff;
-  padding: 9px 23px 9px 31px;
+  padding: 6px 80px 6px 31px;
   width: -1px;
 
   -webkit-border-radius: 10em;
