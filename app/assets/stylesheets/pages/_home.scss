@@ -513,7 +513,7 @@
   text-align: center;
   background-color: #fff;
   max-width: 1344px;
-  padding: 96px 0;
+  padding: 50px 0;
 }
 
 .how-it-works-wrapper{
@@ -532,6 +532,14 @@
   height: 125px;
 }
 
+
+.with-padding-bottom{
+  padding-bottom: 48px;
+  min-height: 320px;
+}
+.with-small-padding-bottom{
+  padding-bottom: 50px;
+}
 .ds-page-title{
   font-family: Soleil,Helvetica,Arial,sans-serif;
   font-size: 30px;
@@ -559,6 +567,8 @@
   height: 500px;
   background-position: bottom;
 }
+
+
 // TESTIMONIAL ///
 .testimonials-text{
   padding: 49px 0 45px 40px;
@@ -594,13 +604,4 @@
   color: inherit;
 }
 
-// .testimonials-text span:before {
-//   content: '"';
-//   display: inline-block;
-//   color: #5e82a6;
-//   font-size: 48px;
-//   font-style: italic;
-//   position: absolute;
-//   top: -30px;
-//   left: -28px;
-// }
+
