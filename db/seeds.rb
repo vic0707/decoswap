@@ -69,7 +69,7 @@ item4 = Item.new(
   designer: "Minh",
   design_period: "2015",
   materials: "Wood",
-  category_item: "Painting")
+  category_item: "Paintings")
 item4.photo_urls = ["http://res.cloudinary.com/dhrqyxgzp/image/upload/v1480510595/uluu8emclrydcp1s2nra.jpg"]
 item5 = Item.new(
   name: "Wood puddle",
@@ -82,7 +82,7 @@ item5 = Item.new(
   designer: "",
   design_period: "2009",
   materials: "Wood",
-  category_item: "Table")
+  category_item: "Tables")
 item5.photo_urls = ["http://res.cloudinary.com/dhrqyxgzp/image/upload/v1480510844/tf0p6kbzpe1q22oig6gq.jpg"]
 
 item6 = Item.new(
@@ -96,7 +96,7 @@ item6 = Item.new(
   designer: "",
   design_period: "2009",
   materials: "Aluminium",
-  category_item: "Lamp")
+  category_item: "Lamps")
 item6.photo_urls = ["http://res.cloudinary.com/dhrqyxgzp/image/upload/v1480510191/tpraydo6ksmmzaytou1p.jpg"]
 
 item7 = Item.new(
@@ -123,7 +123,7 @@ item8 = Item.new(
   designer: "The Swedish Company",
   design_period: "2015",
   materials: "Wood",
-  category_item: "Lamp")
+  category_item: "Lamps")
 item8.photo_urls = ["http://res.cloudinary.com/dhrqyxgzp/image/upload/v1480511280/i3bhx0s97a5hjhdjdz51.jpg"]
 item9 = Item.new(
   name: "Focused Nature",
@@ -135,7 +135,7 @@ item9 = Item.new(
   condition: "New",
   designer: "Houdihou",
   design_period: "2012",
-  materials: "Glass",
+  materials: "Canvas",
   category_item: "Painting")
 item9.photo_urls = ["http://res.cloudinary.com/dhrqyxgzp/image/upload/v1480511503/iqbdfemueq2dqrfmbqg7.jpg"]
 item10 = Item.new(
@@ -149,7 +149,7 @@ item10 = Item.new(
   designer: "The Swedish Company",
   design_period: "2013",
   materials: "Wood",
-  category_item: "Table")
+  category_item: "Tables")
 item10.photo_urls = ["http://res.cloudinary.com/dhrqyxgzp/image/upload/v1480511674/xcpnhix16jtg7qzbho2i.jpg"]
 item11 = Item.new(
   name: "Vase Chair ",
@@ -174,8 +174,8 @@ item12 = Item.new(
   condition: "New",
   designer: "The an.on.ym.ous photograph",
   design_period: "2014",
-  materials: "Glass",
-  category_item: "Painting")
+  materials: "Canvas",
+  category_item: "Paintings")
 item12.photo_urls = ["http://res.cloudinary.com/dhrqyxgzp/image/upload/v1480512003/zuaxk8kakpzaokmbmgok.jpg"]
 item13 = Item.new(
   name: "The Table.",
@@ -188,7 +188,7 @@ item13 = Item.new(
   designer: "The Swedish Company",
   design_period: "",
   materials: "Wood",
-  category_item: "Table")
+  category_item: "Tables")
 item13.photo_urls = ["http://res.cloudinary.com/dhrqyxgzp/image/upload/v1480512102/htjt0szqtfyiqhuo9urg.jpg"]
 item14 = Item.new(
   name: "Dusty shower",
@@ -200,8 +200,8 @@ item14 = Item.new(
   condition: "New",
   designer: "S.P",
   design_period: "2004",
-  materials: "Glass",
-  category_item: "Painting")
+  materials: "Canvas",
+  category_item: "Paintings")
 item14.photo_urls = ["http://res.cloudinary.com/dhrqyxgzp/image/upload/v1480512493/lf4wrhdiveg0qh1yilwr.jpg"]
 
 
@@ -491,7 +491,7 @@ item42 = Item.new(
   designer: "",
   design_period: "2013",
   materials: "Wood",
-  category_item: "Clock")
+  category_item: "Clocks")
 item42.photo_urls = ["http://res.cloudinary.com/dhrqyxgzp/image/upload/v1480510973/qyzg2imxcyjtqzuk29fk.jpg"]
 
 item43 = Item.new(
