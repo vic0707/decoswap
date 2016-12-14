@@ -160,7 +160,7 @@ item11.photo_urls = ["http://res.cloudinary.com/dhrqyxgzp/image/upload/v14805117
 item12 = Item.new(
   name: "Tall Hugs",
   size: "50*150*8",
-  price_cents: 6000,
+  price_cents: 4000,
   status: "Free",
   description: "Often brutal and wild, savanna is a dangerous place. And when things get dangerous, there's nothing better than love to fight it.",
   color: "Black",
@@ -291,9 +291,7 @@ item27 = Item.new(
 item27.photo_urls = [
   "http://res.cloudinary.com/dhrqyxgzp/image/upload/v1481565734/2nd%20seed/vulpes_vulpes1.webp",
   "http://res.cloudinary.com/dhrqyxgzp/image/upload/v1481565734/2nd%20seed/vulpes_vulpes2.webp",
-  "http://res.cloudinary.com/dhrqyxgzp/image/upload/v1481565734/2nd%20seed/vulpes_vulpes3.webp",
-  "http://res.cloudinary.com/dhrqyxgzp/image/upload/v1481565734/2nd%20seed/vulpes_vulpes4.jpg",
-]
+  "http://res.cloudinary.com/dhrqyxgzp/image/upload/v1481565734/2nd%20seed/vulpes_vulpes3.webp"]
 
 item28 = Item.new(
   name: "Hommage to Stan",
@@ -437,9 +435,7 @@ item37 = Item.new(
   design_period: "2015",
   materials: "Metal",
   category_item: "Tables")
-  item37.photo_urls = [
-  "https://cloudinary.com/console/media_library#/dialog/image/upload/table-white-1_augsuy.jpg",
-  "http://res.cloudinary.com/dhrqyxgzp/image/upload/v1481705989/table-white-2_symhyl.jpg",
+  item37.photo_urls = ["http://res.cloudinary.com/dhrqyxgzp/image/upload/v1481705989/table-white-2_symhyl.jpg",
   "http://res.cloudinary.com/dhrqyxgzp/image/upload/v1481705989/table-white-3_zokoxs.jpg"]
 
 item38 = Item.new(
