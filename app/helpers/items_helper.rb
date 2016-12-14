@@ -18,7 +18,8 @@ module ItemsHelper
     "60",
     "100"].map do |x|
       y = x.to_i*100
-      [x,y]
+      z = x + "€/m"
+      [z,y]
     end
   end
 
