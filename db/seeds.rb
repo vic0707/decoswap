@@ -11,8 +11,8 @@ Booking.destroy_all
 Item.destroy_all
 
 user = User.new
-user.email = 'stan@decoswap.com'
-user.password = 'password'
+user.email = 'stan_pollet@decoswap.com'
+user.password = 'decoswap'
 user.save!
 
 
