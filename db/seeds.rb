@@ -16,7 +16,6 @@ user.password = 'decoswap'
 user.save!
 
 
-
 item1 = Item.new(
   name: "C-chair",
   size: "65*40*80",

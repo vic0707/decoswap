@@ -13,9 +13,6 @@ class User < ApplicationRecord
 
   validates :role, inclusion: { in: ["admin", "customer", "professional"], message: "%{value} is not valid" }
 
-
-  after_create :send_welcome_email
-
   def current_order
     orders.find_by(status: "ongoing")
   end
@@ -54,9 +51,5 @@ class User < ApplicationRecord
   end
 
   private
-
-  def send_welcome_email
-    UserMailer.welcome(self).deliver_now
-  end
 
 end
