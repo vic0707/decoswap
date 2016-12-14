@@ -550,7 +550,7 @@ item40 = Item.new(
   size: "22*43*51",
   price_cents: 2000,
   status: "Free",
-  description: "Enlight your ideas with this futuristic desk lamp"
+  description: "Enlight your ideas with this futuristic desk lamp",
   condition: "New",
   designer: "Dark Father",
   design_period: "2016",
