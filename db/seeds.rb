@@ -509,7 +509,57 @@ item30.photo_urls = [
   "http://res.cloudinary.com/dhrqyxgzp/image/upload/v1481623085/2nd%20seed/cornell4.webp",
 ]
 
+item38 = Item.new(
+  name: "Black Hole",
+  size: "120x10x30",
+  price_cents: 1000,
+  status: "Free",
+  description: "You can put anything you want in it, it will fit nice on your table",
+  color: "Black",
+  condition: "New",
+  designer: "Mr. Noir",
+  design_period: "2010",
+  materials: "Metal",
+  category_item: "Accessories")
+item38.photo_urls = [
+  "http://res.cloudinary.com/dhrqyxgzp/image/upload/v1481707847/black_vase_arvlsr.jpg",
+  "http://res.cloudinary.com/dhrqyxgzp/image/upload/v1481707847/black_vase_02_hlemvr.jpg",
+  "http://res.cloudinary.com/dhrqyxgzp/image/upload/v1481707847/black_vase_03_cfduxv.jpg",
 
+
+item39 = Item.new(
+  name: "Boule Jaune",
+  size: "86*43*51",
+  price_cents: 4000,
+  status: "Free",
+  description: "Chinese Designer Mr Jaune will let the sunshine in your home.",
+  color: "Flashy",
+  condition: "New",
+  designer: "Mr.Jaune",
+  design_period: "2016",
+  materials: "Plastic",
+  category_item: "Lamps")
+item39.photo_urls = [
+  "http://res.cloudinary.com/dhrqyxgzp/image/upload/v1481707847/yellow_lamp_ob6pyu.jpg",
+  "http://res.cloudinary.com/dhrqyxgzp/image/upload/v1481707847/yellow_lamp_03_rdijwq.jpg",
+  "http://res.cloudinary.com/dhrqyxgzp/image/upload/v1481707848/yellow_lamp_02_unfjvx.jpg",
+]
+
+item40 = Item.new(
+  name: "Dark Light",
+  size: "22*43*51",
+  price_cents: 2000,
+  status: "Free",
+  description: "Enlight your ideas with this futuristic desk lamp"
+  condition: "New",
+  designer: "Dark Father",
+  design_period: "2016",
+  materials: "Plastic",
+  category_item: "Lamps")
+item40.photo_urls = [
+  "http://res.cloudinary.com/dhrqyxgzp/image/upload/v1481707846/black_lamp__nrsbjh.jpg",
+  
+]
 
 item1.save
 item2.save
@@ -542,7 +592,9 @@ item27.save
 item28.save
 item29.save
 item30.save
-
+item38.save
+item39.save
+item40.save
 
 # item1 = Item.new(
 #   name: "",
