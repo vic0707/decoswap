@@ -35,8 +35,8 @@ module ItemsHelper
 
   def colors_collection
     [
-    "White",
     "Black",
+    "White",
     "Brown",
     "Beige",
     "Gray",
