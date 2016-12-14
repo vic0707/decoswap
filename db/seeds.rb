@@ -160,7 +160,7 @@ item11.photo_urls = ["http://res.cloudinary.com/dhrqyxgzp/image/upload/v14805117
 item12 = Item.new(
   name: "Tall Hugs",
   size: "50*150*8",
-  price_cents: 6000,
+  price_cents: 4000,
   status: "Free",
   description: "Often brutal and wild, savanna is a dangerous place. And when things get dangerous, there's nothing better than love to fight it.",
   color: "Black",
@@ -197,122 +197,6 @@ item14 = Item.new(
   category_item: "Painting")
 item14.photo_urls = ["http://res.cloudinary.com/dhrqyxgzp/image/upload/v1480512493/lf4wrhdiveg0qh1yilwr.jpg"]
 
-
-
-
-
-item15 = Item.new(
-  name: "Brodway",
-  size: "45*47*13",
-  price_cents: 4000,
-  status: "Free",
-  description: "Get some classic New York glamour with the Broadway. We dare you to try and find lighting with more statement.",
-  color: "Brown",
-  condition: "New",
-  designer: "Guy Bright",
-  design_period: "2004",
-  materials: "Metal",
-  category_item: "Lamp")
-item15.photo_urls = ["http://res.cloudinary.com/dhrqyxgzp/image/upload/v1481548812/broardway1_wgqbrx.webp",
-"http://res.cloudinary.com/dhrqyxgzp/image/upload/v1481551411/2nd%20seed/broardway2.webp",
-"http://res.cloudinary.com/dhrqyxgzp/image/upload/v1481551411/2nd%20seed/broardway3.webp",
-"http://res.cloudinary.com/dhrqyxgzp/image/upload/v1481551411/2nd%20seed/broardway4.webp"
-]
-
-
-item16 = Item.new(
-  name: "Audrey",
-  size: "D36.5cm",
-  price_cents: 4000,
-  status: "Free",
-  description: "Classical good looks and its elegant flower-esque silhouette are what makes our Audrey pendant light so covetable.",
-  color: "White",
-  condition: "New",
-  designer: "Holly Golightly",
-  design_period: "1958",
-  materials: "Glass",
-  category_item: "Lamp")
-item16.photo_urls = [
-  "http://res.cloudinary.com/dhrqyxgzp/image/upload/v1481550593/audrey1_hsde6a.webp",
-  "http://res.cloudinary.com/dhrqyxgzp/image/upload/v1481550593/audrey2_ahqxmg.webp",
-  "http://res.cloudinary.com/dhrqyxgzp/image/upload/v1481550593/audrey3_pk6t3w.webp",
-  "http://res.cloudinary.com/dhrqyxgzp/image/upload/v1481550593/audrey4_y1ufm2.webp"
-]
-
-item17 = Item.new(
-  name: "Chicago",
-  size: "145*57*57",
-  price_cents: 6000,
-  status: "Free",
-  description: "Bring some vintage Hollywood glamour into your home with this tripod floor lamp. Inspired by film sets from days gone by.",
-  color: "Bronze",
-  condition: "New",
-  designer: "Rasan Gore",
-  design_period: "2015",
-  materials: "Metal",
-  category_item: "Lamp")
-item17.photo_urls = [
-  "http://res.cloudinary.com/dhrqyxgzp/image/upload/v1481553537/2nd%20seed/chicago_floor_lamp_bronze1.webp",
-  "http://res.cloudinary.com/dhrqyxgzp/image/upload/v1481553537/2nd%20seed/chicago_floor_lamp_bronze2.webp",
-  "http://res.cloudinary.com/dhrqyxgzp/image/upload/v1481553537/2nd%20seed/chicago_floor_lamp_bronze3.webp",
-  "http://res.cloudinary.com/dhrqyxgzp/image/upload/v1481553538/2nd%20seed/chicago_floor_lamp_bronze4.webp"
-]
-
-item18 = Item.new(
-  name: "Ilaria",
-  size: "91*32*32",
-  price_cents: 6000,
-  status: "Free",
-  description: "A perfect balance of gradient colour and transparency, Ilaria's cluster of glass shades adds vibrancy to your space - even when the lights are off.",
-  color: "Blue, Red, Yellow and white",
-  condition: "New",
-  designer: "Livingetc",
-  design_period: "2000",
-  materials: "Glass",
-  category_item: "Lamp")
-item18.photo_urls = [
-  "http://res.cloudinary.com/dhrqyxgzp/image/upload/v1481554040/2nd%20seed/ilaria1.webp",
-  "http://res.cloudinary.com/dhrqyxgzp/image/upload/v1481554041/2nd%20seed/ilaria2.webp",
-  "http://res.cloudinary.com/dhrqyxgzp/image/upload/v1481554041/2nd%20seed/ilaria3.webp"
-]
-
-item19 = Item.new(
-  name: "Rubens",
-  size: "87*82*98",
-  price_cents: 12000,
-  status: "Free",
-  description: "The Rubens is Steuart Padwick's first foray into upholstery. Moving away from his iconic curved wood design masterpieces.",
-  color: "Brown",
-  condition: "New",
-  designer: "Steuart Padwick",
-  design_period: "2009",
-  materials: "Leather",
-  category_item: "Chairs")
-item19.photo_urls = [
-  "http://res.cloudinary.com/dhrqyxgzp/image/upload/v1481555007/2nd%20seed/rubens_armchair1.webp",
-  "http://res.cloudinary.com/dhrqyxgzp/image/upload/v1481555007/2nd%20seed/rubens_armchair2.webp",
-  "http://res.cloudinary.com/dhrqyxgzp/image/upload/v1481555007/2nd%20seed/rubens_armchair3.webp",
-  "http://res.cloudinary.com/dhrqyxgzp/image/upload/v1481555007/2nd%20seed/rubens_armchair4.webp",
-]
-
-item20 = Item.new(
-  name: "",
-  size: "",
-  price_cents: 4000,
-  status: "Free",
-  description: "The collection features two fabrics designed by print ace Allegra Hicks, exclusively for us. She drew inspiration from Moroccan patterns and summery colours.",
-  color: "Warm",
-  condition: "New",
-  designer: "Allegra Hicks",
-  design_period: "2016",
-  materials: "Tissu",
-  category_item: "Sofas")
-item20.photo_urls = [
-  "http://res.cloudinary.com/dhrqyxgzp/image/upload/v1481555862/2nd%20seed/lulu1.webp",
-  "http://res.cloudinary.com/dhrqyxgzp/image/upload/v1481555862/2nd%20seed/lulu2.webp",
-  "http://res.cloudinary.com/dhrqyxgzp/image/upload/v1481555862/2nd%20seed/lulu3.webp",
-  "http://res.cloudinary.com/dhrqyxgzp/image/upload/v1481555862/2nd%20seed/lulu4.webp",
-]
 
 item21 = Item.new(
   name: "Jonah",
@@ -372,47 +256,6 @@ item23.photo_urls = [
 ]
 
 
-item24 = Item.new(
-  name: "Emeline",
-  size: "124*33.5",
-  price_cents: 4000,
-  status: "Free",
-  description: "Emeline is a fitting name for such a fearless design. A modern, industrial ceiling light, crafted with a hemispherical cage.",
-  color: "Black",
-  condition: "New",
-  designer: "S.P",
-  design_period: "2014",
-  materials: "Metal",
-  category_item: "Lamps")
-item24.photo_urls = [
-  "http://res.cloudinary.com/dhrqyxgzp/image/upload/v1481563969/2nd%20seed/emeline1.webp",
-  "http://res.cloudinary.com/dhrqyxgzp/image/upload/v1481563969/2nd%20seed/emeline2.webp",
-  "http://res.cloudinary.com/dhrqyxgzp/image/upload/v1481563969/2nd%20seed/emeline3.webp",
-  "http://res.cloudinary.com/dhrqyxgzp/image/upload/v1481563969/2nd%20seed/emeline4.webp",
-]
-
-
-
-item25 = Item.new(
-  name: "Pulp Fiction",
-  size: "42*59",
-  price_cents: 12000,
-  status: "Free",
-  description: "Illustrator Ale Giorgini has a talent for transforming your favourite cult films into comics. If you’re a Pulp Fiction fan then you need this print, now.",
-  condition: "New",
-  designer: "Ale Giorgino",
-  design_period: "1999",
-  materials: "Canvas",
-  category_item: "Paintings")
-item25.photo_urls = [
-  "http://res.cloudinary.com/dhrqyxgzp/image/upload/v1481636698/2nd%20seed/pulp_fiction_by_ale_giorgini_42x59cm_lb02.webp",
-  "http://res.cloudinary.com/dhrqyxgzp/image/upload/v1481564718/2nd%20seed/pulp_fiction2.jpg",
-  "http://res.cloudinary.com/dhrqyxgzp/image/upload/v1481564718/2nd%20seed/pulp_fiction3.png",
-  "http://res.cloudinary.com/dhrqyxgzp/image/upload/v1481564719/2nd%20seed/pulp_fiction4.webp",
-]
-
-
-
 item26 = Item.new(
   name: "Back To The Future",
   size: "42*59",
@@ -448,9 +291,7 @@ item27 = Item.new(
 item27.photo_urls = [
   "http://res.cloudinary.com/dhrqyxgzp/image/upload/v1481565734/2nd%20seed/vulpes_vulpes1.webp",
   "http://res.cloudinary.com/dhrqyxgzp/image/upload/v1481565734/2nd%20seed/vulpes_vulpes2.webp",
-  "http://res.cloudinary.com/dhrqyxgzp/image/upload/v1481565734/2nd%20seed/vulpes_vulpes3.webp",
-  "http://res.cloudinary.com/dhrqyxgzp/image/upload/v1481565734/2nd%20seed/vulpes_vulpes4.jpg",
-]
+  "http://res.cloudinary.com/dhrqyxgzp/image/upload/v1481565734/2nd%20seed/vulpes_vulpes3.webp"]
 
 item28 = Item.new(
   name: "Hommage to Stan",
@@ -471,43 +312,131 @@ item28.photo_urls = [
   "http://res.cloudinary.com/dhrqyxgzp/image/upload/v1481621634/2nd%20seed/spinspiration4.webp",
 ]
 
-item29 = Item.new(
-  name: "Rolling Stones",
-  size: "45*55",
-  price_cents: 12000,
-  status: "Free",
-  description: "A striking image of the British rock scene, it's a frosty January morning in 1967 and The Rolling Stones take a walk in London. L-R: Watts, Jagger, Wyman, Richards, Jones.",
-  color: "Cold",
-  condition: "New",
-  designer: "S.P",
-  design_period: "1967",
-  materials: "Canvas",
-  category_item: "Photography")
-item29.photo_urls = [
-  "http://res.cloudinary.com/dhrqyxgzp/image/upload/v1481621646/2nd%20seed/rollingstones1.webp",
-  "http://res.cloudinary.com/dhrqyxgzp/image/upload/v1481621646/2nd%20seed/rollingstones2.webp",
-  "http://res.cloudinary.com/dhrqyxgzp/image/upload/v1481621646/2nd%20seed/rollingstrones3.webp",
-  "http://res.cloudinary.com/dhrqyxgzp/image/upload/v1481621646/2nd%20seed/rollingstones4.webp",
-]
 
-item30 = Item.new(
-  name: "Cornell",
-  size: "86*43*51",
-  price_cents: 4000,
+item31 = Item.new(
+  name: "Danish Chair",
+  size: "65*40*80",
+  price_cents: 2000,
   status: "Free",
-  description: "Inspired by classic mid-century design, this striking pair of walnut chairs will give your dining area an instant edge. Arrive assembled.",
-  color: "Brown",
+  description:
+  "The best chair to sit comfortably while speaking with the one you love.",
+  color: "Black",
   condition: "New",
-  designer: "Chloée",
-  design_period: "2000",
+  designer: "Danish",
+  design_period: "2010",
   materials: "Wood",
   category_item: "Chairs")
-item30.photo_urls = [
-  "http://res.cloudinary.com/dhrqyxgzp/image/upload/v1481623085/2nd%20seed/cornell.webp",
-  "http://res.cloudinary.com/dhrqyxgzp/image/upload/v1481623085/2nd%20seed/cornell2.webp",
-  "http://res.cloudinary.com/dhrqyxgzp/image/upload/v1481623085/2nd%20seed/cornell3.webp",
-  "http://res.cloudinary.com/dhrqyxgzp/image/upload/v1481623085/2nd%20seed/cornell4.webp",
-]
+  item31.photo_urls = [
+  "http://res.cloudinary.com/dhrqyxgzp/image/upload/v1481705991/chair-black-1_qiplif.jpg",
+  "http://res.cloudinary.com/dhrqyxgzp/image/upload/v1481705991/chair-black-2_jrbigy.jpg",
+  "http://res.cloudinary.com/dhrqyxgzp/image/upload/v1481705991/chair-black-3_ladixc.jpg"]
+
+
+item32 = Item.new(
+  name: "Black Clock",
+  size: "40*40*10",
+  price_cents: 2000,
+  status: "Free",
+  description:
+  "Our time is running out, You can't push it underground, You can't stop it screaming out",
+  color: "Black",
+  condition: "New",
+  designer: "Mr Swatch",
+  design_period: "2015",
+  materials: "Wood",
+  category_item: "Clocks")
+  item32.photo_urls = [
+  "http://res.cloudinary.com/dhrqyxgzp/image/upload/v1481705990/clock-black-2_nwxoa7.jpg",
+  "http://res.cloudinary.com/dhrqyxgzp/image/upload/v1481705991/clock-black-1_sfi3gl.jpg",
+  "http://res.cloudinary.com/dhrqyxgzp/image/upload/v1481705990/clock-black-3_mmvkgl.jpg"]
+
+
+item33 = Item.new(
+  name: "Night Buddy",
+  size: "65*40*10",
+  price_cents: 2000,
+  status: "Free",
+  description:
+  "It's the best moment of the day, it's bed time. Grab a book, turn the light on and enjoy. Have a good night, we'll see you tomorrow.",
+  color: "Black",
+  condition: "New",
+  designer: "Mr Swatch",
+  design_period: "2015",
+  materials: "Metal",
+  category_item: "Lamps")
+  item33.photo_urls = [
+  "http://res.cloudinary.com/dhrqyxgzp/image/upload/v1481705990/lamp-pixi_bptywn.jpg",
+  "http://res.cloudinary.com/dhrqyxgzp/image/upload/v1481705990/lamp-pixi-2_xgtehk.jpg",
+  "http://res.cloudinary.com/dhrqyxgzp/image/upload/v1481707233/lamp-pixi-3_igucvy.jpg"]
+
+item34 = Item.new(
+  name: "Industrial Seat",
+  size: "60*60*100",
+  price_cents: 10000,
+  status: "Free",
+  description:
+  "You've earn it, com'on, grab a cigare, sit down, relax and breathe. That's right, life is great, life is cool so enjoy",
+  color: "Black",
+  condition: "New",
+  designer: "Vicinstruial",
+  design_period: "2016",
+  materials: "Leather",
+  category_item: "Lamps")
+  item34.photo_urls = [
+  "http://res.cloudinary.com/dhrqyxgzp/image/upload/v1481705990/leather-1_gnc4l9.jpg",
+  "http://res.cloudinary.com/dhrqyxgzp/image/upload/v1481705990/leather-2_rmgwwn.jpg",
+  "http://res.cloudinary.com/dhrqyxgzp/image/upload/v1481705990/leather-3_nqif89.jpg"]
+
+item35 = Item.new(
+  name: "Studio lighting",
+  size: "25*35*65",
+  price_cents: 2000,
+  status: "Free",
+  description:
+  "Like us, you've always dream to be a photograph, travel around the world and take breathtaking pictures. Now you can do it at Home",
+  color: "Black",
+  condition: "New",
+  designer: "M&E",
+  design_period: "2013",
+  materials: "Metal",
+  category_item: "Lamps")
+  item35.photo_urls = [
+  "http://res.cloudinary.com/dhrqyxgzp/image/upload/v1481705990/photograph-1_fczk9b.jpg",
+  "http://res.cloudinary.com/dhrqyxgzp/image/upload/v1481705989/photograph-2_fjmyqa.jpg",
+  "http://res.cloudinary.com/dhrqyxgzp/image/upload/v1481705989/photograph-3_oaqe4i.jpg"]
+
+item36 = Item.new(
+  name: "Movie Studio",
+  size: "30*40*120",
+  price_cents: 4000,
+  status: "Free",
+  description:
+  "Shhhhhhhh ..... ! We're filming.... annnnd Actionnn !!!",
+  color: "Black",
+  condition: "New",
+  designer: "The Movie furnisher",
+  design_period: "2010",
+  materials: "Metal",
+  category_item: "Lamps")
+  item36.photo_urls = [
+  "http://res.cloudinary.com/dhrqyxgzp/image/upload/v1481705989/projo-1_imdril.jpg",
+  "http://res.cloudinary.com/dhrqyxgzp/image/upload/v1481705989/projo-2_s3ivvv.jpg"]
+
+item37 = Item.new(
+  name: "Dinner Table",
+  size: "100*100*85",
+  price_cents: 6000,
+  status: "Free",
+  description:
+  "Tables are for people to be together, tell jokes, stories and share. Sharing is what brings us together.",
+  color: "Black",
+  condition: "New",
+  designer: "The Movie furnisher",
+  design_period: "2015",
+  materials: "Metal",
+  category_item: "Tables")
+  item37.photo_urls = ["http://res.cloudinary.com/dhrqyxgzp/image/upload/v1481705989/table-white-2_symhyl.jpg",
+  "http://res.cloudinary.com/dhrqyxgzp/image/upload/v1481705989/table-white-3_zokoxs.jpg"]
 
 item38 = Item.new(
   name: "Black Hole",
@@ -524,8 +453,7 @@ item38 = Item.new(
 item38.photo_urls = [
   "http://res.cloudinary.com/dhrqyxgzp/image/upload/v1481707847/black_vase_arvlsr.jpg",
   "http://res.cloudinary.com/dhrqyxgzp/image/upload/v1481707847/black_vase_02_hlemvr.jpg",
-  "http://res.cloudinary.com/dhrqyxgzp/image/upload/v1481707847/black_vase_03_cfduxv.jpg",
-]
+  "http://res.cloudinary.com/dhrqyxgzp/image/upload/v1481707847/black_vase_03_cfduxv.jpg"]
 
 item39 = Item.new(
   name: "Boule Jaune",
@@ -542,8 +470,7 @@ item39 = Item.new(
 item39.photo_urls = [
   "http://res.cloudinary.com/dhrqyxgzp/image/upload/v1481707847/yellow_lamp_ob6pyu.jpg",
   "http://res.cloudinary.com/dhrqyxgzp/image/upload/v1481707847/yellow_lamp_03_rdijwq.jpg",
-  "http://res.cloudinary.com/dhrqyxgzp/image/upload/v1481707848/yellow_lamp_02_unfjvx.jpg",
-]
+  "http://res.cloudinary.com/dhrqyxgzp/image/upload/v1481707848/yellow_lamp_02_unfjvx.jpg"]
 
 item40 = Item.new(
   name: "Dark Light",
@@ -557,9 +484,23 @@ item40 = Item.new(
   materials: "Plastic",
   category_item: "Lamps")
 item40.photo_urls = [
-  "http://res.cloudinary.com/dhrqyxgzp/image/upload/v1481707846/black_lamp__nrsbjh.jpg",
+  "http://res.cloudinary.com/dhrqyxgzp/image/upload/v1481707846/black_lamp__nrsbjh.jpg"]
 
-]
+item41 = Item.new(
+  name: "White Cloud",
+  size: "50*60*85",
+  price_cents: 10000,
+  status: "Free",
+  description: "For you, we've designed the most confortable sofa. Try it, it feels like if your were sitting in the clouds",
+  condition: "New",
+  designer: "Dark Father",
+  design_period: "2016",
+  materials: "Plastic",
+  category_item: "Lamps")
+item41.photo_urls = [
+  "http://res.cloudinary.com/dhrqyxgzp/image/upload/v1481709824/sofa-1_isquxj.jpg",
+  "http://res.cloudinary.com/dhrqyxgzp/image/upload/v1481709824/sofa-2_ksvwge.jpg",
+  "http://res.cloudinary.com/dhrqyxgzp/image/upload/v1481709824/sofa-3_gzl1vc.jpg"]
 
 item1.save
 item2.save
@@ -575,28 +516,28 @@ item11.save
 item12.save
 item13.save
 item14.save
-
-item15.save
-item16.save
-item17.save
-item18.save
-item19.save
-item20.save
+item21.save
 item22.save
 item23.save
-item24.save
-item24.save
-item25.save
 item26.save
 item27.save
 item28.save
-item29.save
-item30.save
+item31.save
+item32.save
+item33.save
+item34.save
+item35.save
+item36.save
+item37.save
 item38.save
 item39.save
 item40.save
+item41.save
 
-# item1 = Item.new(
+
+
+
+#.save item1 = Item.new(
 #   name: "",
 #   size: "",
 #   price_cents: 4000,
