@@ -525,7 +525,7 @@ item38.photo_urls = [
   "http://res.cloudinary.com/dhrqyxgzp/image/upload/v1481707847/black_vase_arvlsr.jpg",
   "http://res.cloudinary.com/dhrqyxgzp/image/upload/v1481707847/black_vase_02_hlemvr.jpg",
   "http://res.cloudinary.com/dhrqyxgzp/image/upload/v1481707847/black_vase_03_cfduxv.jpg",
-
+]
 
 item39 = Item.new(
   name: "Boule Jaune",
@@ -558,7 +558,7 @@ item40 = Item.new(
   category_item: "Lamps")
 item40.photo_urls = [
   "http://res.cloudinary.com/dhrqyxgzp/image/upload/v1481707846/black_lamp__nrsbjh.jpg",
-  
+
 ]
 
 item1.save
