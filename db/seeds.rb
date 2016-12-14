@@ -10,6 +10,11 @@ Order.destroy_all
 Booking.destroy_all
 Item.destroy_all
 
+user = User.new
+user.email = 'stan@decoswap.com'
+user.password = 'password'
+user.save!
+
 
 
 item1 = Item.new(
