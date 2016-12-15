@@ -20,7 +20,7 @@ user.save!
 item1 = Item.new(
   name: "C-chair",
   size: "65*40*80",
-  price_cents: 7000,
+  price_cents: 3000,
   status: "Free",
   description:
   "Sitting comfortably is important. Our chairs also come in handy for paying the bills, helping with the homework or just talking with the people you love.",
@@ -36,7 +36,7 @@ item1.photo_urls = [
 item2 = Item.new(
   name: "White Cloud",
   size: "50*60*85",
-  price_cents: 7000,
+  price_cents: 3000,
   status: "Free",
   description: "For you, we've designed the most confortable sofa. Try it, it feels like if your were sitting in the clouds",
   condition: "New",
@@ -120,7 +120,7 @@ item7.photo_urls = ["http://res.cloudinary.com/dhrqyxgzp/image/upload/v148051108
 item8 = Item.new(
   name: "Telescope Lamp",
   size: "20*20*150",
-  price_cents: 1000,
+  price_cents: 3000,
   status: "Free",
   description: "Nights will no longer be scary. They'll be cosy",
   color: "Gray",
@@ -133,7 +133,7 @@ item8.photo_urls = ["http://res.cloudinary.com/dhrqyxgzp/image/upload/v148051128
 item9 = Item.new(
   name: "Focused Nature",
   size: "45*100*5",
-  price_cents: 1000,
+  price_cents: 3000,
   status: "Free",
   description: "Focus. Focus on the calm and the purity of this picture. Houdihou signs here a marvellous picture.",
   color: "Black",
@@ -185,7 +185,7 @@ item12.photo_urls = ["http://res.cloudinary.com/dhrqyxgzp/image/upload/v14805120
 item13 = Item.new(
   name: "The Table.",
   size: "70*50*40",
-  price_cents: 1000,
+  price_cents: 3000,
   status: "Free",
   description: "A perfect table. Nothing more, nothing less.",
   color: "Light Brown",
@@ -198,7 +198,7 @@ item13.photo_urls = ["http://res.cloudinary.com/dhrqyxgzp/image/upload/v14805121
 item14 = Item.new(
   name: "Dusty shower",
   size: "160*100*6",
-  price_cents: 7000,
+  price_cents: 3000,
   status: "Free",
   description: "Stolen picture of an elephant taking a shower. \"One of my greatest\" says S.P the photograph.",
   color: "Black",
@@ -271,7 +271,7 @@ item26.photo_urls = [
 item27 = Item.new(
   name: "Vulpes Vulpes",
   size: "42*59",
-  price_cents: 7000,
+  price_cents: 3000,
   status: "Free",
   description: "Hungary-based artist Robert Farkas creates artwork by digitally layering traditional watercolour. Vulpes Vulpes is the Latin name of the red fox, the star of piece.",
   color: "Warm",
@@ -327,7 +327,7 @@ item31 = Item.new(
 item32 = Item.new(
   name: "Black Clock",
   size: "40*40*10",
-  price_cents: 1000,
+  price_cents: 3000,
   status: "Free",
   description:
   "Our time is running out, You can't push it underground, You can't stop it screaming out",
@@ -364,7 +364,7 @@ item33 = Item.new(
 item34 = Item.new(
   name: "Industrial Seat",
   size: "60*60*100",
-  price_cents: 7000,
+  price_cents: 3000,
   status: "Free",
   description:
   "You've earn it, com'on, grab a cigare, sit down, relax and breathe. That's right, life is great, life is cool so enjoy",
@@ -382,7 +382,7 @@ item34 = Item.new(
 item35 = Item.new(
   name: "Studio lighting",
   size: "25*35*65",
-  price_cents: 1000,
+  price_cents: 3000,
   status: "Free",
   description:
   "Like us, you've always dream to be a photograph, travel around the world and take breathtaking pictures. Now you can do it at Home",
@@ -421,7 +421,7 @@ item36.photo_urls = [
 item37 = Item.new(
   name: "Dinner Table",
   size: "100*100*85",
-  price_cents: 7000,
+  price_cents: 3000,
   status: "Free",
   description:
   "Tables are for people to be together, tell jokes, stories and share. Sharing is what brings us together.",
@@ -439,7 +439,7 @@ item37 = Item.new(
 item38 = Item.new(
   name: "Black Hole",
   size: "120x10x30",
-  price_cents: 1000,
+  price_cents: 3000,
   status: "Free",
   description: "You can put anything you want in it, it will fit nice on your table",
   color: "Black",
@@ -473,7 +473,7 @@ item39.photo_urls = [
 item40 = Item.new(
   name: "Dark Light",
   size: "22*43*51",
-  price_cents: 1000,
+  price_cents: 3000,
   status: "Free",
   description: "Enlight your ideas with this futuristic desk lamp",
   condition: "New",
@@ -488,7 +488,7 @@ item40.photo_urls = [
 item42 = Item.new(
   name: "Wall Clock",
   size: "50*50*8",
-  price_cents: 1000,
+  price_cents: 3000,
   status: "Free",
   description: "Classic wooden clock which gives time. ",
   color: "White",
@@ -502,7 +502,7 @@ item42.photo_urls = ["http://res.cloudinary.com/dhrqyxgzp/image/upload/v14805109
 item43 = Item.new(
   name: "Fonteyn",
   size: "75*90*50",
-  price_cents: 7000,
+  price_cents: 3000,
   status: "Free",
   description: "This dressing table is elegantly balanced with slender, tapered legs and gracefully curved edges. Topped by a stylish round mirror.",
   color: "Beige",
@@ -521,7 +521,7 @@ item43.photo_urls = [
 item44 = Item.new(
   name: "This Giraff is just a perfect Choice",
   size: "75*90*50",
-  price_cents: 7000,
+  price_cents: 3000,
   status: "Free",
   description: "If you love giraff, this is all you need.",
   color: "Beige",
