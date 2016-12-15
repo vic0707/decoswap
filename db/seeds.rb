@@ -43,7 +43,7 @@ item2 = Item.new(
   designer: "Dark Father",
   design_period: "2016",
   materials: "Plastic",
-  category_item: "Lamps")
+  category_item: "Chairs")
 item2.photo_urls = [
   "http://res.cloudinary.com/dhrqyxgzp/image/upload/v1481709824/sofa-1_isquxj.jpg",
   "http://res.cloudinary.com/dhrqyxgzp/image/upload/v1481709824/sofa-2_ksvwge.jpg",
