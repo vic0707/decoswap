@@ -1,5 +1,5 @@
 $(document).ready(function() {
 	setTimeout(function() {
-		$('.flip-container .flipper').css('transform', 'rotateY(180deg)')
+    $('.flip-container .flipper').addClass('flip-transform')
 	}, 3000);
 });
