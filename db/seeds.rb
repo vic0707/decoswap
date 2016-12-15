@@ -174,7 +174,7 @@ item12 = Item.new(
   size: "50*150*8",
   price_cents: 3000,
   status: "Free",
-  description: "Often brutal and wild, savanna is a dangerous place. And when things get dangerous, there's nothing better than love to fight it.",
+  description: "Often brutal and wild, savanna is a dangerous place for girrafes. And when things get dangerous, there's nothing better than love to fight it.",
   color: "Black",
   condition: "New",
   designer: "The an.on.ym.ous photograph",
