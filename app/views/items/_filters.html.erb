@@ -4,7 +4,7 @@
 		<%= simple_form_for :item, url:items_path, html: {method: :get, class: "form-inline text-center"}, data: {autosubmit: true}, remote: true do |f| %>
 		<div class="col-xs-3">
 			<h4>Categories</h4>
-			<%= f.collection_check_boxes :category_item, category_collection, :last, :first, { item_wrapper_class: "collection_button_wrapper", collection_wrapper_class: "folded tags_collection", checked: params["category_item"], include_hidden: false }, name: "category_items[]"%>
+			<%= f.collection_check_boxes :category_item, category_collection, :last, :first, { item_wrapper_class: "collection_button_wrapper", collection_wrapper_class: "folded tags_collection", checked: params["category_item"], include_hidden: false }, name: "category_item[]"%>
 		</div>
 
 
