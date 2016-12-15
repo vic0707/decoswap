@@ -1,5 +1,17 @@
 $(document).ready(function() {
-	setTimeout(function() {
-    $('.flip-container .flipper').addClass('flip-transform')
-	}, 3000);
+  $(function () {
+    $('#datetimepicker1').datetimepicker({
+      format: 'DD/MM/YYYY'
+    });
+  });
+
 });
+
+
+
+$(document).on("click","#swap-btn",function(e){
+  e.preventDefault()
+  $('.flip-container .flipper').addClass('flip-transform')
+  $('#confirmation-tick').removeClass('swap-display-hidden')
+});
+

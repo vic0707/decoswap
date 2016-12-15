@@ -15,7 +15,7 @@ class OrdersController < ApplicationController
 		@order.items.each do |item|
 			Booking.create!(user: current_user, item: item, status: "booked", start_date: Time.now)
 		end
-		
+
 		@order.update(billing_first_name: params[:order][:billing_first_name], billing_last_name: params[:order][:billing_last_name], billing_line: params[:order][:billing_line], billing_zip: params[:order][:billing_zip], billing_city: params[:order][:billing_city], billing_country: params[:order][:billing_country])
 
 		respond_to do |format|
