@@ -13,12 +13,11 @@ module ItemsHelper
   def price_collection
     [
     "10",
-    "20",
-    "40",
-    "60",
-    "100"].map do |x|
+    "30",
+    "70"].map do |x|
       y = x.to_i*100
-      [x,y]
+      z = x + "€/m"
+      [z,y]
     end
   end
 
@@ -27,26 +26,21 @@ module ItemsHelper
     "Wood",
     "Metal",
     "Plastic",
-    "Glass",
     "Canvas",
     "Leather",
-    "Cotton",
-    "Wool"].map do |x|
+    "Cotton"].map do |x|
       [x, x]
     end
   end
 
   def colors_collection
     [
-    "White",
     "Black",
+    "White",
     "Brown",
     "Beige",
     "Gray",
-    "Warm",
-    "Cold",
-    "Flashy",
-    ].map do |x|
+    "Warm"].map do |x|
       [x, x]
     end
   end

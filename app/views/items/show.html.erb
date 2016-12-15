@@ -4,7 +4,7 @@
   <div class="content-wrapper">
     <div class="row">
       <div class="col-md-6">
-        <h1><%= @item.name %> </h1>
+        <h1> <strong> <%= @item.name %> </strong> </h1>
         <%= @item.category_item %>
       </div>
     </div>
@@ -24,7 +24,7 @@
           </div>
 
           <div class="col-md-6">
-            <h3>Product information</h3>
+            <h3> <strong> Product information </strong> </h3>
             <p><%= @item.description %></p>
             <br>
             <p> <strong> Size: </strong>   <%= @item.size %> </p>
@@ -64,34 +64,37 @@
   </div>
   <!-- Modal -->
   <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-          <div class="container">
-            <div class="row">
-              <div class="col-xs-1">
-                <i class="fa fa-check conf-title tick-green" aria-hidden="true">
-                </i>
+     <div class="vertical-alignment-helper">
+      <div class="modal-dialog vertical-align-center" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <div class="container">
+              <div class="row">
+                <div class="col-xs-1">
+                  <i class="fa fa-check conf-title tick-green" aria-hidden="true">
+                  </i>
+                </div>
+                <div class="col-xs-8 col-xs-offset-1"><h4>Your order has been placed</h4></div>
               </div>
-              <div class="col-xs-8 col-xs-offset-1"><h4>Your order has been placed</h4></div>
+            </div>
+          </div>
+          <div class="modal-body">
+            <div class="container">
+              <div class="row">
+                <div class="col-xs-6 text-center">
+                  <%= link_to "Continue Shopping", items_path, class: "btn btn-cart" %>
+                </div>
+                <div class="col-xs-6 text-center">
+                  <%= link_to "Checkout", cart_path, class: "btn btn-cart" %>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-        <div class="modal-body">
-          <div class="container">
-            <div class="row">
-              <div class="col-xs-6 text-center">
-                <%= link_to "Continue Shopping", items_path, class: "btn btn-cart" %>
-              </div>
-              <div class="col-xs-6 text-center">
-                <%= link_to "Checkout", cart_path, class: "btn btn-cart" %>
-              </div>
-            </div>
-          </div>      
-        </div>
       </div>
     </div>
+
   </div>
 </div>
 </div>

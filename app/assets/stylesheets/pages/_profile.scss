@@ -10,6 +10,14 @@ body {
 /*
  * Global add-ons
  */
+.border-bottom-filters {
+  border-bottom: 1px solid #DFDFDF;
+  max-width: 1170px;
+  margin: 0 auto;
+}
+.padding-bottom-300 {
+  .padding-bottom: 300px;
+}
 
 .sub-header {
   padding-bottom: 10px;

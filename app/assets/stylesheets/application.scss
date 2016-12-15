@@ -8,7 +8,7 @@
 @import "font-awesome-sprockets";
 @import "font-awesome";
 
-@import "bootstrap-datepicker";
+@import "bootstrap-datetimepicker";
 
 
 // Your CSS
@@ -16,6 +16,7 @@
 @import "components/index";
 @import "components/banner";
 @import "components/button_cart";
+@import "components/modal";
 @import "pages/index";
 @import "pages/home";
 @import "pages/swap";

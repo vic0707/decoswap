@@ -199,16 +199,20 @@
 .video-container .title-container {
   z-index: 0;
   position: absolute;
-  top: 35%;
+  top: 46%;
   width: 100%;
   text-align: center;
   color: #fff;
 }
 
+.fade{
+  animation: fadeIn ease-in 0.4;
+}
+
 .headlines h1{
   font-size: 90px;
-
-  }
+  letter-spacing: 50px;
+}
 
 .header{
   margin: 0px 50px;
@@ -320,7 +324,7 @@
 
 .pricing-features li {
   padding: 6px 0;
-  font-size: 20px;
+  font-size: 15px;
 }
 .pricing-features i {
   color: #E4AF3C;
@@ -467,7 +471,7 @@
   text-transform: uppercase;
   vertical-align: middle;
   width: 100%;
-  margin-top: 80px;
+  margin-top: 50px;
   &:hover { text-decoration: none; }
 }
   /////////////////////////////////
@@ -565,7 +569,7 @@
   background-image: asset-data-url("background.jpg");
   background-size: cover;
   height: 500px;
-  background-position: bottom;
+  background-position: 86px -144px;
 }
 
 

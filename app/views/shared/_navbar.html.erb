@@ -1,7 +1,7 @@
 <div class="navbar-wagon navbar-wagon <%= content_for :nav_class %>">
   <!-- Logo -->
   <%= link_to root_path, class: "navbar-wagon-brand" do %>
-  <%= image_tag ("logo_white.png"), class: "logo", id: "logo"%>
+  <%= image_tag ("logo_01_white.png"), class: "logo", id: "logo"%>
   <% end %>
 
   <!-- Right Navigation -->
@@ -39,7 +39,7 @@
     <!-- Profile picture and dropdown -->
     <div class="navbar-wagon-item">
       <div class="dropdown">
-        <% avatar_url = current_user.facebook_picture_url || "profile_pic.png" %>
+        <% avatar_url = current_user.facebook_picture_url || "http://res.cloudinary.com/dhrqyxgzp/image/upload/v1481723103/Capture_d_e%CC%81cran_2016-12-14_a%CC%80_14.44.12_ivpg9p.png" %>
         <%= image_tag avatar_url, class: "avatar dropdown-toggle", id: "navbar-wagon-menu", "data-toggle" => "dropdown" %>
         <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
           <li>
@@ -67,8 +67,8 @@
       </div>
     </div>
     <% else %>
-    <%= link_to "Register", "#signupModal", :class => "btn btn-primary register_button", "data-toggle" => "modal" %>
-    <%= link_to "Login", "#loginModal", :class => "btn btn-success login_button", "data-toggle" => "modal" %>
+    <%= link_to "Register", "#signupModal", :class => "btn btn-cart register_button", "data-toggle" => "modal" %>
+    <%= link_to "Login", "#loginModal", :class => "btn btn-cart login_button", "data-toggle" => "modal" %>
     <div class="modal fade" id="signupModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
       <div class="modal-dialog" role="document">
         <div class="modal-content">

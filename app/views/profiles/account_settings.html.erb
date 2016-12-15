@@ -19,11 +19,11 @@
         </div>
 
         <div class="profile-tabs">
-          <a class="profile-tab " <%= link_to 'Dashboard', profile_path %></a>
-          <a class="profile-tab "  <%= link_to 'Historic', historic_profile_path %> </a>
-          <a class="profile-tab active" <%= link_to 'Account Settings', account_settings_profile_path %> </a>
+        <%= link_to 'Dashboard', profile_path, class: 'profile-tab' %>
+        <%= link_to 'Historic', historic_profile_path, class: 'profile-tab' %>
+        <%= link_to 'Account Settings', account_settings_profile_path, class: 'profile-tab active' %>
         </div>
+      </div>
     </div>
   </div>
-</div>
 </div>

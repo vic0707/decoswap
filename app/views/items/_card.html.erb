@@ -6,8 +6,8 @@
           <%= cl_image_tag item.photos.first.path %>
         <% end %>
           <div class="card-content">
-            <h2 class="card__title"><%= item.name %> </h2>
-            <h2 class="card__title"><%= item.price_cents/100 %>€/month </h2>
+            <p class="card__title"><%= item.name %> </p>
+            <p class="card__title"><%= item.price_cents/100 %>€/month </p>
           </div>
       </div>
     </div>
