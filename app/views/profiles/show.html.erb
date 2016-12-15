@@ -49,13 +49,15 @@
               </div>
               <div class="col-xs-3">
                 <div class="flex-center">
-                  <p> <%= link_to "Swap", items_path(price_cents: booking.item.price_cents, to_swap: booking.item.id), class: "btn btn-primary center text-right" %>
+                  <p>
+                  <%= link_to "See", item_path(booking.item), method: :delete, class: "btn btn-success center text-right" %>
+                  <%= link_to "Swap", items_path(price_cents: booking.item.price_cents, to_swap: booking.item.id), class: "btn btn-primary center text-right" %>
                    <%= link_to "Buy", profile_booking_path(booking), method: :delete, class: "btn btn-success center text-right" %> </p>
                    </div>
                    </div>
              </div>
 
-                   <% end %>               
+                   <% end %>
              <% end %>
            </div>
            <div class="padding-bottom-300" ></div>
