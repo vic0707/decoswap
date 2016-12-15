@@ -67,37 +67,37 @@
 
 .collection_button_wrapper {
   label {
-    min-width: 78px;
+    min-width: 98px;
   }
 }
-#item_color_beige + label{
+#item_color_beige:hover + label{
   border-color: #D1BEB7;
   border-width: 1.7px ;
 }
 
-#item_color_white + label{
+#item_color_white:hover + label{
   border-color: $gray-lighter;
   border-width: 1.7px ;
 }
 
-#item_color_black + label{
+#item_color_black:hover + label{
   border-color: $black;
   border-width: 1.7px ;
 }
 
-#item_color_brown + label{
+#item_color_brown:hover + label{
   border-color: #8B4513;
   border-width: 1.7px ;
 }
-#item_color_gray + label{
+#item_color_gray:hover + label{
   border-color: $gray;
   border-width: 1.7px ;
 }
-#item_color_warm + label{
+#item_color_warm:hover + label{
   border-color: #E04D08;
   border-width: 1.7px ;
 }
-#item_color_cold + label{
+#item_color_cold:hover + label{
   border-color: #45AFE0;
   border-width: 1.7px ;
 }
