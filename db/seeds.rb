@@ -141,7 +141,7 @@ item9 = Item.new(
   designer: "Houdihou",
   design_period: "2012",
   materials: "Canvas",
-  category_item: "Painting")
+  category_item: "Paintings")
 item9.photo_urls = ["http://res.cloudinary.com/dhrqyxgzp/image/upload/v1480511503/iqbdfemueq2dqrfmbqg7.jpg"]
 item10 = Item.new(
   name: "Stable table",
