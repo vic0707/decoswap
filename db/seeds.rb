@@ -9,6 +9,7 @@ Cart.destroy_all
 Order.destroy_all
 Booking.destroy_all
 Item.destroy_all
+User.destroy_all
 
 user = User.new
 user.email = 'stan_pollet@decoswap.com'
