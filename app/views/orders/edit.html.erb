@@ -42,7 +42,7 @@
 						</div>
 					</div>
 					<div class="row">
-						
+
 					</div>
 					<div class="row c-margin-left">
 						<% @order.carts.each do |cart| %>
@@ -79,7 +79,7 @@
 								<input
 								type="submit"
 								data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
-								class="btn btn-primary toggle-stripe"
+								class="btn btn-cart toggle-stripe"
 								value="Confirm"
 								data-amount="<%= (@order.total_amount * 100) %>"
 								data-locale="en"

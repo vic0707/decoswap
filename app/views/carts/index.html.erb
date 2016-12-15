@@ -34,7 +34,7 @@
 						</div>
 					</div>
 					<div class="col-xs-3">
-						<div class="flex-center"><h4><%= humanized_money(cart.item.price) %>€</h4></div>
+						<div class="flex-center"><h4><%= humanized_money(cart.item.price) %>€/month</h4></div>
 					</div>
 					<div class="col-xs-3">
 						<div class="flex-center">
@@ -50,11 +50,11 @@
 		<div class="col-xs-12 col-md-3">
       <% if @order %>
   			<div class="background">
-  				<h3>Order Sumary</h3>
+  				<h3>Order Summary</h3>
   				<p>Free Shipping</p>
 
-  				  <p>Total price <%= @order.total_amount %>€</p>
-  				  <%= link_to "Checkout", edit_order_path(@order), class:"btn btn-primary" %>
+  				  <p>Total price: <%= @order.total_amount %>€/month</p>
+  				  <%= link_to "Checkout", edit_order_path(@order), class:"btn btn-cart" %>
 
   				<%#= link_to "Empty Cart", cart_path , class: "btn btn-danger", method: :delete %>
   			</div>
