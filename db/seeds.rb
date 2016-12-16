@@ -174,7 +174,7 @@ item12 = Item.new(
   size: "50*150*8",
   price_cents: 3000,
   status: "Free",
-  description: "Often brutal and wild, savanna is a dangerous place for girrafes. And when things get dangerous, there's nothing better than love to fight it.",
+  description: "Often brutal and wild, savanna is a dangerous place for giraffes. And when things get dangerous, there's nothing better than love to fight it.",
   color: "Black",
   condition: "New",
   designer: "The an.on.ym.ous photograph",
@@ -373,7 +373,7 @@ item34 = Item.new(
   designer: "Vicinstruial",
   design_period: "2016",
   materials: "Leather",
-  category_item: "Lamps")
+  category_item: "Chairs")
   item34.photo_urls = [
   "http://res.cloudinary.com/dhrqyxgzp/image/upload/v1481705990/leather-1_gnc4l9.jpg",
   "http://res.cloudinary.com/dhrqyxgzp/image/upload/v1481705990/leather-2_rmgwwn.jpg",
