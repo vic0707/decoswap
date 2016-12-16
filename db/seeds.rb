@@ -42,7 +42,7 @@ item2 = Item.new(
   condition: "New",
   designer: "Dark Father",
   design_period: "2016",
-  materials: "Plastic",
+  materials: "Leather",
   category_item: "Chairs")
 item2.photo_urls = [
   "http://res.cloudinary.com/dhrqyxgzp/image/upload/v1481709824/sofa-1_isquxj.jpg",
@@ -123,7 +123,7 @@ item8 = Item.new(
   price_cents: 3000,
   status: "Free",
   description: "Nights will no longer be scary. They'll be cosy",
-  color: "Gray",
+  color: "White",
   condition: "New",
   designer: "The Swedish Company",
   design_period: "2015",
@@ -149,7 +149,7 @@ item10 = Item.new(
   price_cents: 1000,
   status: "Free",
   description: "Tables. Tables are the place we share things. Get I great one.",
-  color: "Light Brown",
+  color: "Brown",
   condition: "New",
   designer: "The Swedish Company",
   design_period: "2013",
@@ -162,11 +162,11 @@ item11 = Item.new(
   price_cents: 7000,
   status: "Free",
   description: "Sitting comfortably is important. Sitting with great style is too. We have combined both.",
-  color: "Light Gray",
+  color: "Gray",
   condition: "New",
   designer: "Norsign",
   design_period: "2016",
-  materials: "Tissu ",
+  materials: "Wood",
   category_item: "Chairs")
 item11.photo_urls = ["http://res.cloudinary.com/dhrqyxgzp/image/upload/v1480511792/jjlkoduddekghc6867ze.jpg"]
 item12 = Item.new(
@@ -216,12 +216,12 @@ item21 = Item.new(
   price_cents: 3000,
   status: "Free",
   description: "We’re a bit emotional about Jonah. It was one of our first ever designs, and it’s been a customer favourite ever since. So we thought a re-vamp was well deserved. Check out the new Spearmint Green fabric.",
-  color: "Flashy",
+  color: "Warm",
   condition: "New",
   designer: "James Harrison",
   design_period: "2007",
   materials: "Wood",
-  category_item: "Chairs")
+  category_item: "Sofas")
 item21.photo_urls = [
   "http://res.cloudinary.com/dhrqyxgzp/image/upload/v1481561801/2nd%20seed/jonah1.webp",
   "http://res.cloudinary.com/dhrqyxgzp/image/upload/v1481561801/2nd%20seed/jonah2.webp",
@@ -254,7 +254,7 @@ item26 = Item.new(
   price_cents: 3000,
   status: "Free",
   description: "Illustrator Ale Giorgini has a talent for transforming your favourite cult films into comics. If you’re a Back To The Future fan then you need this print, now.",
-  color: "Cold",
+  color: "Black",
   condition: "New",
   designer: "Ale Giorgino",
   design_period: "1992",
@@ -270,7 +270,7 @@ item26.photo_urls = [
 
 item27 = Item.new(
   name: "Vulpes Vulpes",
-  size: "42*59",
+  size: "42*59*3",
   price_cents: 3000,
   status: "Free",
   description: "Hungary-based artist Robert Farkas creates artwork by digitally layering traditional watercolour. Vulpes Vulpes is the Latin name of the red fox, the star of piece.",
@@ -286,11 +286,11 @@ item27.photo_urls = [
   "http://res.cloudinary.com/dhrqyxgzp/image/upload/v1481565734/2nd%20seed/vulpes_vulpes3.webp"]
 
 item28 = Item.new(
-  name: "Hommage to Stan",
+  name: "Tribute to Stan",
   size: "42*59",
   price_cents: 3000,
   status: "Free",
-  description: "S.P been a great inspiration for generations of giraffe lovers. Here again an exemple of his insfluence.",
+  description: "S.P been a great inspiration for generations of giraffe lovers. Here again an exemple of his influence.",
   color: "Warm",
   condition: "New",
   designer: "Spforever",
@@ -410,7 +410,7 @@ item36 = Item.new(
   designer: "Tim Fenby",
   design_period: "2015",
   materials: "Wood",
-  category_item: "Chairs")
+  category_item: "Tables")
 item36.photo_urls = [
   "http://res.cloudinary.com/dhrqyxgzp/image/upload/v1481563738/2nd%20seed/jenson1.webp",
   "http://res.cloudinary.com/dhrqyxgzp/image/upload/v1481563738/2nd%20seed/jenson2.webp",
@@ -425,11 +425,11 @@ item37 = Item.new(
   status: "Free",
   description:
   "Tables are for people to be together, tell jokes, stories and share. Sharing is what brings us together.",
-  color: "Black",
+  color: "White",
   condition: "New",
   designer: "The Movie furnisher",
   design_period: "2015",
-  materials: "Metal",
+  materials: "Wood",
   category_item: "Tables")
   item37.photo_urls = [
   "http://res.cloudinary.com/dhrqyxgzp/image/upload/v1481721571/table-white-1-1_i7gpcy.jpg",
@@ -459,7 +459,7 @@ item39 = Item.new(
   price_cents: 3000,
   status: "Free",
   description: "Chinese Designer Mr Jaune will let the sunshine in your home.",
-  color: "Flashy",
+  color: "Warm",
   condition: "New",
   designer: "Mr.Jaune",
   design_period: "2016",
@@ -476,6 +476,7 @@ item40 = Item.new(
   price_cents: 3000,
   status: "Free",
   description: "Enlight your ideas with this futuristic desk lamp",
+  color: "Black",
   condition: "New",
   designer: "Dark Father",
   design_period: "2016",
@@ -531,6 +532,7 @@ item10.save
 item11.save
 item12.save
 item13.save
+item14.save
 item21.save
 item22.save
 item26.save
@@ -541,8 +543,8 @@ item32.save
 item33.save
 item34.save
 item35.save
-item37.save
 item36.save
+item37.save
 item38.save
 item39.save
 item40.save
