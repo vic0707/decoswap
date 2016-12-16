@@ -518,21 +518,6 @@ item43.photo_urls = [
   "http://res.cloudinary.com/dhrqyxgzp/image/upload/v1481563146/2nd%20seed/fonteyn4.webp",
 ]
 
-item44 = Item.new(
-  name: "This Giraff is just a perfect Choice",
-  size: "75*90*50",
-  price_cents: 3000,
-  status: "Free",
-  description: "If you love giraff, this is all you need.",
-  color: "Beige",
-  condition: "New",
-  designer: "Mr Zoo",
-  design_period: "2009",
-  materials: "Canvas",
-  category_item: "Paintings")
-item44.photo_urls = [
-  "http://res.cloudinary.com/dhrqyxgzp/image/upload/v1481818373/giraff_02_ssbzc0.jpg",
-]
 item1.save
 item2.save
 item3.save
@@ -563,5 +548,4 @@ item39.save
 item40.save
 item42.save
 item43.save
-item44.save
 
